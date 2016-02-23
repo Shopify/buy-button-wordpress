@@ -60,11 +60,15 @@ class SBB_Shortcode {
 		<?php
 	}
 
+	/**
+	 * Shortcode rendering
+	 * Just passes arguments to output function.
+	 *
+	 * @since 0.1.0
+	 * @param  array $args Shortcode attributes
+	 * @return string      HTML output.
+	 */
 	public function shortcode( $args ) {
-		$args = shortcode_atts( array(
-			'shop' => '',
-		), $args, 'shopify-buy-button' );
-
-		return $this->plugin->output->get_iframe( $args );
+		return $this->plugin->output->get_button( $args );
 	}
 }

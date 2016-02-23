@@ -40,7 +40,15 @@ function createButtonModal(callback) {
 		console.log(origin);
 		console.log(event.data);
 
-		callback(event.data);
+		if ('https://widgets.shopifyapps.com' !== event.origin) {
+			return;
+		}
+
+		if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
+			callback(event.data);
+		}
+
+		modal.remove();
 	});
 } /* global sbbAdminModal */
 
@@ -76,9 +84,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 		e.preventDefault();
 
-		(0, _addButtonModal2.default)(function () {
+		(0, _addButtonModal2.default)(function (data) {
+			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '"]';
+
 			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
-			editor.insertContent('[shopify-buy-button]');
+			editor.insertContent(shortcode);
 		});
 	});
 });

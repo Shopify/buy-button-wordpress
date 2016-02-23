@@ -19,6 +19,14 @@ export default function createButtonModal( callback ) {
 		console.log( origin );
 		console.log( event.data );
 
-		callback( event.data );
+		if ( 'https://widgets.shopifyapps.com' !== event.origin ) {
+			return;
+		}
+
+		if ( event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length ) {
+			callback( event.data );
+		}
+
+		modal.remove();
 	} );
 }

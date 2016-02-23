@@ -17,7 +17,8 @@ $( function() {
 		e.preventDefault();
 
 		modal( ( data ) => {
-			let shortcode = `[shopify-buy-button embed_type="${ data.resourceType }" shop="${ data.shop }" product_handle="${ resourceHandles }"]`
+			let shortcode = `[shopify-buy-button embed_type="${ data.resourceType }" shop="${ data.shop }" product_handle="${ data.resourceHandles.join( ', ' ) }"]`;
+
 			editor = tinymce.get( $( this ).data( 'editor-id' ) );
 			editor.insertContent( shortcode );
 		} );
