@@ -13,11 +13,12 @@ export default function createButtonModal( callback ) {
 		modal.remove();
 	} );
 
-	window.addEventListener( 'message', () => {
-		let data = arguments;
+	window.addEventListener( 'message', ( event ) => {
+		let origin = event.origin || event.originalEvent.origin;
 
-		console.log( data );
+		console.log( origin );
+		console.log( event.data );
 
-		callback( data );
+		callback( event.data );
 	} );
 }

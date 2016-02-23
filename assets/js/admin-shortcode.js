@@ -22,8 +22,6 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function createButtonModal(callback) {
-	var _arguments = arguments;
-
 	var modal = undefined,
 	    html = sbbAdminModal.modal.trim();
 
@@ -36,12 +34,13 @@ function createButtonModal(callback) {
 		modal.remove();
 	});
 
-	window.addEventListener('message', function () {
-		var data = _arguments;
+	window.addEventListener('message', function (event) {
+		var origin = event.origin || event.originalEvent.origin;
 
-		console.log(data);
+		console.log(origin);
+		console.log(event.data);
 
-		callback(data);
+		callback(event.data);
 	});
 } /* global sbbAdminModal */
 
