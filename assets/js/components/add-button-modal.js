@@ -1,15 +1,13 @@
 import $ from 'jquery';
-import template from './templates/modal.ejs';
 export default function createButtonModal( callback ) {
 	let modal,
-		html = template( {
-			url: 'https://widgets.shopifyapps.com/embed_admin/embeds/picker'
-		} );
+		html;
 
-	modal = $( html )
-		.appendTo( document.body );
+	modal = $( html ).appendTo( document.body );
 
 	modal.addClass( 'test' );
+
+	modal.on( 'click', )
 
 	window.addEventListener( 'message', () => {
 		let data = arguments;
