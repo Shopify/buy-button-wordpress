@@ -82,6 +82,23 @@ module.exports = function (grunt) {
                 files: { 'assets/js/admin-shortcode.min.js': 'assets/js/admin-shortcode.js' },
                 options: { banner: compactBannerTemplate }
             }
+        },
+        sass: {
+            dist: {
+                options: { sourceMap: true },
+                files: { 'assets/css/shopify-buy-button.css': 'assets/css/sass/styles.scss' }
+            }
+        },
+        cssmin: { dist: { files: { 'assets/css/shopify-buy-button.min.css': 'assets/css/shopify-buy-button.css' } } },
+        usebanner: {
+            taskName: {
+                options: {
+                    position: 'top',
+                    banner: bannerTemplate,
+                    linebreak: true
+                },
+                files: { src: ['assets/css/shopify-buy-button.min.css'] }
+            }
         }
     });
     // Default task.
@@ -90,7 +107,11 @@ module.exports = function (grunt) {
         'browserify',
         'uglify'
     ]);
-    grunt.registerTask('styles', []);
+    grunt.registerTask('styles', [
+        'sass',
+        'cssmin',
+        'usebanner'
+    ]);
     grunt.registerTask('php', [
         'addtextdomain',
         'makepot'

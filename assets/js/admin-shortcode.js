@@ -19,23 +19,22 @@ var _jquery = (typeof window !== "undefined" ? window['jQuery'] : typeof global 
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _modal = require('./templates/modal.ejs');
-
-var _modal2 = _interopRequireDefault(_modal);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function createButtonModal(callback) {
 	var _arguments = arguments;
 
 	var modal = undefined,
-	    html = (0, _modal2.default)({
-		url: 'https://widgets.shopifyapps.com/embed_admin/embeds/picker'
-	});
+	    html = sbbAdminModal.modal.trim();
 
 	modal = (0, _jquery2.default)(html).appendTo(document.body);
 
 	modal.addClass('test');
+
+	modal.on('click', '.sbb-modal-close', function (e) {
+		e.preventDefault();
+		modal.remove();
+	});
 
 	window.addEventListener('message', function () {
 		var data = _arguments;
@@ -44,10 +43,10 @@ function createButtonModal(callback) {
 
 		callback(data);
 	});
-}
+} /* global sbbAdminModal */
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./templates/modal.ejs":3}],2:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -86,21 +85,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./add-button-modal":1}],3:[function(require,module,exports){
-module.exports = (function anonymous(locals, filters, escape, rethrow
-/**/) {
-escape = escape || function (html){
-  return String(html)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/'/g, '&#39;')
-    .replace(/"/g, '&quot;');
-};
-var buf = [];
-with (locals || {}) { (function(){ 
- buf.push('<div tabindex="0" id="sbb-modal" >\n	<div class="media-modal wp-core-ui">\n		<button type="button" class="button-link media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text">Close media panel</span></span></button>\n		<div class="media-modal-content">\n			<iframe src="', escape((5,  url )), '"></iframe>\n		</div>\n	</div>\n	<div class="media-modal-backdrop"></div>\n</div>'); })();
-} 
-return buf.join('');
-})
-},{}]},{},[2]);
+},{"./add-button-modal":1}]},{},[2]);

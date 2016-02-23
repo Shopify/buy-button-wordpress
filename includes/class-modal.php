@@ -39,7 +39,7 @@ class SBB_Modal {
 		?>
 		<div class="sbb-modal-wrap">
 			<div class="sbb-modal">
-				<div class="sbb-modal-close"><?php esc_attr_e( 'Close', 'shopify-buy-button' ); ?></div>
+				<div class="sbb-modal-close"><div class="screen-reader-text"><?php esc_attr_e( 'Close', 'shopify-buy-button' ); ?></div></div>
 				<iframe src="<?php echo esc_url( $iframe_url ); ?>" frameborder="0" class="sbb-modal-iframe"></iframe>
 			</div>
 			<div class="sbb-modal-background"></div>
