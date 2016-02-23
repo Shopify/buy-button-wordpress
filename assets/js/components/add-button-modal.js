@@ -1,32 +1,45 @@
 /* global sbbAdminModal */
 import $ from 'jquery';
-export default function createButtonModal( callback ) {
-	let modal,
-		html = sbbAdminModal.modal.trim();
+let open = false,
+	modal,
+	html = sbbAdminModal.modal.trim(),
+	closeModal = function() {
+		if ( modal && modal.remove ) {
+			modal.remove();
+		}
+		open = false;
+	};
 
+export default function createButtonModal( callback ) {
+	// Only open one at a time.
+	if ( open ) {
+		return;
+	}
+	open = true;
+
+	// Add modal to document.
 	modal = $( html ).appendTo( document.body );
 
-	modal.addClass( 'test' );
-
+	// Handle close button event.
 	modal.on( 'click', '.sbb-modal-close', function( e ) {
 		e.preventDefault();
-		modal.remove();
+		closeModal();
 	} );
 
+	// Handle post message from iframe.
 	window.addEventListener( 'message', ( event ) => {
 		let origin = event.origin || event.originalEvent.origin;
 
-		console.log( origin );
-		console.log( event.data );
-
-		if ( 'https://widgets.shopifyapps.com' !== event.origin ) {
+		// Return if origin isn't shopify.
+		if ( 'https://widgets.shopifyapps.com' !== origin ) {
 			return;
 		}
 
+		// If data returned, trigger callback.
 		if ( event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length ) {
 			callback( event.data );
 		}
 
-		modal.remove();
+		closeModal();
 	} );
 }

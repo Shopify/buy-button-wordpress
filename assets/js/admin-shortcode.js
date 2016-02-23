@@ -21,36 +21,50 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function createButtonModal(callback) {
-	var modal = undefined,
-	    html = sbbAdminModal.modal.trim();
+var open = false,
+    modal = undefined,
+    html = sbbAdminModal.modal.trim(),
+    closeModal = function closeModal() {
+	if (modal && modal.remove) {
+		modal.remove();
+	}
+	open = false;
+}; /* global sbbAdminModal */
 
+
+function createButtonModal(callback) {
+	// Only open one at a time.
+	if (open) {
+		return;
+	}
+	open = true;
+
+	// Add modal to document.
 	modal = (0, _jquery2.default)(html).appendTo(document.body);
 
-	modal.addClass('test');
-
+	// Handle close button event.
 	modal.on('click', '.sbb-modal-close', function (e) {
 		e.preventDefault();
-		modal.remove();
+		closeModal();
 	});
 
+	// Handle post message from iframe.
 	window.addEventListener('message', function (event) {
 		var origin = event.origin || event.originalEvent.origin;
 
-		console.log(origin);
-		console.log(event.data);
-
-		if ('https://widgets.shopifyapps.com' !== event.origin) {
+		// Return if origin isn't shopify.
+		if ('https://widgets.shopifyapps.com' !== origin) {
 			return;
 		}
 
+		// If data returned, trigger callback.
 		if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
 			callback(event.data);
 		}
 
-		modal.remove();
+		closeModal();
 	});
-} /* global sbbAdminModal */
+}
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],2:[function(require,module,exports){
