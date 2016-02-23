@@ -35,6 +35,13 @@ class SBB_Output {
 	public function hooks() {
 	}
 
+	/**
+	 * Get markup for frontend buy button iframe.
+	 *
+	 * @since 0.1.0
+	 * @param  array $args Arguments for buy button
+	 * @return string      HTML markup
+	 */
 	public function get_iframe( $args ) {
 		$args = wp_parse_args( $args, array(
 			'setting' => true,
