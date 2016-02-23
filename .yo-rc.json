@@ -1,0 +1,17 @@
+{
+  "generator-plugin-wp": {
+    "name": "Shopify Buy Button",
+    "homepage": "https://www.shopify.com/buy-button",
+    "description": "Add ecommerce to WordPress in minutes!",
+    "version": "0.1.0",
+    "author": "WebDevStudios",
+    "authoremail": "contact@webdevstudios.com",
+    "authorurl": "http://webdevstudios.com",
+    "license": "GPLv2",
+    "slug": "shopify-buy-button",
+    "classname": "Shopify_Buy_Button",
+    "classprefix": "SBB_",
+    "prefix": "shopify_buy_button",
+    "year": 2016
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "shopify-buy-button",
+  "description": "Add ecommerce to WordPress in minutes!",
+  "license": "GPLv2",
+  "authors": [
+    "WebDevStudios"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
