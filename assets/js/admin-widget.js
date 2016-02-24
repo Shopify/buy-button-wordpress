@@ -108,9 +108,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
+			var fakeEnterPress = new _jquery2.default.Event('keydown');
+
+			fakeEnterPress.which = 13;
+
 			$c.inputType.val(data.resourceType);
 			$c.inputShop.val(data.shop);
 			$c.inputHandle.val(data.resourceHandles.join(', '));
+
+			$c.inputHandle.trigger(fakeEnterPress);
 
 			$c.iframe.attr('src', document.location.protocol + '//' + document.location.host + '?product_handle=' + encodeURIComponent(data.resourceHandles.join(', ')) + '&shop=' + encodeURIComponent(data.shop) + '&embed_type=' + encodeURIComponent(data.resourceType));
 

@@ -13,7 +13,7 @@
   bottom: 20px;
   max-width: 600px;
   margin: 0 auto;
-  z-index: 102000;
+  z-index: 702000;
   background: #fff;
   border-radius: 5px;
   overflow: hidden; }
@@ -45,7 +45,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 101000;
+  z-index: 701000;
   background: rgba(0, 0, 0, 0.5); }
 
 .sbb-widget-preview {

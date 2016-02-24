@@ -21,9 +21,15 @@ $( function() {
 		e.preventDefault();
 
 		modal( ( data ) => {
+			let fakeEnterPress = new $.Event( 'keydown' );
+
+			fakeEnterPress.which = 13;
+
 			$c.inputType.val( data.resourceType );
 			$c.inputShop.val( data.shop );
 			$c.inputHandle.val( data.resourceHandles.join( ', ' ) );
+
+			$c.inputHandle.trigger( fakeEnterPress );
 
 			$c.iframe.attr( 'src', `${ document.location.protocol }//${ document.location.host }?product_handle=${ encodeURIComponent( data.resourceHandles.join( ', ' ) ) }&shop=${ encodeURIComponent( data.shop ) }&embed_type=${ encodeURIComponent( data.resourceType ) }` );
 
