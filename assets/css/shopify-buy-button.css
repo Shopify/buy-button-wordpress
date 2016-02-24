@@ -11,8 +11,12 @@
   left: 20px;
   right: 20px;
   bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto;
   z-index: 102000;
-  background: #fff; }
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden; }
 
 .sbb-modal-iframe {
   width: 100%;

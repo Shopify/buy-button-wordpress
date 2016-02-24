@@ -101,7 +101,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		    $c = {
 			inputType: $widgetContent.find('.sbb-hidden-embed_type'),
 			inputShop: $widgetContent.find('.sbb-hidden-shop'),
-			inputHandle: $widgetContent.find('.sbb-hidden-product_handle')
+			inputHandle: $widgetContent.find('.sbb-hidden-product_handle'),
+			iframe: $widgetContent.find('.sbb-widget-preview')
 		};
 
 		e.preventDefault();
@@ -110,6 +111,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			$c.inputType.val(data.resourceType);
 			$c.inputShop.val(data.shop);
 			$c.inputHandle.val(data.resourceHandles.join(', '));
+
+			$c.iframe.attr('src', document.location.protocol + '//' + document.location.host + '?product_handle=' + encodeURIComponent(data.resourceHandles.join(', ')) + '&shop=' + encodeURIComponent(data.shop) + '&embed_type=' + encodeURIComponent(data.resourceType));
 
 			console.log(data);
 		});

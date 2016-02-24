@@ -55,15 +55,15 @@ class SBB_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->widget_name          = esc_html__( 'Shopify Buy Button Widget', 'shopify-buy-button' );
-		$this->default_widget_title = esc_html__( 'Shopify Buy Button Widget', 'shopify-buy-button' );
+		$this->widget_name          = esc_html__( 'Shopify Buy Button', 'shopify-buy-button' );
+		$this->default_widget_title = esc_html__( 'Shopify Buy Button', 'shopify-buy-button' );
 
 		parent::__construct(
 			$this->widget_slug,
 			$this->widget_name,
 			array(
 				'classname'   => $this->widget_slug,
-				'description' => esc_html__( 'A widget boilerplate description.', 'shopify-buy-button' ),
+				'description' => esc_html__( 'Embed a Shopify product and buy button.', 'shopify-buy-button' ),
 			)
 		);
 
@@ -184,6 +184,22 @@ class SBB_Widget extends WP_Widget {
 		return $instance;
 	}
 
+	/**
+	 * Enqueue admin widget scripts and styles.
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	function enqueue() {
+		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		wp_enqueue_script( 'sbb-admin-shortcode', shopify_buy_button()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
+		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
+			'modal' => shopify_buy_button()->modal->get_modal(),
+		) );
+
+		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
+	}
+
 
 	/**
 	 * Back-end widget form with defaults.
@@ -195,38 +211,49 @@ class SBB_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance,
 			array(
-				'title' => $this->default_widget_title,
-				'embed_type' => '',
-				'shop' => '',
+				'title'          => $this->default_widget_title,
+				'embed_type'     => '',
+				'shop'           => '',
 				'product_handle' => '',
 			)
 		);
 
-		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_script( 'sbb-admin-shortcode', shopify_buy_button()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
-		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
-			'modal' => shopify_buy_button()->modal->get_modal(),
-		) );
+		$this->enqueue();
 
-		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
-
+		// Title field
 		?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', '<%= slug %>' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" placeholder="optional" /></p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', '<%= slug %>' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" placeholder="optional" />
+		</p>
 		<?php
+
+		// Do product preview
 		if ( $instance[ 'product_handle' ] ) {
-			?><p><?php echo esc_html( sprintf( __( 'Product Handle: %1$s', 'shopify-buy-button' ), $instance[ 'product_handle' ] ) ); ?></p><?php
+			?>
+			<iframe class="sbb-widget-preview" src="<?php echo esc_url( add_query_arg( array(
+				'embed_type'     => $instance[ 'embed_type' ],
+				'shop'           => $instance[ 'shop' ],
+				'product_handle' => $instance[ 'product_handle' ],
+			), site_url() ) ); ?>"></iframe>
+			<?php
 		} else {
 			?><p><?php esc_html_e( 'No Product Set', 'shopify-buy-button' ); ?></p><?php
 		}
 
+		// Do button
+		$button_text = __( 'Add Product', 'shopify-buy-button' );
+		if ( $instance[ 'product_handle' ] ) {
+			$button_text = __( 'Replace Product', 'shopify-buy-button' );
+		}
 		?>
-		<p><button class="button" id="sbb-add-widget"><?php esc_html_e( 'Add Product', 'shopify-buy-button' ); ?></button></p>
-
-		<input class="sbb-hidden-embed_type" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'embed_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'embed_type' ) ); ?>" value="<?php echo esc_attr( $instance[ 'embed_type' ]) ?>">
-		<input class="sbb-hidden-shop" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'shop' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'shop' ) ); ?>" value="<?php echo esc_attr( $instance[ 'shop' ]) ?>">
-		<input class="sbb-hidden-product_handle" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'product_handle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'product_handle' ) ); ?>" value="<?php echo esc_attr( $instance[ 'product_handle' ]) ?>">
+		<p><button class="button" id="sbb-add-widget"><?php echo esc_html( $button_text ); ?></button></p>
 		<?php
+
+		// Do hidden fields for product
+		foreach( array( 'embed_type', 'shop', 'product_handle' ) as $hidden_field ) {
+			?><input class="sbb-hidden-<?php echo $hidden_field ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
+		}
 	}
 }
 

@@ -33,6 +33,7 @@ class SBB_Output {
 	 * @return void
 	 */
 	public function hooks() {
+		add_action( 'init', array( $this, 'button_endpoint' ), 30 );
 	}
 
 	/**
@@ -92,6 +93,10 @@ class SBB_Output {
 			return;
 		}
 
+		if ( 'collection' == $args['embed_type'] ) {
+			$args['collection_handle'] = $args['product_handle'];
+		}
+
 		// Override for whether or not to display the product price. Can be true or false.	The current value of data-has_image
 		$args['show_product_price'] = ! empty( $args['show_product_price'] ) ? $args['show_product_price'] : $args['has_image'];
 		// Override for whether or not to display the product title. Can be true or false.	The current value of data-has_image
@@ -118,5 +123,21 @@ class SBB_Output {
 		}
 
 		return ob_get_clean();
+	}
+
+	public function button_endpoint() {
+		if ( ! current_user_can( 'edit_posts' )
+			|| empty( $_GET['product_handle'] )
+			|| empty( $_GET['embed_type'] ) ) {
+			return;
+		}
+
+		echo $this->get_button( array(
+			'product_handle' => sanitize_text_field( $_GET['product_handle'] ),
+			'shop' => isset( $_GET['shop'] ) ? sanitize_text_field( $_GET['shop'] ) : get_option( 'sbb-connected-site', false ),
+			'embed_type' => sanitize_text_field( $_GET['embed_type'] ),
+		) );
+
+		die();
 	}
 }
