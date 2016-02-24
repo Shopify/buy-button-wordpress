@@ -48,4 +48,10 @@
   z-index: 101000;
   background: rgba(0, 0, 0, 0.5); }
 
+.sbb-widget-preview {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 290px; }
+
 /*# sourceMappingURL=shopify-buy-button.css.map */

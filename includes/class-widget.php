@@ -231,11 +231,12 @@ class SBB_Widget extends WP_Widget {
 		// Do product preview
 		if ( $instance[ 'product_handle' ] ) {
 			?>
+			<p><?php esc_html_e( 'Preview: ', 'shopify_buy_button' ); ?>
 			<iframe class="sbb-widget-preview" src="<?php echo esc_url( add_query_arg( array(
 				'embed_type'     => $instance[ 'embed_type' ],
 				'shop'           => $instance[ 'shop' ],
 				'product_handle' => $instance[ 'product_handle' ],
-			), site_url() ) ); ?>"></iframe>
+			), site_url() ) ); ?>"></iframe></p>
 			<?php
 		} else {
 			?><p><?php esc_html_e( 'No Product Set', 'shopify-buy-button' ); ?></p><?php
