@@ -1,3 +1,10 @@
+/**
+ * Shopify Buy Button - Add Button Modal
+ * https://www.shopify.com/buy-button
+ *
+ * Licensed under the GPLv2+ license.
+ */
+
 /* global sbbAdminModal */
 import $ from 'jquery';
 let open = false,

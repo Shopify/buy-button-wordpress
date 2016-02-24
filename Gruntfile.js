@@ -75,11 +75,17 @@ module.exports = function (grunt) {
                     'browserify-shim'
                 ]
             },
-            dist: { files: { 'assets/js/admin-shortcode.js': 'assets/js/components/admin-shortcode.js' } }
+            dist: { files: {
+                'assets/js/admin-shortcode.js': 'assets/js/components/admin-shortcode.js',
+                'assets/js/admin-widget.js': 'assets/js/components/admin-widget.js'
+            } }
         },
         uglify: {
             dist: {
-                files: { 'assets/js/admin-shortcode.min.js': 'assets/js/admin-shortcode.js' },
+                files: {
+                    'assets/js/admin-shortcode.min.js': 'assets/js/admin-shortcode.js',
+                    'assets/js/admin-widget.min.js': 'assets/js/admin-widget.js'
+                },
                 options: { banner: compactBannerTemplate }
             }
         },

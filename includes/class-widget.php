@@ -98,12 +98,14 @@ class SBB_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		echo self::get_widget( array(
-			'before_widget' => $args['before_widget'],
-			'after_widget'  => $args['after_widget'],
-			'before_title'  => $args['before_title'],
-			'after_title'   => $args['after_title'],
-			'title'         => $instance['title'],
-			'text'          => $instance['text'],
+			'before_widget'  => $args['before_widget'],
+			'after_widget'   => $args['after_widget'],
+			'before_title'   => $args['before_title'],
+			'after_title'    => $args['after_title'],
+			'title'          => $instance['title'],
+			'embed_type'     => $instance['embed_type'],
+			'shop'           => $instance['shop'],
+			'product_handle' => $instance['product_handle'],
 		) );
 	}
 
@@ -121,12 +123,15 @@ class SBB_Widget extends WP_Widget {
 		// Set up default values for attributes.
 		$atts = shortcode_atts(
 			array(
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '',
-				'after_title'   => '',
-				'title'         => '',
-				'text'          => '',
+				'before_widget'  => '',
+				'after_widget'   => '',
+				'before_title'   => '',
+				'after_title'    => '',
+				'title'          => '',
+				'text'           => '',
+				'embed_type'     => '',
+				'shop'           => '',
+				'product_handle' => '',
 			),
 			(array) $atts,
 			self::$shortcode
@@ -139,6 +144,12 @@ class SBB_Widget extends WP_Widget {
 		$widget .= ( $atts['title'] ) ? $atts['before_title'] . esc_html( $atts['title'] ) . $atts['after_title'] : '';
 
 		$widget .= wpautop( wp_kses_post( $atts['text'] ) );
+
+		$widget .= shopify_buy_button()->output->get_button( array(
+			'embed_type'     => $atts[ 'embed_type' ],
+			'shop'           => $atts[ 'shop' ],
+			'product_handle' => $atts[ 'product_handle' ],
+		) );
 
 		// After widget hook.
 		$widget .= $atts['after_widget'];
@@ -160,15 +171,12 @@ class SBB_Widget extends WP_Widget {
 		// Previously saved values.
 		$instance = $old_instance;
 
+		$instance['embed_type'] = sanitize_text_field( $new_instance['embed_type'] );
+		$instance['shop'] = sanitize_text_field( $new_instance['shop'] );
+		$instance['product_handle'] = sanitize_text_field( $new_instance['product_handle'] );
+
 		// Sanitize title before saving to database.
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
-
-		// Sanitize text before saving to database.
-		if ( current_user_can( 'unfiltered_html' ) ) {
-			$instance['text'] = force_balance_tags( $new_instance['text'] );
-		} else {
-			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes( $new_instance['text'] ) ) );
-		}
 
 		// Flush cache.
 		$this->flush_widget_cache();
@@ -188,17 +196,36 @@ class SBB_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance,
 			array(
 				'title' => $this->default_widget_title,
-				'text'  => '',
+				'embed_type' => '',
+				'shop' => '',
+				'product_handle' => '',
 			)
 		);
 
-		?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'shopify-buy-button' ); ?></label>
-		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" placeholder="optional" /></p>
+		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		wp_enqueue_script( 'sbb-admin-shortcode', shopify_buy_button()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
+		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
+			'modal' => shopify_buy_button()->modal->get_modal(),
+		) );
 
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php esc_html_e( 'Text:', 'shopify-buy-button' ); ?></label>
-		<textarea class="widefat" rows="16" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo esc_textarea( $instance['text'] ); ?></textarea></p>
-		<p class="description"><?php esc_html_e( 'Basic HTML tags are allowed.', 'shopify-buy-button' ); ?></p>
+		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
+
+		?>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', '<%= slug %>' ); ?></label>
+		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_html( $instance['title'] ); ?>" placeholder="optional" /></p>
+		<?php
+		if ( $instance[ 'product_handle' ] ) {
+			?><p><?php echo esc_html( sprintf( __( 'Product Handle: %1$s', 'shopify-buy-button' ), $instance[ 'product_handle' ] ) ); ?></p><?php
+		} else {
+			?><p><?php esc_html_e( 'No Product Set', 'shopify-buy-button' ); ?></p><?php
+		}
+
+		?>
+		<p><button class="button" id="sbb-add-widget"><?php esc_html_e( 'Add Product', 'shopify-buy-button' ); ?></button></p>
+
+		<input class="sbb-hidden-embed_type" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'embed_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'embed_type' ) ); ?>" value="<?php echo esc_attr( $instance[ 'embed_type' ]) ?>">
+		<input class="sbb-hidden-shop" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'shop' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'shop' ) ); ?>" value="<?php echo esc_attr( $instance[ 'shop' ]) ?>">
+		<input class="sbb-hidden-product_handle" type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'product_handle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'product_handle' ) ); ?>" value="<?php echo esc_attr( $instance[ 'product_handle' ]) ?>">
 		<?php
 	}
 }

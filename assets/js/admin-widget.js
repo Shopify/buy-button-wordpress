@@ -89,27 +89,29 @@ var _addButtonModal2 = _interopRequireDefault(_addButtonModal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Shopify Buy Button - Admin Shortcode
+ * Shopify Buy Button - Admin Widget
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
  */
 
-/* global tinymce */
-
 (0, _jquery2.default)(function () {
-	(0, _jquery2.default)('#sbb-add-shortcode').click(function (e) {
-		var _this = this;
-
-		var editor = undefined;
+	(0, _jquery2.default)(document.body).on('click', '#sbb-add-widget', function (e) {
+		var $widgetContent = (0, _jquery2.default)(this).closest('.widget-content'),
+		    $c = {
+			inputType: $widgetContent.find('.sbb-hidden-embed_type'),
+			inputShop: $widgetContent.find('.sbb-hidden-shop'),
+			inputHandle: $widgetContent.find('.sbb-hidden-product_handle')
+		};
 
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
-			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '"]';
+			$c.inputType.val(data.resourceType);
+			$c.inputShop.val(data.shop);
+			$c.inputHandle.val(data.resourceHandles.join(', '));
 
-			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
-			editor.insertContent(shortcode);
+			console.log(data);
 		});
 	});
 });
