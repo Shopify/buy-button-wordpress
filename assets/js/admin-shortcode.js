@@ -106,8 +106,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
+			// Generate shortcode
 			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '"]';
 
+			// Insert shortcode.
 			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
 			editor.insertContent(shortcode);
 		});

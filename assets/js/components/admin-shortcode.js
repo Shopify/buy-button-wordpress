@@ -17,8 +17,10 @@ $( function() {
 		e.preventDefault();
 
 		modal( ( data ) => {
+			// Generate shortcode
 			let shortcode = `[shopify-buy-button embed_type="${ data.resourceType }" shop="${ data.shop }" product_handle="${ data.resourceHandles.join( ', ' ) }"]`;
 
+			// Insert shortcode.
 			editor = tinymce.get( $( this ).data( 'editor-id' ) );
 			editor.insertContent( shortcode );
 		} );

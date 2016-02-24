@@ -97,6 +97,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)(function () {
 	(0, _jquery2.default)(document.body).on('click', '#sbb-add-widget', function (e) {
+		// Grab inputs and iframe of current widget.
 		var $widgetContent = (0, _jquery2.default)(this).closest('.widget-content'),
 		    $c = {
 			inputType: $widgetContent.find('.sbb-hidden-embed_type'),
@@ -108,19 +109,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
-			var fakeEnterPress = new _jquery2.default.Event('keydown');
+			var fakeEnterPress = undefined;
 
-			fakeEnterPress.which = 13;
-
+			// Fill in hidden fields with postMessage results
 			$c.inputType.val(data.resourceType);
 			$c.inputShop.val(data.shop);
 			$c.inputHandle.val(data.resourceHandles.join(', '));
 
+			// Fake enter press on one of the hidden fields to trigger
+			// customizer refresh!
+			fakeEnterPress = new _jquery2.default.Event('keydown');
+			fakeEnterPress.which = 13;
 			$c.inputHandle.trigger(fakeEnterPress);
 
+			// Update preview iframe with postMessage results
 			$c.iframe.attr('src', document.location.protocol + '//' + document.location.host + '?product_handle=' + encodeURIComponent(data.resourceHandles.join(', ')) + '&shop=' + encodeURIComponent(data.shop) + '&embed_type=' + encodeURIComponent(data.resourceType));
-
-			console.log(data);
 		});
 	});
 });
