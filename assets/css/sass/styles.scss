@@ -74,12 +74,71 @@ button.sbb-add-shortcode.button {
 	height: 290px;
 }
 
-.sbb-appearance-preview {
-	height: 350px;
-	width: 300px;
-}
-
 .sbb-settings-iframe {
 	width: 100%;
 	height: 1200px;
+}
+
+.sbb-appearance {
+	overflow: hidden;
+	border-radius: 5px;
+	position: relative;
+
+	.cmb-th {
+		padding: 0;
+	}
+
+	.cmb-td {
+		padding: 0 0 20px;
+	}
+
+	.cmb2-id-background .cmb-td {
+		padding: 29px 0 0;
+	}
+
+	.cmb2-wrap .cmb-row {
+		width: 50%;
+		float: left;
+	}
+
+	.cmb2-wrap .cmb-row.cmb-type-text {
+		float: none;
+		width: 100%;
+	}
+
+	.cmb2-id-background-color {
+		clear: both;
+	}
+
+	.button-primary {
+		clear: both;
+		float: left;
+	}
+}
+
+.sbb-appearance-left, .sbb-appearance-right {
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.sbb-appearance-left {
+	width: 40%;
+	float: left;
+	background: #fff;
+	min-height: 500px;
+}
+
+.sbb-appearance-right {
+	width: 60%;
+	height: 100%;
+	background: #F4F5F6;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.sbb-appearance-preview {
+	height: 400px;
+	width: 250px;
 }

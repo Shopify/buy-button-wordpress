@@ -112,12 +112,20 @@ class SBB_Appearance {
 		?>
 		<div class="wrap cmb2-options-page <?php echo esc_attr( $this->key ); ?>">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
-			<?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
-			<iframe class="sbb-appearance-preview" src="<?php echo esc_url( add_query_arg( array(
-				'embed_type'     => 'product',
-				'shop'           => 'embeds.myshopify.com',
-				'product_handle' => 'yello-w',
-			), site_url() ) ); ?>"></iframe>
+			<div class="sbb-appearance">
+				<div class="sbb-appearance-left">
+					<?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
+				</div>
+				<div class="sbb-appearance-right">
+					<iframe class="sbb-appearance-preview" src="<?php
+					echo esc_url( add_query_arg( array(
+						'embed_type'     => 'product',
+						'shop'           => 'embeds.myshopify.com',
+						'product_handle' => 'yello-w',
+					), site_url() ) );
+					?>"></iframe>
+				</div>
+			</div>
 		</div>
 		<?php
 	}
@@ -166,22 +174,22 @@ class SBB_Appearance {
 
 		$cmb->add_field( array(
 			'name'    => __( 'Background', 'shopify-buy-button' ),
-			'id'      => 'background',
-			'type'    => 'checkbox',
-			'default' => false,
-		) );
-
-		$cmb->add_field( array(
-			'name'    => __( 'Background Color', 'shopify-buy-button' ),
 			'id'      => 'background_color',
 			'type'    => 'colorpicker',
 			'default' => 'ffffff',
 		) );
 
 		$cmb->add_field( array(
+			'desc'    => __( 'Background', 'shopify-buy-button' ),
+			'id'      => 'background',
+			'type'    => 'checkbox',
+			'default' => false,
+		) );
+
+		$cmb->add_field( array(
 			'name'    => __( 'Button Text', 'shopify-buy-button' ),
 			'id'      => 'buy_button_text',
-			'type'    => 'text_small',
+			'type'    => 'text',
 			'default' => __( 'Buy now', 'shopify-buy-button' ),
 		) );
 
