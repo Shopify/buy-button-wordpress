@@ -113,6 +113,11 @@ class SBB_Appearance {
 		<div class="wrap cmb2-options-page <?php echo esc_attr( $this->key ); ?>">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 			<?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
+			<iframe class="sbb-appearance-preview" src="<?php echo esc_url( add_query_arg( array(
+				'embed_type'     => 'product',
+				'shop'           => 'embeds.myshopify.com',
+				'product_handle' => 'yello-w',
+			), site_url() ) ); ?>"></iframe>
 		</div>
 		<?php
 	}

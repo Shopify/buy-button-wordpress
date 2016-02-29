@@ -58,6 +58,10 @@ button.sbb-add-shortcode.button {
   border-radius: 5px;
   height: 290px; }
 
+.sbb-appearance-preview {
+  height: 350px;
+  width: 300px; }
+
 .sbb-settings-iframe {
   width: 100%;
   height: 1200px; }

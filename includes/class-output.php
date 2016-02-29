@@ -33,7 +33,7 @@ class SBB_Output {
 	 * @return void
 	 */
 	public function hooks() {
-		add_action( 'init', array( $this, 'button_endpoint' ), 30 );
+		add_action( 'cmb2_init', array( $this, 'button_endpoint' ), 30 );
 	}
 
 	/**
@@ -74,7 +74,7 @@ class SBB_Output {
 			// The hex code of the color of the buy button's text, without the #. Can be three hex characters or six.
 			'button_text_color'                   => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
 			// The background color of the area surrounding the Buy button. It can be a hex code (per rules above), or transparent. If transparent, no padding is applied to the embed's content.
-			'background_color'                    => 'transparent',
+			'background_color'                    => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
 			// The text that appears when a product is out of stock.
 			'buy_button_out_of_stock_text'        => __( 'Out of Stock', 'shopify' ),
 			// The text that appears when a product is unavailable.
