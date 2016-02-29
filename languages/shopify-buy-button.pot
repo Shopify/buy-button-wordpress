@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Shopify Buy Button 0.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/shopify-buy-button\n"
-"POT-Creation-Date: 2016-02-29 15:57:55+00:00\n"
+"POT-Creation-Date: 2016-02-29 17:35:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,12 +14,36 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
 
-#: includes/class-modal.php:42
-msgid "Close"
+#: includes/class-appearance.php:60
+msgid "Appearance"
 msgstr ""
 
-#: includes/class-output.php:71
+#: includes/class-appearance.php:142
+msgid "Button"
+msgstr ""
+
+#: includes/class-appearance.php:149 includes/class-appearance.php:177
+msgid "Button Text"
+msgstr ""
+
+#: includes/class-appearance.php:156
+msgid "Title Color"
+msgstr ""
+
+#: includes/class-appearance.php:163
+msgid "Background"
+msgstr ""
+
+#: includes/class-appearance.php:170
+msgid "Background Color"
+msgstr ""
+
+#: includes/class-appearance.php:180
 msgid "Buy now"
+msgstr ""
+
+#: includes/class-modal.php:42
+msgid "Close"
 msgstr ""
 
 #: includes/class-output.php:79
@@ -35,7 +59,7 @@ msgid "Buy %s"
 msgstr ""
 
 #: includes/class-settings.php:58
-msgid "Shopify Button"
+msgid "Shopify"
 msgstr ""
 
 #: includes/class-shortcode.php:55 includes/class-widget.php:244
@@ -66,7 +90,7 @@ msgstr ""
 msgid "Replace Product"
 msgstr ""
 
-#: shopify-buy-button.php:280
+#: shopify-buy-button.php:288
 msgid ""
 "Shopify Buy Button is missing requirements and has been <a "
 "href=\"%s\">deactivated</a>. Please make sure all requirements are "

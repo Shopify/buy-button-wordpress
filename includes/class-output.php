@@ -68,11 +68,11 @@ class SBB_Output {
 			// Where the buy button links to. Can be 'checkout', 'product', or 'cart'. If you want the buy button to connect with an embedded cart on the same page, data-redirect_to must be cart. (product_modal is a recent addition that has not yet been added to the docs)
 			'redirect_to'                         => 'checkout',
 			// The text displayed on the buy button.
-			'buy_button_text'                     => __( 'Buy now', 'shopify' ),
+			'buy_button_text'                     => cmb2_get_option( 'shopify_buy_button_appearance', 'buy_button_text' ),
 			// The hex code of the color of the buy button, without the #. Can be three hex characters or six.
-			'button_background_color'             => '7db461',
+			'button_background_color'             => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
 			// The hex code of the color of the buy button's text, without the #. Can be three hex characters or six.
-			'button_text_color'                   => 'ffffff',
+			'button_text_color'                   => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
 			// The background color of the area surrounding the Buy button. It can be a hex code (per rules above), or transparent. If transparent, no padding is applied to the embed's content.
 			'background_color'                    => 'transparent',
 			// The text that appears when a product is out of stock.
@@ -80,7 +80,7 @@ class SBB_Output {
 			// The text that appears when a product is unavailable.
 			'buy_button_product_unavailable_text' => __( 'Unavailable', 'shopify' ),
 			// The hex code of the color of the product title's text, without the #. Can be three hex characters or six.
-			'product_title_color'                 => '000000',
+			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'product_title_color' ), 1 ),
 			// Additional non-data-attribute params
 			'no_script_url'                       => '', // https://<shop>.myshopify.com/cart/<cart-number>
 			'no_script_text'                      => sprintf( __( 'Buy %s', 'shopify' ), '[product_name]' ), // Buy <product_name>

@@ -55,7 +55,7 @@ class SBB_Settings {
 		$this->plugin = $plugin;
 		$this->hooks();
 
-		$this->title = __( 'Shopify Button', 'shopify-buy-button' );
+		$this->title = __( 'Shopify', 'shopify-buy-button' );
 	}
 
 	/**
