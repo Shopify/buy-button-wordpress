@@ -130,6 +130,13 @@ class Shopify_Buy_Button {
 	protected $modal;
 
 	/**
+	 * Instance of SBB_Settings
+	 *
+	 * @var SBB_Settings
+	 */
+	protected $settings;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since  0.1.0
@@ -171,6 +178,7 @@ class Shopify_Buy_Button {
 		$this->shortcode = new SBB_Shortcode( $this );
 		require( self::dir( 'includes/class-widget.php' ) );
 		$this->modal = new SBB_Modal( $this );
+		$this->settings = new SBB_Settings( $this );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
@@ -291,6 +299,7 @@ class Shopify_Buy_Button {
 			case 'output':
 			case 'shortcode':
 			case 'modal':
+			case 'settings':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid '. __CLASS__ .' property: ' . $field );
