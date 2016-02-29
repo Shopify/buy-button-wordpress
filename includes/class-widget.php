@@ -196,8 +196,6 @@ class SBB_Widget extends WP_Widget {
 		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
 			'modal' => shopify_buy_button()->modal->get_modal(),
 		) );
-
-		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
 	}
 
 

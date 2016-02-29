@@ -66,6 +66,7 @@ class SBB_Settings {
 	 */
 	public function hooks() {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'admin_menu', array( $this, 'add_options_page' ) );
 	}
 
@@ -80,6 +81,17 @@ class SBB_Settings {
 	}
 
 	/**
+	 * Enqueue admin styles
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	public function admin_enqueue_scripts() {
+		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
+	}
+
+	/**
 	 * Add menu options page
 	 *
 	 * @since  0.1.0
@@ -91,7 +103,8 @@ class SBB_Settings {
 			$this->title,
 			'manage_options',
 			$this->key,
-			array( $this, 'admin_page_display' )
+			array( $this, 'admin_page_display' ),
+			$this->plugin->url( 'assets/images/shopify_icon_small.png' )
 		);
 	}
 
@@ -102,8 +115,6 @@ class SBB_Settings {
 	 * @return void
 	 */
 	public function admin_page_display() {
-		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
 		?>
 		<iframe class="sbb-settings-iframe" src="https://widgets.shopifyapps.com/embed_admin/settings"></iframe>
 		<?php
