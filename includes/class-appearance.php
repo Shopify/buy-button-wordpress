@@ -113,10 +113,8 @@ class SBB_Appearance {
 		<div class="wrap cmb2-options-page <?php echo esc_attr( $this->key ); ?>">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 			<div class="sbb-appearance">
-				<div class="sbb-appearance-left">
-					<?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
-				</div>
 				<div class="sbb-appearance-right">
+					<h4><?php _e( 'Preview', 'shopify-buy-button' ); ?></h4>
 					<iframe class="sbb-appearance-preview" src="<?php
 					echo esc_url( add_query_arg( array(
 						'embed_type'     => 'product',
@@ -124,6 +122,9 @@ class SBB_Appearance {
 						'product_handle' => 'yello-w',
 					), site_url() ) );
 					?>"></iframe>
+				</div>
+				<div class="sbb-appearance-left">
+					<?php cmb2_metabox_form( $this->metabox_id, $this->key ); ?>
 				</div>
 			</div>
 		</div>
