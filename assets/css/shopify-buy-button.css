@@ -71,20 +71,33 @@ button.sbb-add-shortcode.button {
   .sbb-appearance .cmb-th {
     padding: 0; }
   .sbb-appearance .cmb-td {
-    padding: 0 0 30px; }
+    padding: 0 0 30px;
+    position: relative;
+    width: 100%; }
   .sbb-appearance .cmb2-id-background .cmb-td {
     padding: 29px 0 0; }
   .sbb-appearance .cmb2-wrap .cmb-row {
     width: 50%;
-    float: left; }
+    float: left;
+    height: 82px; }
   .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-text {
     float: none;
+    clear: both;
     width: 100%; }
   .sbb-appearance .cmb2-id-background-color {
     clear: both; }
   .sbb-appearance .button-primary {
     clear: both;
     float: left; }
+  .sbb-appearance .wp-picker-active {
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    padding: 10px;
+    top: -11px;
+    left: -11px;
+    border: 1px solid #ddd;
+    border-radius: 2px; }
 
 .sbb-appearance-left, .sbb-appearance-right {
   padding: 30px;

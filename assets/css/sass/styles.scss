@@ -94,6 +94,8 @@ button.sbb-add-shortcode.button {
 
 	.cmb-td {
 		padding: 0 0 30px;
+		position: relative;
+		width: 100%;
 	}
 
 	.cmb2-id-background .cmb-td {
@@ -103,10 +105,12 @@ button.sbb-add-shortcode.button {
 	.cmb2-wrap .cmb-row {
 		width: 50%;
 		float: left;
+		height: 82px;
 	}
 
 	.cmb2-wrap .cmb-row.cmb-type-text {
 		float: none;
+		clear: both;
 		width: 100%;
 	}
 
@@ -117,6 +121,20 @@ button.sbb-add-shortcode.button {
 	.button-primary {
 		clear: both;
 		float: left;
+	}
+
+	.wp-picker-active {
+		position: absolute;
+		z-index: 10;
+		background: #fff;
+
+		padding: 10px;
+		top: -11px;
+		left: -11px;
+
+		border: 1px solid #ddd;
+
+		border-radius: 2px;
 	}
 }
 

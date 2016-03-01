@@ -109,6 +109,8 @@ class SBB_Appearance {
 	 * @return void
 	 */
 	public function admin_page_display() {
+		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		wp_enqueue_script( 'sbb-admin-appearance', $this->plugin->url( 'assets/js/admin-appearance' . $min . '.js' ), array( 'jquery' ), '160223', true );
 		?>
 		<div class="wrap cmb2-options-page <?php echo esc_attr( $this->key ); ?>">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
@@ -117,7 +119,6 @@ class SBB_Appearance {
 					<h4><?php _e( 'Preview', 'shopify-buy-button' ); ?></h4>
 					<iframe class="sbb-appearance-preview" src="<?php
 					echo esc_url( add_query_arg( array(
-						'embed_type'     => 'product',
 						'shop'           => 'embeds.myshopify.com',
 						'product_handle' => 'yello-w',
 					), site_url() ) );

@@ -77,14 +77,16 @@ module.exports = function (grunt) {
             },
             dist: { files: {
                 'assets/js/admin-shortcode.js': 'assets/js/components/admin-shortcode.js',
-                'assets/js/admin-widget.js': 'assets/js/components/admin-widget.js'
+                'assets/js/admin-widget.js': 'assets/js/components/admin-widget.js',
+                'assets/js/admin-appearance.js': 'assets/js/components/admin-appearance.js'
             } }
         },
         uglify: {
             dist: {
                 files: {
                     'assets/js/admin-shortcode.min.js': 'assets/js/admin-shortcode.js',
-                    'assets/js/admin-widget.min.js': 'assets/js/admin-widget.js'
+                    'assets/js/admin-widget.min.js': 'assets/js/admin-widget.js',
+                    'assets/js/admin-appearance.min.js': 'assets/js/admin-appearance.js'
                 },
                 options: { banner: compactBannerTemplate }
             }

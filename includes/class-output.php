@@ -127,16 +127,31 @@ class SBB_Output {
 
 	public function button_endpoint() {
 		if ( ! current_user_can( 'edit_posts' )
-			|| empty( $_GET['product_handle'] )
-			|| empty( $_GET['embed_type'] ) ) {
+			|| empty( $_GET['product_handle'] ) ) {
 			return;
 		}
 
-		echo $this->get_button( array(
-			'product_handle' => sanitize_text_field( $_GET['product_handle'] ),
-			'shop' => isset( $_GET['shop'] ) ? sanitize_text_field( $_GET['shop'] ) : get_option( 'sbb-connected-site', false ),
-			'embed_type' => sanitize_text_field( $_GET['embed_type'] ),
-		) );
+		$args = array(
+			'product_handle' => esc_attr( $_GET['product_handle'] ),
+		);
+
+		$other_args = array(
+			'shop',
+			'embed_type',
+			'buy_button_text',
+			'button_background_color',
+			'button_text_color',
+			'background_color',
+			'product_title_color',
+		);
+
+		foreach( $other_args as $arg ) {
+			if ( isset( $_GET[ $arg ] ) ) {
+				$args[ $arg ] = esc_attr( $_GET[ $arg ] );
+			}
+		}
+
+		echo $this->get_button( $args );
 
 		die();
 	}
