@@ -101,6 +101,8 @@ button.sbb-add-shortcode.button {
     left: -11px;
     border: 1px solid #ddd;
     border-radius: 2px; }
+  .sbb-appearance h4 {
+    color: #bbb; }
 
 .sbb-appearance-left, .sbb-appearance-right {
   padding: 30px;
