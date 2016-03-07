@@ -104,6 +104,12 @@ class SBB_Output {
 			unset( $args['background_color'] );
 		}
 
+		if ( ! empty( $args['show'] ) ) {
+			if ( $args['show'] == 'button-only' ) {
+				$args['has_image'] = 'false';
+			}
+		}
+
 		/**
 		 * Arguments for buy button data attributes
 		 *

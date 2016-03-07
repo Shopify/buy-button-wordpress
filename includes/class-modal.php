@@ -46,6 +46,11 @@ class SBB_Modal {
 			<div class="sbb-modal">
 				<div class="sbb-modal-close"><div class="screen-reader-text"><?php esc_attr_e( 'Close', 'shopify-buy-button' ); ?></div></div>
 				<iframe src="<?php echo esc_url( $iframe_url ); ?>" frameborder="0" class="sbb-modal-iframe"></iframe>
+				<div class="sbb-modal-secondpage">
+					<label><input class="sbb-show" type="radio" name="sbb-show" value="all"> <?php esc_html_e( 'Product image, price and button', 'shopify-buy-button' ); ?></label>
+					<label><input class="sbb-show" type="radio" name="sbb-show" value="button-only"> <?php esc_html_e( 'Buy button only', 'shopify-buy-button' ); ?></label>
+					<button class="sbb-modal-add-button"><?php esc_html_e( 'Add Button', 'shopify-buy-button' ); ?></button>
+				</div>
 			</div>
 			<div class="sbb-modal-background"></div>
 		</div>

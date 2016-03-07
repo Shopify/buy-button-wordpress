@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Shopify Buy Button 0.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/shopify-buy-button\n"
-"POT-Creation-Date: 2016-03-07 21:19:59+00:00\n"
+"POT-Creation-Date: 2016-03-07 21:52:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,15 +86,27 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: includes/class-output.php:128
+#: includes/class-modal.php:50
+msgid "Product image, price and button"
+msgstr ""
+
+#: includes/class-modal.php:51
+msgid "Buy button only"
+msgstr ""
+
+#: includes/class-modal.php:52
+msgid "Add Button"
+msgstr ""
+
+#: includes/class-output.php:134
 msgid "Out of Stock"
 msgstr ""
 
-#: includes/class-output.php:129
+#: includes/class-output.php:135
 msgid "Unavailable"
 msgstr ""
 
-#: includes/class-output.php:133
+#: includes/class-output.php:139
 msgid "Buy %s"
 msgstr ""
 

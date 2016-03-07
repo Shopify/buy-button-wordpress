@@ -66,10 +66,21 @@ function createButtonModal(callback) {
 
 		// If data returned, trigger callback.
 		if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
-			callback(event.data);
+			if ('product' === event.data.resourceType) {
+				modal.find('iframe').remove();
+				modal.find('.sbb-modal-secondpage').show();
+				modal.find('.sbb-modal-add-button').click(function () {
+					event.data.show = modal.find('.sbb-show:checked').val();
+					callback(event.data);
+					closeModal();
+				});
+			} else {
+				callback(event.data);
+				closeModal();
+			}
+		} else {
+			closeModal();
 		}
-
-		closeModal();
 	});
 }
 

@@ -66,10 +66,21 @@ function createButtonModal(callback) {
 
 		// If data returned, trigger callback.
 		if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
-			callback(event.data);
+			if ('product' === event.data.resourceType) {
+				modal.find('iframe').remove();
+				modal.find('.sbb-modal-secondpage').show();
+				modal.find('.sbb-modal-add-button').click(function () {
+					event.data.show = modal.find('.sbb-show:checked').val();
+					callback(event.data);
+					closeModal();
+				});
+			} else {
+				callback(event.data);
+				closeModal();
+			}
+		} else {
+			closeModal();
 		}
-
-		closeModal();
 	});
 }
 
@@ -107,7 +118,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 		(0, _addButtonModal2.default)(function (data) {
 			// Generate shortcode
-			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '"]';
+			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '" show="' + data.show + '"]';
 
 			// Insert shortcode.
 			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
