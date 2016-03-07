@@ -80,10 +80,13 @@ button.sbb-add-shortcode.button {
     width: 50%;
     float: left;
     height: 82px; }
-  .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-text {
+  .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-text, .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-select {
     float: none;
     clear: both;
     width: 100%; }
+  .sbb-appearance .cmb2_select {
+    width: 25em;
+    max-width: 100%; }
   .sbb-appearance .cmb2-id-background-color {
     clear: both; }
   .sbb-appearance .button-primary {
@@ -113,7 +116,8 @@ button.sbb-add-shortcode.button {
   width: 100%;
   height: 100%;
   background: #F4F5F6;
-  text-align: center; }
+  text-align: center;
+  padding: 30px 0; }
 
 @media (min-width: 645px) {
   .sbb-appearance-left {
@@ -133,6 +137,6 @@ button.sbb-add-shortcode.button {
 
 .sbb-appearance-preview {
   height: 400px;
-  width: 250px; }
+  width: 100%; }
 
 /*# sourceMappingURL=shopify-buy-button.css.map */

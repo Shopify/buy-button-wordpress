@@ -108,10 +108,15 @@ button.sbb-add-shortcode.button {
 		height: 82px;
 	}
 
-	.cmb2-wrap .cmb-row.cmb-type-text {
+	.cmb2-wrap .cmb-row.cmb-type-text, .cmb2-wrap .cmb-row.cmb-type-select {
 		float: none;
 		clear: both;
 		width: 100%;
+	}
+
+	.cmb2_select {
+		width: 25em;
+		max-width: 100%;
 	}
 
 	.cmb2-id-background-color {
@@ -155,6 +160,7 @@ button.sbb-add-shortcode.button {
 	height: 100%;
 	background: #F4F5F6;
 	text-align: center;
+	padding: 30px 0;
 }
 
 @media (min-width: 645px) {
@@ -183,5 +189,5 @@ button.sbb-add-shortcode.button {
 
 .sbb-appearance-preview {
 	height: 400px;
-	width: 250px;
+	width: 100%;
 }

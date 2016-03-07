@@ -27,26 +27,14 @@ $( function() {
 			}
 		};
 
-	$( document.body ).on( 'change', 'input', function() {
-		if ( 'background' === this.name ) {
-			if ( this.checked ) {
-				addArgument( 'background_color', $( '#background_color' ).val() );
-			} else {
-				addArgument( 'background_color', 'transparent' );
-			}
-		} else {
-			addArgument( this.name, this.value );
-		}
+	$( document.body ).on( 'change', 'input,select', function() {
+		addArgument( this.name, this.value );
 	} );
 
 	$( '.cmb2-colorpicker' ).wpColorPicker( {
 		change: function( event, ui ) {
 			let name = event.target.name,
 				color = ui.color.toString();
-
-			if ( 'background_color' === name && 0 === $( '#background:checked' ).length ) {
-				return;
-			}
 
 			addArgument( name, color );
 		}

@@ -6,6 +6,7 @@
  */
 
 class SBB_Output {
+
 	/**
 	 * Parent plugin class
 	 *
@@ -13,6 +14,14 @@ class SBB_Output {
 	 * @since 0.1.0
 	 */
 	protected $plugin = null;
+
+	/**
+	 * Has the shopify js been added?
+	 *
+	 * @var boolean
+	 * @since 0.1.0
+	 */
+	private static $js_added = false;
 
 	/**
 	 * Constructor
@@ -34,6 +43,51 @@ class SBB_Output {
 	 */
 	public function hooks() {
 		add_action( 'cmb2_init', array( $this, 'button_endpoint' ), 30 );
+		add_action( 'wp_footer', array( $this, 'embed_cart' ), 30 );
+	}
+
+	/**
+	 * Convert array of attributes to string of html data attributes.
+	 *
+	 * @since 0.1.0
+	 * @param  array $args Array of attributes to convert to data attributes.
+	 * @return string      HTML attributes.
+	 */
+	public function array_to_data_attributes( $args ) {
+		$attributes = '';
+		foreach ( $args as $key => $value ) {
+			if ( !empty( $value ) ) {
+				$attributes .= sprintf( ' data-%s="%s"', esc_html( $key ), esc_attr( $value ) );
+			}
+		}
+
+		return $attributes;
+	}
+
+	/**
+	 * Get shopify embed markup.
+	 *
+	 * @since 0.1.0
+	 * @param  array $args data arguments.
+	 * @return string      HTML markup.
+	 */
+	public function get_embed( $args ) {
+		$no_script_text = str_replace( '[product_name]', $args['product_name'], wp_kses_post( $args['no_script_text'] ) );
+		$no_script_url = $args['no_script_url'];
+		unset( $args['no_script_url'], $args['no_script_text'] );
+
+		ob_start();
+		?>
+		<div<?php echo $this->array_to_data_attributes( $args ); ?>></div>
+		<noscript><a href="<?php echo esc_url( $no_script_url ); ?>" target="_blank"><?php echo $no_script_text; ?></a></noscript>
+		<?php
+
+		if ( ! self::$js_added ) {
+			?><script type="text/javascript"> document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>'); </script><?php
+			self::$js_added = true;
+		}
+
+		return ob_get_clean();
 	}
 
 	/**
@@ -44,7 +98,13 @@ class SBB_Output {
 	 * @return string      HTML markup
 	 */
 	public function get_button( $args ) {
-		static $js_added = false;
+		if ( isset( $args['text_color'] ) ) {
+			$args['product_title_color'] = $args['text_color'];
+		}
+
+		if ( empty( $args['background'] ) ) {
+			unset( $args['background_color'] );
+		}
 
 		/**
 		 * Arguments for buy button data attributes
@@ -56,31 +116,20 @@ class SBB_Output {
 			// * Provided by iframe -- product/collection
 			'embed_type'                          => 'product',
 			// * Provided by iframe -- The myshopify domain (such as storename.myshopify.com) connected to the button. Your Shopify domain
-			'shop'                                => get_option( 'sbb-connected-site', false ),
+			'shop'                                => '',
 			// * Provided by iframe -- The product_handle of the featured product, which is based on the product's title. Each of your products has a unique handle in Shopify.
 			'product_handle'                      => '',
-			// The title of the featured product.
 			'product_name'                        => '',
-			// The maximum width of the embed. Can be 'compact' (230px) or 'regular' (450px).
 			'display_size'                        => 'compact',
-			// Whether it's a full product embed ('true') or buy button only ('false').
 			'has_image'                           => 'true',
-			// Where the buy button links to. Can be 'checkout', 'product', or 'cart'. If you want the buy button to connect with an embedded cart on the same page, data-redirect_to must be cart. (product_modal is a recent addition that has not yet been added to the docs)
-			'redirect_to'                         => 'checkout',
-			// The text displayed on the buy button.
+			'redirect_to'                         => cmb2_get_option( 'shopify_buy_button_appearance', 'redirect_to' ),
 			'buy_button_text'                     => cmb2_get_option( 'shopify_buy_button_appearance', 'buy_button_text' ),
-			// The hex code of the color of the buy button, without the #. Can be three hex characters or six.
 			'button_background_color'             => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
-			// The hex code of the color of the buy button's text, without the #. Can be three hex characters or six.
 			'button_text_color'                   => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
-			// The background color of the area surrounding the Buy button. It can be a hex code (per rules above), or transparent. If transparent, no padding is applied to the embed's content.
-			'background_color'                    => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
-			// The text that appears when a product is out of stock.
+			'background_color'                    => ! empty( $args['background'] ) || cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
 			'buy_button_out_of_stock_text'        => __( 'Out of Stock', 'shopify' ),
-			// The text that appears when a product is unavailable.
 			'buy_button_product_unavailable_text' => __( 'Unavailable', 'shopify' ),
-			// The hex code of the color of the product title's text, without the #. Can be three hex characters or six.
-			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'product_title_color' ), 1 ),
+			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
 			// Additional non-data-attribute params
 			'no_script_url'                       => '', // https://<shop>.myshopify.com/cart/<cart-number>
 			'no_script_text'                      => sprintf( __( 'Buy %s', 'shopify' ), '[product_name]' ), // Buy <product_name>
@@ -102,29 +151,45 @@ class SBB_Output {
 		// Override for whether or not to display the product title. Can be true or false.	The current value of data-has_image
 		$args['show_product_title'] = ! empty( $args['show_product_title'] ) ? $args['show_product_title'] : $args['has_image'];
 
-		$no_script_text = str_replace( '[product_name]', $args['product_name'], wp_kses_post( $args['no_script_text'] ) );
-		$no_script_url = $args['no_script_url'];
-		unset( $args['no_script_url'], $args['no_script_text'] );
-
-		$attributes = '';
-		foreach ( $args as $key => $value ) {
-			$attributes .= sprintf( ' data-%s="%s"', esc_html( $key ), esc_attr( $value ) );
-		}
-
-		ob_start();
-		?>
-		<div<?php echo $attributes; ?>></div>
-		<noscript><a href="<?php echo esc_url( $no_script_url ); ?>" target="_blank"><?php echo $no_script_text; ?></a></noscript>
-		<?php
-
-		if ( ! $js_added ) {
-			?><script type="text/javascript"> document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>'); </script><?php
-			$js_added = true;
-		}
-
-		return ob_get_clean();
+		return $this->get_embed( $args );
 	}
 
+	/**
+	 * Get the cart embed
+	 *
+	 * @since 0.1.0
+	 * @param  array $args Cart arguments
+	 * @return string      HTML embed markup
+	 */
+	public function get_cart( $args ) {
+		$args = wp_parse_args( $args, array(
+			'shop' => '',
+			'checkout_button_text' => cmb2_get_option( 'shopify_buy_button_appearance', 'checkout_button_text' ),
+			'button_text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
+			'button_background_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
+			'background_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ),
+			'text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
+			'accent_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'accent_color' ), 1 ),
+			'cart_title' => cmb2_get_option( 'shopify_buy_button_appearance', 'cart_title' ),
+			'cart_total_text' => '',
+			'discount_notice_text' => '',
+			'sticky' => '',
+			'empty_cart_text' => '',
+			'next_page_button_text' => '',
+		) );
+
+		$args['embed_type'] = 'cart';
+		$args['sticky'] = 'true';
+
+		return $this->get_embed( $args );
+	}
+
+	/**
+	 * Handle endpoint for preview elements
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
 	public function button_endpoint() {
 		if ( ! current_user_can( 'edit_posts' )
 			|| empty( $_GET['product_handle'] ) ) {
@@ -141,8 +206,12 @@ class SBB_Output {
 			'buy_button_text',
 			'button_background_color',
 			'button_text_color',
+			'background',
 			'background_color',
-			'product_title_color',
+			'text_color',
+			'cart_title',
+			'checkout_button_text',
+			'redirect_to',
 		);
 
 		foreach( $other_args as $arg ) {
@@ -151,8 +220,37 @@ class SBB_Output {
 			}
 		}
 
+		?>
+		<style type="text/css">
+		body {
+			text-align: center;
+		}
+		</style>
+		<?php
+
+		if ( ! empty( $_GET['show_cart'] ) ) {
+			echo $this->get_cart( $args );
+		}
+
 		echo $this->get_button( $args );
 
 		die();
+	}
+
+	/**
+	 * Embed the cart in the footer
+	 *
+	 * @since 0.1.0
+	 * @return void
+	 */
+	function embed_cart() {
+		// Only output cart if redirect is set to cart.
+		if ( 'cart' !== cmb2_get_option( 'shopify_buy_button_appearance', 'redirect_to' ) ) {
+			return;
+		}
+
+		echo $this->get_cart( array(
+			'shop' => 'wds-test-store.myshopify.com',
+		) );
 	}
 }

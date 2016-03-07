@@ -121,6 +121,7 @@ class SBB_Appearance {
 					echo esc_url( add_query_arg( array(
 						'shop'           => 'embeds.myshopify.com',
 						'product_handle' => 'yello-w',
+						'show_cart'      => true,
 					), site_url() ) );
 					?>"></iframe>
 				</div>
@@ -168,8 +169,15 @@ class SBB_Appearance {
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Title Color', 'shopify-buy-button' ),
-			'id'      => 'product_title_color',
+			'name'    => __( 'Accent', 'shopify-buy-button' ),
+			'id'      => 'accent_color',
+			'type'    => 'colorpicker',
+			'default' => '000000',
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Text', 'shopify-buy-button' ),
+			'id'      => 'text_color',
 			'type'    => 'colorpicker',
 			'default' => '000000',
 		) );
@@ -189,10 +197,36 @@ class SBB_Appearance {
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Button Text', 'shopify-buy-button' ),
+			'name'    => __( 'Button text', 'shopify-buy-button' ),
 			'id'      => 'buy_button_text',
 			'type'    => 'text',
 			'default' => __( 'Buy now', 'shopify-buy-button' ),
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Cart title text', 'shopify-buy-button' ),
+			'id'      => 'cart_title',
+			'type'    => 'text',
+			'default' => __( 'Your cart', 'shopify-buy-button' ),
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Checkout button text', 'shopify-buy-button' ),
+			'id'      => 'checkout_button_text',
+			'type'    => 'text',
+			'default' => __( 'Checkout', 'shopify-buy-button' ),
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Where this button links to (single product only)', 'shopify-buy-button' ),
+			'id'      => 'redirect_to',
+			'type'    => 'select',
+			'default' => 'checkout',
+			'options' => array(
+				'checkout' => __( 'Checkout', 'shopify-buy-button' ),
+				'product'  => __( 'Product', 'shopify-buy-button' ),
+				'cart'     => __( 'Cart', 'shopify-buy-button' ),
+			),
 		) );
 
 	}

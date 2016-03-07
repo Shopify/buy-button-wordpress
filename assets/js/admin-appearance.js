@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-01
+ * Shopify Buy Button - v0.1.0 - 2016-03-07
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -46,26 +46,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		}
 	};
 
-	(0, _jquery2.default)(document.body).on('change', 'input', function () {
-		if ('background' === this.name) {
-			if (this.checked) {
-				addArgument('background_color', (0, _jquery2.default)('#background_color').val());
-			} else {
-				addArgument('background_color', 'transparent');
-			}
-		} else {
-			addArgument(this.name, this.value);
-		}
+	(0, _jquery2.default)(document.body).on('change', 'input,select', function () {
+		addArgument(this.name, this.value);
 	});
 
 	(0, _jquery2.default)('.cmb2-colorpicker').wpColorPicker({
 		change: function change(event, ui) {
 			var name = event.target.name,
 			    color = ui.color.toString();
-
-			if ('background_color' === name && 0 === (0, _jquery2.default)('#background:checked').length) {
-				return;
-			}
 
 			addArgument(name, color);
 		}
