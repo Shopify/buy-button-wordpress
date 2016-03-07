@@ -24,6 +24,12 @@ class SBB_Modal {
 		$this->plugin = $plugin;
 	}
 
+	/**
+	 * Get the buy button creation modal
+	 *
+	 * @since 0.1.0
+	 * @return string HTML markup of modal.
+	 */
 	public function get_modal() {
 		$iframe_url = 'https://widgets.shopifyapps.com/embed_admin/embeds/picker';
 
