@@ -140,6 +140,7 @@ class SBB_Appearance {
 	 * @return void
 	 */
 	public function add_options_page_metabox() {
+		add_action( "cmb2_save_options-page_fields_{$this->metabox_id}", array( $this, 'settings_notices' ), 10, 2 );
 
 		$cmb = new_cmb2_box( array(
 			'id'         => $this->metabox_id,
@@ -229,5 +230,21 @@ class SBB_Appearance {
 			),
 		) );
 
+	}
+
+	/**
+	 * Register settings notices for display
+	 *
+	 * @since  0.1.0
+	 * @param  int   $object_id Option key
+	 * @param  array $updated   Array of updated fields
+	 * @return void
+	 */
+	public function settings_notices( $object_id, $updated ) {
+		if ( $object_id !== $this->key || empty( $updated ) ) {
+			return;
+		}
+		add_settings_error( $this->key . '-notices', '', __( 'Settings updated.', 'myprefix' ), 'updated' );
+		settings_errors( $this->key . '-notices' );
 	}
 }
