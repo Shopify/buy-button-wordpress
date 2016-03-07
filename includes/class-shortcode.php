@@ -19,7 +19,6 @@ class SBB_Shortcode {
 	 *
 	 * @since  0.1.0
 	 * @param  object $plugin Main plugin object.
-	 * @return void
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
@@ -30,7 +29,6 @@ class SBB_Shortcode {
 	 * Initiate our hooks
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function hooks() {
 		add_action( 'media_buttons', array( $this, 'media_buttons' ), 10 );
@@ -42,7 +40,6 @@ class SBB_Shortcode {
 	 *
 	 * @since 0.1.0
 	 * @param string $editor_id ID of content editor for button.
-	 * @return void
 	 */
 	public function media_buttons( $editor_id ) {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';

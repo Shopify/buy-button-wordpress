@@ -49,7 +49,6 @@ class SBB_Settings {
 	 *
 	 * @since  0.1.0
 	 * @param  object $plugin Main plugin object.
-	 * @return void
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
@@ -62,7 +61,6 @@ class SBB_Settings {
 	 * Initiate our hooks
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function hooks() {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -74,7 +72,6 @@ class SBB_Settings {
 	 * Register our setting to WP
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function admin_init() {
 		register_setting( $this->key, $this->key );
@@ -84,7 +81,6 @@ class SBB_Settings {
 	 * Enqueue admin styles
 	 *
 	 * @since 0.1.0
-	 * @return void
 	 */
 	public function admin_enqueue_scripts() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -95,7 +91,6 @@ class SBB_Settings {
 	 * Add menu options page
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function add_options_page() {
 		$this->options_page = add_menu_page(
@@ -112,7 +107,6 @@ class SBB_Settings {
 	 * Admin page markup. Mostly handled by CMB2
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function admin_page_display() {
 		?>

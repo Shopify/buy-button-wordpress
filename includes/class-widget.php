@@ -51,7 +51,6 @@ class SBB_Widget extends WP_Widget {
 	 * Construct widget class.
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function __construct() {
 
@@ -81,7 +80,6 @@ class SBB_Widget extends WP_Widget {
 	 * delete_transient( 'some-transient-generated-by-this-widget' );
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function flush_widget_cache() {
 		wp_cache_delete( $this->widget_slug, 'widget' );
@@ -94,7 +92,6 @@ class SBB_Widget extends WP_Widget {
 	 * @since  0.1.0
 	 * @param  array $args     The widget arguments set up when a sidebar is registered.
 	 * @param  array $instance The widget settings as set by user.
-	 * @return void
 	 */
 	public function widget( $args, $instance ) {
 		echo self::get_widget( array(
@@ -188,7 +185,6 @@ class SBB_Widget extends WP_Widget {
 	 * Enqueue admin widget scripts and styles.
 	 *
 	 * @since 0.1.0
-	 * @return void
 	 */
 	function enqueue() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -204,7 +200,6 @@ class SBB_Widget extends WP_Widget {
 	 *
 	 * @since  0.1.0
 	 * @param  array $instance Current settings.
-	 * @return void
 	 */
 	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance,
@@ -261,7 +256,6 @@ class SBB_Widget extends WP_Widget {
  * Register this widget with WordPress. Can also move this function to the parent plugin.
  *
  * @since  0.1.0
- * @return void
  */
 function register_shopify_buy_button_widget() {
 	register_widget( 'SBB_Widget' );

@@ -28,7 +28,6 @@ class SBB_Output {
 	 *
 	 * @since  0.1.0
 	 * @param  object $plugin Main plugin object.
-	 * @return void
 	 */
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
@@ -39,7 +38,6 @@ class SBB_Output {
 	 * Initiate our hooks
 	 *
 	 * @since  0.1.0
-	 * @return void
 	 */
 	public function hooks() {
 		add_action( 'cmb2_init', array( $this, 'button_endpoint' ), 30 );
@@ -188,7 +186,6 @@ class SBB_Output {
 	 * Handle endpoint for preview elements
 	 *
 	 * @since 0.1.0
-	 * @return void
 	 */
 	public function button_endpoint() {
 		if ( ! current_user_can( 'edit_posts' )
@@ -241,7 +238,6 @@ class SBB_Output {
 	 * Embed the cart in the footer
 	 *
 	 * @since 0.1.0
-	 * @return void
 	 */
 	function embed_cart() {
 		// Only output cart if redirect is set to cart.
