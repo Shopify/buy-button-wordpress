@@ -34,16 +34,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		    split = loc.split('?'),
 		    parsed = _queryString2.default.parse(split[1]);
 
-		parsed[key] = val;
-		loc = split[0] + '?' + _queryString2.default.stringify(parsed);
+		if ('#' === val[0]) {
+			val = val.slice(1);
+		}
 
-		$iframe.attr('src', loc);
+		if (parsed[key] !== val) {
+			parsed[key] = val;
+			loc = split[0] + '?' + _queryString2.default.stringify(parsed);
+
+			$iframe.attr('src', loc);
+		}
 	};
 
 	(0, _jquery2.default)(document.body).on('change', 'input', function () {
 		if ('background' === this.name) {
 			if (this.checked) {
-				addArgument('background_color', (0, _jquery2.default)('#background_color').val().slice(1));
+				addArgument('background_color', (0, _jquery2.default)('#background_color').val());
 			} else {
 				addArgument('background_color', 'transparent');
 			}
@@ -55,7 +61,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	(0, _jquery2.default)('.cmb2-colorpicker').wpColorPicker({
 		change: function change(event, ui) {
 			var name = event.target.name,
-			    color = ui.color.toString().slice(1);
+			    color = ui.color.toString();
 
 			if ('background_color' === name && 0 === (0, _jquery2.default)('#background:checked').length) {
 				return;

@@ -15,16 +15,22 @@ $( function() {
 				split = loc.split( '?' ),
 				parsed = queryString.parse( split[1] );
 
-			parsed[ key ] = val;
-			loc = split[0] + '?' + queryString.stringify( parsed );
+			if ( '#' === val[0] ) {
+				val = val.slice( 1 );
+			}
 
-			$iframe.attr( 'src', loc );
+			if ( parsed[ key ] !== val ) {
+				parsed[ key ] = val;
+				loc = split[0] + '?' + queryString.stringify( parsed );
+
+				$iframe.attr( 'src', loc );
+			}
 		};
 
 	$( document.body ).on( 'change', 'input', function() {
 		if ( 'background' === this.name ) {
 			if ( this.checked ) {
-				addArgument( 'background_color', $( '#background_color' ).val().slice( 1 ) );
+				addArgument( 'background_color', $( '#background_color' ).val() );
 			} else {
 				addArgument( 'background_color', 'transparent' );
 			}
@@ -36,7 +42,7 @@ $( function() {
 	$( '.cmb2-colorpicker' ).wpColorPicker( {
 		change: function( event, ui ) {
 			let name = event.target.name,
-				color = ui.color.toString().slice( 1 );
+				color = ui.color.toString();
 
 			if ( 'background_color' === name && 0 === $( '#background:checked' ).length ) {
 				return;
