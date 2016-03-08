@@ -85,7 +85,8 @@ button.sbb-add-shortcode.button {
 
 .sbb-modal-footer {
   padding: 20px;
-  border-top: 1px solid #ddd; }
+  border-top: 1px solid #ddd;
+  text-align: right; }
 
 .sbb-modal-background {
   position: fixed;

@@ -21,7 +21,15 @@ class SBB_Output {
 	 * @var boolean
 	 * @since 0.1.0
 	 */
-	private static $js_added = false;
+	private $js_added = false;
+
+	/**
+	 * The current shop.
+	 *
+	 * @var boolean
+	 * @since 0.1.0
+	 */
+	private $shop = false;
 
 	/**
 	 * Constructor
@@ -63,6 +71,37 @@ class SBB_Output {
 	}
 
 	/**
+	 * Handle missing or multiple shop parameters.
+	 *
+	 * If shop parameter is missing set it to the same as the first embed on
+	 * the page or the saved option. If shop parameter is different from first
+	 * embed and 'redirect_to' set to cart change redirect_to to checkout.
+	 *
+	 * @since 0.1.0
+	 * @param  array $args Embed arguments.
+	 * @return array       Modified embed arguments.
+	 */
+	public function handle_shop( $args ) {
+		if ( empty( $args['shop'] ) ) {
+			// Is the shop param unset?
+			// Assign the shop param to the same as the first embed on the page.
+			$args['shop'] = empty( $this->shop ) ? get_option( 'sbb_shop', '' ) : $this->shop;
+		} else if ( empty( $this->shop ) ) {
+			// Is the shop param set, but no shop param stored?
+			// Save the shop to an option and the class.
+			$this->shop = $args['shop'];
+			update_option( 'sbb_shop', $this->shop );
+		}
+
+		// Is the shop param different from the first embed's shop param?
+		if ( $args['shop'] != $this->shop && 'cart' == $args['redirect_to'] ) {
+			$args['redirect_to'] = 'checkout';
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Get shopify embed markup.
 	 *
 	 * @since 0.1.0
@@ -70,6 +109,8 @@ class SBB_Output {
 	 * @return string      HTML markup.
 	 */
 	public function get_embed( $args ) {
+		$args = $this->handle_shop( $args );
+
 		$no_script_text = str_replace( '[product_name]', $args['product_name'], wp_kses_post( $args['no_script_text'] ) );
 		$no_script_url = $args['no_script_url'];
 		unset( $args['no_script_url'], $args['no_script_text'] );
@@ -80,9 +121,9 @@ class SBB_Output {
 		<noscript><a href="<?php echo esc_url( $no_script_url ); ?>" target="_blank"><?php echo $no_script_text; ?></a></noscript>
 		<?php
 
-		if ( ! self::$js_added ) {
+		if ( ! $this->js_added ) {
 			?><script type="text/javascript"> document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>'); </script><?php
-			self::$js_added = true;
+			$this->js_added = true;
 		}
 
 		return ob_get_clean();
@@ -252,8 +293,6 @@ class SBB_Output {
 			return;
 		}
 
-		echo $this->get_cart( array(
-			'shop' => 'wds-test-store.myshopify.com',
-		) );
+		echo $this->get_cart( array() );
 	}
 }
