@@ -47,9 +47,26 @@ class SBB_Modal {
 				<div class="sbb-modal-close"><div class="screen-reader-text"><?php esc_attr_e( 'Close', 'shopify-buy-button' ); ?></div></div>
 				<iframe src="<?php echo esc_url( $iframe_url ); ?>" frameborder="0" class="sbb-modal-iframe"></iframe>
 				<div class="sbb-modal-secondpage">
-					<label><input class="sbb-show" type="radio" name="sbb-show" value="all"> <?php esc_html_e( 'Product image, price and button', 'shopify-buy-button' ); ?></label>
-					<label><input class="sbb-show" type="radio" name="sbb-show" value="button-only"> <?php esc_html_e( 'Buy button only', 'shopify-buy-button' ); ?></label>
-					<button class="sbb-modal-add-button"><?php esc_html_e( 'Add Button', 'shopify-buy-button' ); ?></button>
+					<div class="sbb-modal-header">
+						<h2><?php esc_html_e( 'Embed Type', 'shopify-buy-button' ); ?></h2>
+					</div>
+					<div class="sbb-modal-content">
+						<label class="sbb-show-label">
+							<span class="sbb-show-preview">
+							</span>
+							<input class="sbb-show" type="radio" name="sbb-show" value="all"> 
+							<?php esc_html_e( 'Product image, price and button', 'shopify-buy-button' ); ?>
+						</label>
+						<label class="sbb-show-label">
+							<span class="sbb-show-preview">
+							</span>
+							<input class="sbb-show" type="radio" name="sbb-show" value="button-only">
+							<?php esc_html_e( 'Buy button only', 'shopify-buy-button' ); ?>
+						</label>
+					</div>
+					<div class="sbb-modal-footer">
+						<button class="button button-primary sbb-modal-add-button"><?php esc_html_e( 'Ok', 'shopify-buy-button' ); ?></button>
+					</div>
 				</div>
 			</div>
 			<div class="sbb-modal-background"></div>

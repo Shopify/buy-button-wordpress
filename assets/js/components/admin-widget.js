@@ -16,6 +16,7 @@ $( function() {
 				inputType:   $widgetContent.find( '.sbb-hidden-embed_type' ),
 				inputShop:   $widgetContent.find( '.sbb-hidden-shop' ),
 				inputHandle: $widgetContent.find( '.sbb-hidden-product_handle' ),
+				inputShow:   $widgetContent.find( '.sbb-hidden-show' ),
 				iframe:      $widgetContent.find( '.sbb-widget-preview' )
 			};
 

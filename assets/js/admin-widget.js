@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-07
+ * Shopify Buy Button - v0.1.0 - 2016-03-08
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -114,6 +114,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			inputType: $widgetContent.find('.sbb-hidden-embed_type'),
 			inputShop: $widgetContent.find('.sbb-hidden-shop'),
 			inputHandle: $widgetContent.find('.sbb-hidden-product_handle'),
+			inputShow: $widgetContent.find('.sbb-hidden-show'),
 			iframe: $widgetContent.find('.sbb-widget-preview')
 		};
 
