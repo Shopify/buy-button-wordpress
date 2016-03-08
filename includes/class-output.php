@@ -215,6 +215,7 @@ class SBB_Output {
 			'cart_title',
 			'checkout_button_text',
 			'redirect_to',
+			'show',
 		);
 
 		foreach( $other_args as $arg ) {

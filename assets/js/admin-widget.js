@@ -135,7 +135,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			$c.inputHandle.trigger(fakeEnterPress);
 
 			// Update preview iframe with postMessage results
-			$c.iframe.attr('src', document.location.protocol + '//' + document.location.host + '?product_handle=' + encodeURIComponent(data.resourceHandles.join(', ')) + '&shop=' + encodeURIComponent(data.shop) + '&embed_type=' + encodeURIComponent(data.resourceType));
+			$c.iframe.attr('src', document.location.protocol + '//' + document.location.host + '?product_handle=' + encodeURIComponent(data.resourceHandles.join(', ')) + '&shop=' + encodeURIComponent(data.shop) + '&embed_type=' + encodeURIComponent(data.resourceType) + '&show=' + encodeURIComponent(data.show));
 		});
 	});
 });
