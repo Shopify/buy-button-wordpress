@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-08
+ * Shopify Buy Button - v0.1.0 - 2016-03-09
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -29,22 +29,52 @@ var open = false,
 		modal.remove();
 	}
 	open = false;
-}; /**
-    * Shopify Buy Button - Add Button Modal
-    * https://www.shopify.com/buy-button
-    *
-    * Licensed under the GPLv2+ license.
-    */
+},
+    callback = undefined; /**
+                           * Shopify Buy Button - Add Button Modal
+                           * https://www.shopify.com/buy-button
+                           *
+                           * Licensed under the GPLv2+ license.
+                           */
 
 /* global sbbAdminModal */
 
 
-function createButtonModal(callback) {
+window.addEventListener('message', function (event) {
+	var origin = event.origin || event.originalEvent.origin;
+
+	// Return if origin isn't shopify.
+	if (!open || 'https://widgets.shopifyapps.com' !== origin) {
+		return;
+	}
+
+	// If data returned, trigger callback.
+	if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
+		if ('product' === event.data.resourceType) {
+			modal.find('iframe').remove();
+			modal.find('.sbb-modal-secondpage').show();
+			modal.find('.sbb-modal-add-button').click(function () {
+				event.data.show = modal.find('.sbb-show:checked').val();
+				callback(event.data);
+				closeModal();
+			});
+		} else {
+			callback(event.data);
+			closeModal();
+		}
+	} else {
+		closeModal();
+	}
+});
+
+function createButtonModal(cb) {
 	// Only open one at a time.
 	if (open) {
 		return;
 	}
 	open = true;
+
+	callback = cb;
 
 	// Add modal to document.
 	modal = (0, _jquery2.default)(html).appendTo(document.body);
@@ -53,34 +83,6 @@ function createButtonModal(callback) {
 	modal.on('click', '.sbb-modal-close', function (e) {
 		e.preventDefault();
 		closeModal();
-	});
-
-	// Handle post message from iframe.
-	window.addEventListener('message', function (event) {
-		var origin = event.origin || event.originalEvent.origin;
-
-		// Return if origin isn't shopify.
-		if ('https://widgets.shopifyapps.com' !== origin) {
-			return;
-		}
-
-		// If data returned, trigger callback.
-		if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
-			if ('product' === event.data.resourceType) {
-				modal.find('iframe').remove();
-				modal.find('.sbb-modal-secondpage').show();
-				modal.find('.sbb-modal-add-button').click(function () {
-					event.data.show = modal.find('.sbb-show:checked').val();
-					callback(event.data);
-					closeModal();
-				});
-			} else {
-				callback(event.data);
-				closeModal();
-			}
-		} else {
-			closeModal();
-		}
 	});
 }
 
@@ -122,7 +124,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 			// Insert shortcode.
 			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
-			editor.insertContent(shortcode);
+
+			if (editor) {
+				editor.insertContent(shortcode);
+			} else {
+				(0, _jquery2.default)(_this).parents('.wp-editor-wrap').find('.wp-editor-area').append('\n\n' + shortcode);
+			}
 		});
 	});
 });

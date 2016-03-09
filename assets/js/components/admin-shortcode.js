@@ -22,7 +22,14 @@ $( function() {
 
 			// Insert shortcode.
 			editor = tinymce.get( $( this ).data( 'editor-id' ) );
-			editor.insertContent( shortcode );
+
+			if ( editor ) {
+				editor.insertContent( shortcode );
+			} else {
+				$( this ).parents( '.wp-editor-wrap' )
+						.find( '.wp-editor-area' )
+						.append( '\n\n' + shortcode );
+			}
 		} );
 	} );
 } );

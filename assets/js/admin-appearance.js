@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-08
+ * Shopify Buy Button - v0.1.0 - 2016-03-09
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
