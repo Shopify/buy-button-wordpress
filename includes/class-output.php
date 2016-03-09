@@ -11,7 +11,7 @@ class SBB_Output {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	protected $plugin = null;
 
@@ -19,7 +19,7 @@ class SBB_Output {
 	 * Has the shopify js been added?
 	 *
 	 * @var boolean
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	private $js_added = false;
 
@@ -27,14 +27,14 @@ class SBB_Output {
 	 * The current shop.
 	 *
 	 * @var boolean
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	private $shop = false;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -45,7 +45,7 @@ class SBB_Output {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function hooks() {
 		add_action( 'cmb2_init', array( $this, 'button_endpoint' ), 30 );
@@ -55,7 +55,7 @@ class SBB_Output {
 	/**
 	 * Convert array of attributes to string of html data attributes.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args Array of attributes to convert to data attributes.
 	 * @return string      HTML attributes.
 	 */
@@ -77,7 +77,7 @@ class SBB_Output {
 	 * the page or the saved option. If shop parameter is different from first
 	 * embed and 'redirect_to' set to cart change redirect_to to checkout.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args Embed arguments.
 	 * @return array       Modified embed arguments.
 	 */
@@ -104,7 +104,7 @@ class SBB_Output {
 	/**
 	 * Get shopify embed markup.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args data arguments.
 	 * @return string      HTML markup.
 	 */
@@ -132,7 +132,7 @@ class SBB_Output {
 	/**
 	 * Get markup for frontend buy button iframe.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args Arguments for buy button
 	 * @return string      HTML markup
 	 */
@@ -202,7 +202,7 @@ class SBB_Output {
 	/**
 	 * Get the cart embed
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args Cart arguments
 	 * @return string      HTML embed markup
 	 */
@@ -232,7 +232,7 @@ class SBB_Output {
 	/**
 	 * Handle endpoint for preview elements
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	public function button_endpoint() {
 		if ( ! current_user_can( 'edit_posts' )
@@ -285,7 +285,7 @@ class SBB_Output {
 	/**
 	 * Embed the cart in the footer
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	function embed_cart() {
 		// Only output cart if redirect is set to cart.

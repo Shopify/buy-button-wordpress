@@ -10,7 +10,7 @@ class SBB_Settings {
 	 * Parent plugin class
 	 *
 	 * @var    class
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $plugin = null;
 
@@ -18,7 +18,7 @@ class SBB_Settings {
 	 * Option key, and option page slug
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $key = 'shopify_buy_button_settings';
 
@@ -26,7 +26,7 @@ class SBB_Settings {
 	 * Options page metabox id
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $metabox_id = 'shopify_buy_button_settings_metabox';
 
@@ -34,7 +34,7 @@ class SBB_Settings {
 	 * Options Page title
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $title = '';
 
@@ -47,7 +47,7 @@ class SBB_Settings {
 	/**
 	 * Constructor
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -60,7 +60,7 @@ class SBB_Settings {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function hooks() {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -71,7 +71,7 @@ class SBB_Settings {
 	/**
 	 * Register our setting to WP
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function admin_init() {
 		register_setting( $this->key, $this->key );
@@ -80,7 +80,7 @@ class SBB_Settings {
 	/**
 	 * Enqueue admin styles
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	public function admin_enqueue_scripts() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -90,7 +90,7 @@ class SBB_Settings {
 	/**
 	 * Add menu options page
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function add_options_page() {
 		$this->options_page = add_menu_page(
@@ -106,7 +106,7 @@ class SBB_Settings {
 	/**
 	 * Admin page markup. Mostly handled by CMB2
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function admin_page_display() {
 		?>

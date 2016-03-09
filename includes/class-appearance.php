@@ -12,7 +12,7 @@ class SBB_Appearance {
 	 * Parent plugin class
 	 *
 	 * @var    class
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $plugin = null;
 
@@ -20,7 +20,7 @@ class SBB_Appearance {
 	 * Option key, and option page slug
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $key = 'shopify_buy_button_appearance';
 
@@ -28,7 +28,7 @@ class SBB_Appearance {
 	 * Options page metabox id
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $metabox_id = 'shopify_buy_button_appearance_metabox';
 
@@ -36,7 +36,7 @@ class SBB_Appearance {
 	 * Options Page title
 	 *
 	 * @var    string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $title = '';
 
@@ -49,7 +49,7 @@ class SBB_Appearance {
 	/**
 	 * Constructor
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -62,7 +62,7 @@ class SBB_Appearance {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function hooks() {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -73,7 +73,7 @@ class SBB_Appearance {
 	/**
 	 * Register our setting to WP
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function admin_init() {
 		register_setting( $this->key, $this->key );
@@ -82,7 +82,7 @@ class SBB_Appearance {
 	/**
 	 * Add menu options page
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function add_options_page() {
 		$this->options_page = add_submenu_page(
@@ -101,7 +101,7 @@ class SBB_Appearance {
 	/**
 	 * Admin page markup. Mostly handled by CMB2
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function admin_page_display() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -131,7 +131,7 @@ class SBB_Appearance {
 	/**
 	 * Add custom fields to the options page.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function add_options_page_metabox() {
 		add_action( "cmb2_save_options-page_fields_{$this->metabox_id}", array( $this, 'settings_notices' ), 10, 2 );
@@ -229,7 +229,7 @@ class SBB_Appearance {
 	/**
 	 * Register settings notices for display
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  int   $object_id Option key
 	 * @param  array $updated   Array of updated fields
 	 */

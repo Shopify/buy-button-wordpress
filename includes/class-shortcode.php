@@ -10,14 +10,14 @@ class SBB_Shortcode {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	protected $plugin = null;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -28,7 +28,7 @@ class SBB_Shortcode {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function hooks() {
 		add_action( 'media_buttons', array( $this, 'media_buttons' ), 10 );
@@ -38,7 +38,7 @@ class SBB_Shortcode {
 	/**
 	 * Add Shopify Buy Button next to the add media button.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param string $editor_id ID of content editor for button.
 	 */
 	public function media_buttons( $editor_id ) {
@@ -58,7 +58,7 @@ class SBB_Shortcode {
 	 * Shortcode rendering
 	 * Just passes arguments to output function.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @param  array $args Shortcode attributes
 	 * @return string      HTML output.
 	 */

@@ -13,7 +13,7 @@ class SBB_Widget extends WP_Widget {
 	 * Will also serve as the widget class.
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $widget_slug = 'shopify-buy-button-widget';
 
@@ -23,7 +23,7 @@ class SBB_Widget extends WP_Widget {
 	 * Set in __construct since __() shouldn't take a variable.
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $widget_name = '';
 
@@ -33,7 +33,7 @@ class SBB_Widget extends WP_Widget {
 	 * Set in __construct since __() shouldn't take a variable.
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $default_widget_title = '';
 
@@ -42,7 +42,7 @@ class SBB_Widget extends WP_Widget {
 	 * Shortcode name for this widget
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected static $shortcode = 'shopify-buy-button-widget';
 
@@ -50,7 +50,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Construct widget class.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function __construct() {
 
@@ -79,7 +79,7 @@ class SBB_Widget extends WP_Widget {
 	 * Note: Could also delete any transients
 	 * delete_transient( 'some-transient-generated-by-this-widget' );
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	public function flush_widget_cache() {
 		wp_cache_delete( $this->widget_slug, 'widget' );
@@ -89,7 +89,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Front-end display of widget.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  array $args     The widget arguments set up when a sidebar is registered.
 	 * @param  array $instance The widget settings as set by user.
 	 */
@@ -110,7 +110,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Return the widget/shortcode output
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  array $atts Array of widget/shortcode attributes/args.
 	 * @return string       Widget output
 	 */
@@ -159,7 +159,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Update form values as they are saved.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  array $new_instance New settings for this instance as input by the user.
 	 * @param  array $old_instance Old settings for this instance.
 	 * @return array               Settings to save or bool false to cancel saving.
@@ -185,7 +185,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Enqueue admin widget scripts and styles.
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	function enqueue() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -199,7 +199,7 @@ class SBB_Widget extends WP_Widget {
 	/**
 	 * Back-end widget form with defaults.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  array $instance Current settings.
 	 */
 	public function form( $instance ) {
@@ -256,7 +256,7 @@ class SBB_Widget extends WP_Widget {
 /**
  * Register this widget with WordPress. Can also move this function to the parent plugin.
  *
- * @since  0.1.0
+ * @since  NEXT
  */
 function register_shopify_buy_button_widget() {
 	register_widget( 'SBB_Widget' );

@@ -10,14 +10,14 @@ class SBB_Modal {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since 0.1.0
+	 * @since NEXT
 	 */
 	protected $plugin = null;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -27,7 +27,7 @@ class SBB_Modal {
 	/**
 	 * Get the buy button creation modal
 	 *
-	 * @since 0.1.0
+	 * @since NEXT
 	 * @return string HTML markup of modal.
 	 */
 	public function get_modal() {
@@ -54,7 +54,7 @@ class SBB_Modal {
 						<label class="sbb-show-label">
 							<span class="sbb-show-preview">
 							</span>
-							<input class="sbb-show" type="radio" name="sbb-show" value="all"> 
+							<input class="sbb-show" type="radio" name="sbb-show" value="all" checked="checked">
 							<?php esc_html_e( 'Product image, price and button', 'shopify-buy-button' ); ?>
 						</label>
 						<label class="sbb-show-label">
