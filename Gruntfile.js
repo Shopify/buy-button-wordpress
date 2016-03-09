@@ -202,7 +202,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask( 'version', [ 'default', 'replace:version_php', 'replace:version_readme' ] );
-    grunt.registerTask( 'release', [ 'default', 'replace', 'copy' ] );
+    grunt.registerTask( 'release', [ 'replace:readme_txt', 'copy' ] );
 
     grunt.util.linefeed = '\n';
 };
