@@ -2,12 +2,12 @@
 
 class SBB_Widget_Test extends WP_UnitTestCase {
 
-	function test_sample() {
-		// replace this with some actual testing code
-		$this->assertTrue( true );
-	}
-
+	/**
+	 * Confirm widget class is defined.
+	 *
+	 * @since NEXT
+	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'SBB_Widget') );
+		$this->assertTrue( class_exists( 'SBB_Widget' ) );
 	}
 }
