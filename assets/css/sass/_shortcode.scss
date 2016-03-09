@@ -1,4 +1,6 @@
-button.sbb-add-shortcode.button {
+button.sbb-add-shortcode.button, button.sbb-add-shortcode.button:hover {
 	padding-left: 25px;
-	background: url(../images/shopify_icon_small.png) 6px 4px no-repeat ;
+	background-image: url(../images/shopify_icon_small.png);
+	background-position: 6px 4px;
+	background-repeat: no-repeat;
 }

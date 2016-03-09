@@ -99,7 +99,7 @@ class SBB_Settings {
 			'manage_options',
 			$this->key,
 			array( $this, 'admin_page_display' ),
-			$this->plugin->url( 'assets/images/shopify_icon_small.png' )
+			$this->plugin->url( 'assets/images/shopify_icon_small2.png' )
 		);
 	}
 
