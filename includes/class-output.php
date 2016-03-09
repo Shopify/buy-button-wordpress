@@ -117,7 +117,7 @@ class SBB_Output {
 
 		ob_start();
 		?>
-		<div<?php echo $this->array_to_data_attributes( $args ); ?>></div>
+		<div class="sbb-embed sbb-embed-<?php echo esc_attr( $args['embed_type'] ) ?>"<?php echo $this->array_to_data_attributes( $args ); ?>></div>
 		<noscript><a href="<?php echo esc_url( $no_script_url ); ?>" target="_blank"><?php echo $no_script_text; ?></a></noscript>
 		<?php
 
@@ -270,6 +270,11 @@ class SBB_Output {
 		body {
 			text-align: center;
 		}
+		.sbb-embed-product {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 		</style>
 		<?php
 
@@ -288,11 +293,6 @@ class SBB_Output {
 	 * @since NEXT
 	 */
 	function embed_cart() {
-		// Only output cart if redirect is set to cart.
-		if ( 'cart' !== cmb2_get_option( 'shopify_buy_button_appearance', 'redirect_to' ) ) {
-			return;
-		}
-
 		echo $this->get_cart( array() );
 	}
 }

@@ -72,7 +72,10 @@ module.exports = function (grunt) {
                         { presets: ['es2015'] }
                     ],
                     'ejsify',
-                    'browserify-shim'
+                    [
+                        'browserify-shim',
+                        { global: true }
+                    ]
                 ]
             },
             dist: { files: {

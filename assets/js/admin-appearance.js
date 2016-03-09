@@ -39,7 +39,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		}
 
 		if (parsed[key] !== val) {
-			parsed[key] = val;
+			if (val) {
+				parsed[key] = val;
+			} else {
+				delete parsed[key];
+			}
 			loc = split[0] + '?' + _queryString2.default.stringify(parsed);
 
 			$iframe.attr('src', loc);
@@ -47,9 +51,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	};
 
 	(0, _jquery2.default)(document.body).on('change', 'input,select', function () {
-		addArgument(this.name, this.value);
+		if ('background' === this.id) {
+			addArgument(this.name, this.checked);
+			(0, _jquery2.default)('.cmb2-id-background-color').toggleClass('disabled', !this.checked);
+		} else {
+			addArgument(this.name, this.value);
+		}
 	});
 
+	// Add color picker change event
 	(0, _jquery2.default)('.cmb2-colorpicker').wpColorPicker({
 		change: function change(event, ui) {
 			var name = event.target.name,
@@ -58,6 +68,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			addArgument(name, color);
 		}
 	});
+
+	// Adjust color picker styling to have field title in button.
+	setTimeout(function () {
+		(0, _jquery2.default)('.wp-color-result').each(function () {
+			var $this = (0, _jquery2.default)(this),
+			    newTitle = undefined;
+
+			newTitle = $this.closest('.cmb-row').find('.cmb-th label').text();
+
+			$this.attr('title', newTitle).attr('data-current', newTitle);
+		});
+	}, 1);
+
+	(0, _jquery2.default)('.cmb2-id-background-color').toggleClass('disabled', (0, _jquery2.default)('.cmb2-id-background input:checked').length === 0);
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})

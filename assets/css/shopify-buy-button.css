@@ -112,7 +112,8 @@ button.sbb-add-shortcode.button {
   border-radius: 5px;
   position: relative;
   margin: 30px 0;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+  max-width: 975px; }
   .sbb-appearance .cmb-th {
     padding: 0; }
   .sbb-appearance .cmb-td {
@@ -120,15 +121,41 @@ button.sbb-add-shortcode.button {
     position: relative;
     width: 100%; }
   .sbb-appearance .cmb2-id-background .cmb-td {
-    padding: 29px 0 0; }
+    padding: 10px 0 0; }
+    .sbb-appearance .cmb2-id-background .cmb-td label span {
+      color: inherit;
+      font-style: normal; }
   .sbb-appearance .cmb2-wrap .cmb-row {
-    width: 50%;
+    width: 48%;
     float: left;
-    height: 82px; }
-  .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-text, .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-select {
+    height: 42px;
+    margin-right: 4%; }
+    .sbb-appearance .cmb2-wrap .cmb-row:nth-of-type(odd) {
+      margin-right: 0; }
+  .sbb-appearance .cmb2-wrap .wp-picker-container {
+    width: 100%; }
+    .sbb-appearance .cmb2-wrap .wp-picker-container.wp-picker-active {
+      width: auto; }
+  .sbb-appearance .cmb2-wrap .wp-color-result {
+    width: 80%; }
+    .sbb-appearance .cmb2-wrap .wp-color-result:after {
+      text-align: left; }
+  .sbb-appearance .cmb2-wrap .wp-picker-active .wp-color-result {
+    width: auto; }
+  .sbb-appearance .cmb-type-colorpicker .cmb-th {
+    display: none; }
+  .sbb-appearance .disabled {
+    opacity: 0.6;
+    pointer-events: none; }
+  .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-text, .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-select, .sbb-appearance .cmb2-wrap .cmb-row.cmb-type-title {
     float: none;
     clear: both;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
+  .sbb-appearance .cmb-type-title h3 {
+    margin-top: 0;
+    padding: 0;
+    font-size: 14px; }
   .sbb-appearance .cmb2_select {
     width: 25em;
     max-width: 100%; }
@@ -164,7 +191,9 @@ button.sbb-add-shortcode.button {
   height: 100%;
   background: #F4F5F6;
   text-align: center;
-  padding: 30px 0; }
+  padding: 30px 0;
+  min-height: 530px;
+  position: relative; }
 
 @media (min-width: 645px) {
   .sbb-appearance-left {
@@ -183,7 +212,12 @@ button.sbb-add-shortcode.button {
     width: 60%; } }
 
 .sbb-appearance-preview {
-  height: 400px;
-  width: 100%; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=shopify-buy-button.css.map */

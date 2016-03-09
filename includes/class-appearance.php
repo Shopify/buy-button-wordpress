@@ -150,14 +150,25 @@ class SBB_Appearance {
 		Add your fields here
 		*/
 		$cmb->add_field( array(
-			'name'    => __( 'Button', 'shopify-buy-button' ),
-			'id'      => 'button_background_color',
-			'type'    => 'colorpicker',
-			'default' => '7db461',
+			'name'    => __( 'Colors', 'shopify-buy-button' ),
+			'id'   => 'color_title',
+			'type'    => 'title',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Button Text', 'shopify-buy-button' ),
+			'name'    => __( 'Button color', 'shopify-buy-button' ),
+			'id'      => 'button_background_color',
+			'type'    => 'colorpicker',
+			'default' => '7db461',
+			'attributes' => array(
+				'data-colorpicker' => json_encode( array(
+					'pick' => 'TEST',
+				) ),
+			),
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Button text', 'shopify-buy-button' ),
 			'id'      => 'button_text_color',
 			'type'    => 'colorpicker',
 			'default' => 'ffffff',
@@ -178,17 +189,17 @@ class SBB_Appearance {
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Background', 'shopify-buy-button' ),
-			'id'      => 'background_color',
-			'type'    => 'colorpicker',
-			'default' => 'ffffff',
-		) );
-
-		$cmb->add_field( array(
 			'desc'    => __( 'Background', 'shopify-buy-button' ),
 			'id'      => 'background',
 			'type'    => 'checkbox',
 			'default' => false,
+		) );
+
+		$cmb->add_field( array(
+			'name'    => __( 'Background', 'shopify-buy-button' ),
+			'id'      => 'background_color',
+			'type'    => 'colorpicker',
+			'default' => 'ffffff',
 		) );
 
 		$cmb->add_field( array(
