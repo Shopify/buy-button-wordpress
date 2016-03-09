@@ -28,5 +28,10 @@
   "browserify-shim": {
     "jquery": "global:jQuery",
     "tinymce": "global:tinymce"
+  },
+  "scripts": {
+    "test": "dockunit",
+    "preversion": "npm test",
+    "version": "grunt version && git add ."
   }
 }
