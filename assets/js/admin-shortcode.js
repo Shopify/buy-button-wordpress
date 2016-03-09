@@ -119,8 +119,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
-			// Generate shortcode
-			var shortcode = '[shopify-buy-button embed_type="' + data.resourceType + '" shop="' + data.shop + '" product_handle="' + data.resourceHandles.join(', ') + '" show="' + data.show + '"]';
+			var shortcode = undefined,
+			    shortcodeAtts = undefined;
+
+			shortcodeAtts = [{ name: 'embed_type', value: data.resourceType }, { name: 'shop', value: data.shop }, { name: 'product_handle', value: data.resourceHandles.join(', ') }, { name: 'show', value: data.show }];
+
+			shortcode = '[shopify-buy-button';
+
+			for (var i in shortcodeAtts) {
+				if (shortcodeAtts[i].value) {
+					shortcode += ' ' + shortcodeAtts[i].name + '="' + shortcodeAtts[i].value + '"';
+				}
+			}
+
+			shortcode += ']';
 
 			// Insert shortcode.
 			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
