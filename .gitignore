@@ -67,3 +67,5 @@ node_modules
 ### Sass ###
 .sass-cache
 
+release
+

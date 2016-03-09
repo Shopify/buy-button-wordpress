@@ -107,7 +107,7 @@ module.exports = function (grunt) {
                 },
                 files: { src: ['assets/css/shopify-buy-button.min.css'] }
             }
-        }
+        },
         replace: {
             version_php: {
                 src: [

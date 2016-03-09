@@ -38,7 +38,7 @@
 /**
  * Autoloads files with classes when needed
  *
- * @since  0.1.0
+ * @since  NEXT
  * @param  string $class_name Name of the class being requested.
  * @return void
  */
@@ -60,7 +60,7 @@ spl_autoload_register( 'shopify_buy_button_autoload_classes' );
 /**
  * Main initiation class
  *
- * @since  0.1.0
+ * @since  NEXT
  * @var  string $version  Plugin version
  * @var  string $basename Plugin basename
  * @var  string $url      Plugin URL
@@ -72,7 +72,7 @@ class Shopify_Buy_Button {
 	 * Current version
 	 *
 	 * @var  string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	const VERSION = '0.1.0';
 
@@ -80,7 +80,7 @@ class Shopify_Buy_Button {
 	 * URL of plugin directory
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $url = '';
 
@@ -88,7 +88,7 @@ class Shopify_Buy_Button {
 	 * Path of plugin directory
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $path = '';
 
@@ -96,7 +96,7 @@ class Shopify_Buy_Button {
 	 * Plugin basename
 	 *
 	 * @var string
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected $basename = '';
 
@@ -104,7 +104,7 @@ class Shopify_Buy_Button {
 	 * Singleton instance of plugin
 	 *
 	 * @var Shopify_Buy_Button
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected static $single_instance = null;
 
@@ -146,7 +146,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Creates or returns an instance of this class.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return Shopify_Buy_Button A single instance of this class.
 	 */
 	public static function get_instance() {
@@ -160,7 +160,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Sets up our plugin
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 */
 	protected function __construct() {
 		$this->basename = plugin_basename( __FILE__ );
@@ -176,7 +176,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Attach other plugin classes to the base plugin class.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public function plugin_classes() {
@@ -192,7 +192,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Add hooks and filters
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public function hooks() {
@@ -202,7 +202,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Activate the plugin
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public static function _activate() {
@@ -214,7 +214,7 @@ class Shopify_Buy_Button {
 	 * Deactivate the plugin
 	 * Uninstall routines should be in uninstall.php
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public static function _deactivate() {}
@@ -222,7 +222,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Init hooks
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public function init() {
@@ -235,7 +235,7 @@ class Shopify_Buy_Button {
 	 * Check if the plugin meets requirements and
 	 * disable it if they are not present.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return boolean result of meets_requirements
 	 */
 	public function check_requirements() {
@@ -256,7 +256,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Deactivates this plugin, hook this function on admin_init.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public function deactivate_me() {
@@ -266,7 +266,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Check that all plugin requirements are met
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return boolean True if requirements are met.
 	 */
 	public static function meets_requirements() {
@@ -279,7 +279,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Adds a notice to the dashboard if the plugin requirements are not met
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @return void
 	 */
 	public function requirements_not_met_notice() {
@@ -292,7 +292,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Magic getter for our object.
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param string $field Field to get.
 	 * @throws Exception Throws an exception if the field is invalid.
 	 * @return mixed
@@ -318,7 +318,7 @@ class Shopify_Buy_Button {
 	/**
 	 * Include a file from the includes directory
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  string $filename Name of the file to be included.
 	 * @return bool   Result of include call.
 	 */
@@ -333,7 +333,7 @@ class Shopify_Buy_Button {
 	/**
 	 * This plugin's directory
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  string $path (optional) appended path.
 	 * @return string       Directory and path
 	 */
@@ -346,7 +346,7 @@ class Shopify_Buy_Button {
 	/**
 	 * This plugin's url
 	 *
-	 * @since  0.1.0
+	 * @since  NEXT
 	 * @param  string $path (optional) appended path.
 	 * @return string       URL and path
 	 */
@@ -361,7 +361,7 @@ class Shopify_Buy_Button {
  * Grab the Shopify_Buy_Button object and return it.
  * Wrapper for Shopify_Buy_Button::get_instance()
  *
- * @since  0.1.0
+ * @since  NEXT
  * @return Shopify_Buy_Button  Singleton instance of plugin class.
  */
 function shopify_buy_button() {
