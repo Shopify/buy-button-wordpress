@@ -141,8 +141,8 @@ class SBB_Output {
 			$args['product_title_color'] = $args['text_color'];
 		}
 
-		if ( empty( $args['background'] ) ) {
-			unset( $args['background_color'] );
+		if ( isset( $args['background'] ) && ! $args['background'] ) {
+			$args['background_color'] = 'transparent';
 		}
 
 		if ( ! empty( $args['show'] ) ) {
@@ -171,7 +171,7 @@ class SBB_Output {
 			'buy_button_text'                     => cmb2_get_option( 'shopify_buy_button_appearance', 'buy_button_text' ),
 			'button_background_color'             => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
 			'button_text_color'                   => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
-			'background_color'                    => ! empty( $args['background'] ) || cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
+			'background_color'                    => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
 			'buy_button_out_of_stock_text'        => __( 'Out of Stock', 'shopify' ),
 			'buy_button_product_unavailable_text' => __( 'Unavailable', 'shopify' ),
 			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
@@ -261,7 +261,11 @@ class SBB_Output {
 
 		foreach( $other_args as $arg ) {
 			if ( isset( $_GET[ $arg ] ) ) {
-				$args[ $arg ] = esc_attr( $_GET[ $arg ] );
+				if ( $_GET[ $arg ] == 'false' ) {
+					$args[ $arg ] = false;
+				} else {
+					$args[ $arg ] = esc_attr( $_GET[ $arg ] );
+				}
 			}
 		}
 
@@ -278,11 +282,11 @@ class SBB_Output {
 		</style>
 		<?php
 
+		echo $this->get_button( $args );
+
 		if ( ! empty( $_GET['show_cart'] ) ) {
 			echo $this->get_cart( $args );
 		}
-
-		echo $this->get_button( $args );
 
 		die();
 	}

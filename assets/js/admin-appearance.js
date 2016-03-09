@@ -39,11 +39,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		}
 
 		if (parsed[key] !== val) {
-			if (val) {
-				parsed[key] = val;
-			} else {
-				delete parsed[key];
-			}
+			parsed[key] = val;
 			loc = split[0] + '?' + _queryString2.default.stringify(parsed);
 
 			$iframe.attr('src', loc);
