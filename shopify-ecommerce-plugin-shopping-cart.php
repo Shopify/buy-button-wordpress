@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Shopify Buy Button
+ * Plugin Name: Shopify eCommerce Plugin - Shopping Cart
  * Plugin URI:  https://www.shopify.com/buy-button
- * Description: Add ecommerce to WordPress in minutes!
+ * Description: Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
  * Version:     0.1.0
  * Author:      WebDevStudios
  * Author URI:  http://webdevstudios.com
  * Donate link: https://www.shopify.com/buy-button
  * License:     GPLv2
- * Text Domain: shopify-buy-button
+ * Text Domain: shopify-ecommerce-plugin-shopping-cart
  * Domain Path: /languages
  */
 
@@ -42,19 +42,19 @@
  * @param  string $class_name Name of the class being requested.
  * @return void
  */
-function shopify_buy_button_autoload_classes( $class_name ) {
-	if ( 0 !== strpos( $class_name, 'SBB_' ) ) {
+function shopify_ecommerce_plugin_autoload_classes( $class_name ) {
+	if ( 0 !== strpos( $class_name, 'SECP_' ) ) {
 		return;
 	}
 
 	$filename = strtolower( str_replace(
 		'_', '-',
-		substr( $class_name, strlen( 'SBB_' ) )
+		substr( $class_name, strlen( 'SECP_' ) )
 	) );
 
-	Shopify_Buy_Button::include_file( $filename );
+	Shopify_ECommerce_Plugin::include_file( $filename );
 }
-spl_autoload_register( 'shopify_buy_button_autoload_classes' );
+spl_autoload_register( 'shopify_ecommerce_plugin_autoload_classes' );
 
 /**
  * Main initiation class
@@ -65,7 +65,7 @@ spl_autoload_register( 'shopify_buy_button_autoload_classes' );
  * @var  string $url      Plugin URL
  * @var  string $path     Plugin Path
  */
-class Shopify_Buy_Button {
+class Shopify_ECommerce_Plugin {
 
 	/**
 	 * Current version
@@ -102,51 +102,51 @@ class Shopify_Buy_Button {
 	/**
 	 * Singleton instance of plugin
 	 *
-	 * @var Shopify_Buy_Button
+	 * @var Shopify_ECommerce_Plugin
 	 * @since  NEXT
 	 */
 	protected static $single_instance = null;
 
 	/**
-	 * Instance of SBB_Output
+	 * Instance of SECP_Output
 	 *
-	 * @var SBB_Output
+	 * @var SECP_Output
 	 */
 	protected $output;
 
 	/**
-	 * Instance of SBB_Shortcode
+	 * Instance of SECP_Shortcode
 	 *
-	 * @var SBB_Shortcode
+	 * @var SECP_Shortcode
 	 */
 	protected $shortcode;
 
 	/**
-	 * Instance of SBB_Modal
+	 * Instance of SECP_Modal
 	 *
-	 * @var SBB_Modal
+	 * @var SECP_Modal
 	 */
 	protected $modal;
 
 	/**
-	 * Instance of SBB_Settings
+	 * Instance of SECP_Settings
 	 *
-	 * @var SBB_Settings
+	 * @var SECP_Settings
 	 */
 	protected $settings;
 
 	/**
-	 * Instance of SBB_Appearance
+	 * Instance of SECP_Customize
 	 *
-	 * @var SBB_Appearance
+	 * @var SECP_Customize
 	 */
-	protected $appearance;
+	protected $customize;
 
 	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since  NEXT
-	 * @return Shopify_Buy_Button A single instance of this class.
+	 * @return Shopify_ECommerce_Plugin A single instance of this class.
 	 */
 	public static function get_instance() {
 		if ( null === self::$single_instance ) {
@@ -176,11 +176,11 @@ class Shopify_Buy_Button {
 	 */
 	public function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
-		$this->output     = new SBB_Output( $this );
-		$this->shortcode  = new SBB_Shortcode( $this );
-		$this->modal      = new SBB_Modal( $this );
-		$this->settings   = new SBB_Settings( $this );
-		$this->appearance = new SBB_Appearance( $this );
+		$this->output     = new SECP_Output( $this );
+		$this->shortcode  = new SECP_Shortcode( $this );
+		$this->modal      = new SECP_Modal( $this );
+		$this->settings   = new SECP_Settings( $this );
+		$this->customize = new SECP_Customize( $this );
 		require( self::dir( 'includes/class-widget.php' ) );
 	} // END OF PLUGIN CLASSES FUNCTION
 
@@ -200,7 +200,7 @@ class Shopify_Buy_Button {
 	 */
 	public function init() {
 		if ( $this->check_requirements() ) {
-			load_plugin_textdomain( 'shopify-buy-button', false, dirname( $this->basename ) . '/languages/' );
+			load_plugin_textdomain( 'shopify-ecommerce-plugin-shopping-cart', false, dirname( $this->basename ) . '/languages/' );
 		}
 	}
 
@@ -256,7 +256,7 @@ class Shopify_Buy_Button {
 	public function requirements_not_met_notice() {
 		// Output our error.
 		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'Shopify Buy Button is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'shopify-buy-button' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'shopify-ecommerce-plugin-shopping-cart' ), admin_url( 'plugins.php' ) ) . '</p>';
 		echo '</div>';
 	}
 
@@ -279,7 +279,7 @@ class Shopify_Buy_Button {
 			case 'shortcode':
 			case 'modal':
 			case 'settings':
-			case 'appearance':
+			case 'customize':
 				return $this->$field;
 			default:
 				throw new Exception( 'Invalid '. __CLASS__ .' property: ' . $field );
@@ -329,15 +329,15 @@ class Shopify_Buy_Button {
 }
 
 /**
- * Grab the Shopify_Buy_Button object and return it.
- * Wrapper for Shopify_Buy_Button::get_instance()
+ * Grab the Shopify_ECommerce_Plugin object and return it.
+ * Wrapper for Shopify_ECommerce_Plugin::get_instance()
  *
  * @since  NEXT
- * @return Shopify_Buy_Button  Singleton instance of plugin class.
+ * @return Shopify_ECommerce_Plugin  Singleton instance of plugin class.
  */
-function shopify_buy_button() {
-	return Shopify_Buy_Button::get_instance();
+function shopify_ecommerce_plugin() {
+	return Shopify_ECommerce_Plugin::get_instance();
 }
 
 // Kick it off.
-add_action( 'plugins_loaded', array( shopify_buy_button(), 'hooks' ) );
+add_action( 'plugins_loaded', array( shopify_ecommerce_plugin(), 'hooks' ) );

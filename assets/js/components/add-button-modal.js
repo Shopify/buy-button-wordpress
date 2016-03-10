@@ -1,16 +1,16 @@
 /**
- * Shopify Buy Button - Add Button Modal
+ * Shopify eCommerce Plugin - Shopping Cart - Add Button Modal
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
  */
 
-/* global sbbAdminModal */
+/* global secpAdminModal */
 import $ from 'jquery';
 
 let open = false,
 	modal,
-	html = sbbAdminModal.modal.trim(),
+	html = secpAdminModal.modal.trim(),
 	closeModal = function() {
 		if ( modal && modal.remove ) {
 			modal.remove();
@@ -33,9 +33,9 @@ window.addEventListener( 'message', ( event ) => {
 			event.data.resourceHandles.length ) {
 		if ( 'product' === event.data.resourceType ) {
 			modal.find( 'iframe' ).remove();
-			modal.find( '.sbb-modal-secondpage' ).show();
-			modal.find( '.sbb-modal-add-button' ).click( function() {
-				event.data.show = modal.find( '.sbb-show:checked' ).val();
+			modal.find( '.secp-modal-secondpage' ).show();
+			modal.find( '.secp-modal-add-button' ).click( function() {
+				event.data.show = modal.find( '.secp-show:checked' ).val();
 				callback( event.data );
 				closeModal();
 			} );
@@ -61,7 +61,7 @@ export default function createButtonModal( cb ) {
 	modal = $( html ).appendTo( document.body );
 
 	// Handle close button event.
-	modal.on( 'click', '.sbb-modal-close', function( e ) {
+	modal.on( 'click', '.secp-modal-close', function( e ) {
 		e.preventDefault();
 		closeModal();
 	} );

@@ -1,6 +1,6 @@
 {
   "generator-plugin-wp": {
-    "name": "Shopify Buy Button",
+    "name": "Shopify eCommerce Plugin - Shopping Cart",
     "homepage": "https://www.shopify.com/buy-button",
     "description": "Add ecommerce to WordPress in minutes!",
     "version": "0.1.0",
@@ -8,10 +8,10 @@
     "authoremail": "contact@webdevstudios.com",
     "authorurl": "http://webdevstudios.com",
     "license": "GPLv2",
-    "slug": "shopify-buy-button",
-    "classname": "Shopify_Buy_Button",
-    "classprefix": "SBB_",
-    "prefix": "shopify_buy_button",
+    "slug": "shopify-ecommerce-plugin-shopping-cart",
+    "classname": "Shopify_ECommerce_Plugin",
+    "classprefix": "SECP_",
+    "prefix": "shopify_ecommerce_plugin",
     "year": 2016
   }
 }

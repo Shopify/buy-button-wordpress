@@ -1,6 +1,6 @@
 <?php
 
-class SBB_Settings_Test extends WP_UnitTestCase {
+class SECP_Settings_Test extends WP_UnitTestCase {
 
 	/**
 	 * Confirm settings class is defined.
@@ -8,7 +8,7 @@ class SBB_Settings_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'SBB_Settings' ) );
+		$this->assertTrue( class_exists( 'SECP_Settings' ) );
 	}
 
 	/**
@@ -17,6 +17,6 @@ class SBB_Settings_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_access() {
-		$this->assertTrue( shopify_buy_button()->settings instanceof SBB_Settings );
+		$this->assertTrue( shopify_ecommerce_plugin()->settings instanceof SECP_Settings );
 	}
 }

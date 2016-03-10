@@ -81,7 +81,7 @@ module.exports = function (grunt) {
             dist: { files: {
                 'assets/js/admin-shortcode.js': 'assets/js/components/admin-shortcode.js',
                 'assets/js/admin-widget.js': 'assets/js/components/admin-widget.js',
-                'assets/js/admin-appearance.js': 'assets/js/components/admin-appearance.js'
+                'assets/js/admin-customize.js': 'assets/js/components/admin-customize.js'
             } }
         },
         uglify: {
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
                 files: {
                     'assets/js/admin-shortcode.min.js': 'assets/js/admin-shortcode.js',
                     'assets/js/admin-widget.min.js': 'assets/js/admin-widget.js',
-                    'assets/js/admin-appearance.min.js': 'assets/js/admin-appearance.js'
+                    'assets/js/admin-customize.min.js': 'assets/js/admin-customize.js'
                 },
                 options: { banner: compactBannerTemplate }
             }
@@ -97,10 +97,10 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 options: { sourceMap: true },
-                files: { 'assets/css/shopify-buy-button.css': 'assets/css/sass/styles.scss' }
+                files: { 'assets/css/styles.css': 'assets/css/sass/styles.scss' }
             }
         },
-        cssmin: { dist: { files: { 'assets/css/shopify-buy-button.min.css': 'assets/css/shopify-buy-button.css' } } },
+        cssmin: { dist: { files: { 'assets/css/styles.min.css': 'assets/css/styles.css' } } },
         usebanner: {
             taskName: {
                 options: {
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
                     banner: bannerTemplate,
                     linebreak: true
                 },
-                files: { src: ['assets/css/shopify-buy-button.min.css'] }
+                files: { src: ['assets/css/styles.min.css'] }
             }
         },
         replace: {

@@ -1,6 +1,6 @@
 <?php
 
-class SBB_Widget_Test extends WP_UnitTestCase {
+class SECP_Widget_Test extends WP_UnitTestCase {
 
 	/**
 	 * Confirm widget class is defined.
@@ -8,6 +8,6 @@ class SBB_Widget_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'SBB_Widget' ) );
+		$this->assertTrue( class_exists( 'SECP_Widget' ) );
 	}
 }

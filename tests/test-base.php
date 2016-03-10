@@ -8,7 +8,7 @@ class BaseTest extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'Shopify_Buy_Button' ) );
+		$this->assertTrue( class_exists( 'Shopify_ECommerce_Plugin' ) );
 	}
 
 	/**
@@ -17,6 +17,6 @@ class BaseTest extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_get_instance() {
-		$this->assertTrue( shopify_buy_button() instanceof Shopify_Buy_Button );
+		$this->assertTrue( shopify_ecommerce_plugin() instanceof Shopify_ECommerce_Plugin );
 	}
 }

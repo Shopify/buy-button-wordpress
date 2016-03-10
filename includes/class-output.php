@@ -1,11 +1,11 @@
 <?php
 /**
- * Shopify Buy Button Output
+ * Shopify eCommerce Plugin - Shopping Cart Output
  * @version 0.1.0
- * @package Shopify Buy Button
+ * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
-class SBB_Output {
+class SECP_Output {
 
 	/**
 	 * Parent plugin class
@@ -85,12 +85,12 @@ class SBB_Output {
 		if ( empty( $args['shop'] ) ) {
 			// Is the shop param unset?
 			// Assign the shop param to the same as the first embed on the page.
-			$args['shop'] = empty( $this->shop ) ? get_option( 'sbb_shop', '' ) : $this->shop;
+			$args['shop'] = empty( $this->shop ) ? get_option( 'secp_shop', '' ) : $this->shop;
 		} else if ( empty( $this->shop ) ) {
 			// Is the shop param set, but no shop param stored?
 			// Save the shop to an option and the class.
 			$this->shop = $args['shop'];
-			update_option( 'sbb_shop', $this->shop );
+			update_option( 'secp_shop', $this->shop );
 		}
 
 		// Is the shop param different from the first embed's shop param?
@@ -113,7 +113,7 @@ class SBB_Output {
 
 		ob_start();
 		?>
-		<div class="sbb-embed sbb-embed-<?php echo esc_attr( $args['embed_type'] ) ?>"<?php echo $this->array_to_data_attributes( $args ); ?>></div>
+		<div class="secp-embed secp-embed-<?php echo esc_attr( $args['embed_type'] ) ?>"<?php echo $this->array_to_data_attributes( $args ); ?>></div>
 		<?php
 
 		if ( ! $this->js_added ) {
@@ -160,14 +160,14 @@ class SBB_Output {
 			'product_name'                        => '',
 			'display_size'                        => 'compact',
 			'has_image'                           => 'true',
-			'redirect_to'                         => cmb2_get_option( 'shopify_buy_button_appearance', 'redirect_to' ),
-			'buy_button_text'                     => cmb2_get_option( 'shopify_buy_button_appearance', 'buy_button_text' ),
-			'button_background_color'             => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
-			'button_text_color'                   => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
-			'background_color'                    => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
+			'redirect_to'                         => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'redirect_to' ),
+			'buy_button_text'                     => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'buy_button_text' ),
+			'button_background_color'             => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'button_background_color' ), 1 ),
+			'button_text_color'                   => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'button_text_color' ), 1 ),
+			'background_color'                    => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'background' ) ? substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'background_color' ), 1 ) : 'transparent',
 			'buy_button_out_of_stock_text'        => __( 'Out of Stock', 'shopify' ),
 			'buy_button_product_unavailable_text' => __( 'Unavailable', 'shopify' ),
-			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
+			'product_title_color'                 => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'text_color' ), 1 ),
 		) );
 
 		if ( 'collection' === $args['embed_type'] ) {
@@ -189,7 +189,7 @@ class SBB_Output {
 		// Override for whether or not to display the product title. Can be true or false.	The current value of data-has_image.
 		$args['show_product_title'] = ! empty( $args['show_product_title'] ) ? $args['show_product_title'] : $args['has_image'];
 
-		$args = apply_filters( 'sbb_product_output_args', $args );
+		$args = apply_filters( 'secp_product_output_args', $args );
 
 		return $this->get_embed( $args );
 	}
@@ -204,13 +204,13 @@ class SBB_Output {
 	public function get_cart( $args ) {
 		$args = wp_parse_args( $args, array(
 			'shop' => '',
-			'checkout_button_text' => cmb2_get_option( 'shopify_buy_button_appearance', 'checkout_button_text' ),
-			'button_text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
-			'button_background_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
-			'background_color' => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
-			'text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
-			'accent_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'accent_color' ), 1 ),
-			'cart_title' => cmb2_get_option( 'shopify_buy_button_appearance', 'cart_title' ),
+			'checkout_button_text' => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'checkout_button_text' ),
+			'button_text_color' => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'button_text_color' ), 1 ),
+			'button_background_color' => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'button_background_color' ), 1 ),
+			'background_color' => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'background' ) ? substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'background_color' ), 1 ) : 'transparent',
+			'text_color' => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'text_color' ), 1 ),
+			'accent_color' => substr( cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'accent_color' ), 1 ),
+			'cart_title' => cmb2_get_option( 'shopify_ecommerce_plugin_customize', 'cart_title' ),
 			'cart_total_text' => '',
 			'discount_notice_text' => '',
 			'sticky' => '',
@@ -221,7 +221,7 @@ class SBB_Output {
 		$args['embed_type'] = 'cart';
 		$args['sticky'] = 'true';
 
-		$args = apply_filters( 'sbb_cart_output_args', $args );
+		$args = apply_filters( 'secp_cart_output_args', $args );
 
 		return $this->get_embed( $args );
 	}
@@ -266,14 +266,14 @@ class SBB_Output {
 			}
 		}
 
-		$args = apply_filters( 'sbb_preview_args', $args );
+		$args = apply_filters( 'secp_preview_args', $args );
 
 		?>
 		<style type="text/css">
 		body {
 			text-align: center;
 		}
-		.sbb-embed-product {
+		.secp-embed-product {
 			position: relative;
 			top: 50%;
 			transform: translateY(-50%);
@@ -287,7 +287,7 @@ class SBB_Output {
 			echo $this->get_cart( $args );
 		}
 
-		do_action( 'sbb_preview_output', $args );
+		do_action( 'secp_preview_output', $args );
 
 		die();
 	}

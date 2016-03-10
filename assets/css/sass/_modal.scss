@@ -1,4 +1,4 @@
-.sbb-modal {
+.secp-modal {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -26,7 +26,7 @@
 	}
 }
 
-.sbb-modal-iframe {
+.secp-modal-iframe {
 	width: 100%;
 	height: 100%;
 	@media (min-height: 440px) {
@@ -34,7 +34,7 @@
 	}
 }
 
-.sbb-modal-close {
+.secp-modal-close {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -56,21 +56,21 @@
 	}
 }
 
-.sbb-modal-secondpage {
+.secp-modal-secondpage {
 	display: none;
 }
 
-.sbb-modal-header {
+.secp-modal-header {
 	padding: 0 20px;
 	border-bottom: 1px solid #ddd;
 }
 
-.sbb-modal-content {
+.secp-modal-content {
 	padding: 20px;
 	overflow: hidden;
 }
 
-.sbb-show-label {
+.secp-show-label {
 	width: 50%;
 	display: block;
 	float: left;
@@ -78,20 +78,20 @@
 	margin-bottom: 20px;
 }
 
-.sbb-show-preview {
+.secp-show-preview {
 	width: 150px;
 	height: 150px;
 	display: block;
 	margin: 0 auto 20px;
 }
 
-.sbb-modal-footer {
+.secp-modal-footer {
 	padding: 20px;
 	border-top: 1px solid #ddd;
 	text-align: right;
 }
 
-.sbb-modal-background {
+.secp-modal-background {
 	position: fixed;
 	top: 0;
 	left: 0;

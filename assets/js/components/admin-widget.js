@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - Admin Widget
+ * Shopify eCommerce Plugin - Shopping Cart - Admin Widget
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
@@ -9,15 +9,15 @@ import $ from 'jquery';
 import modal from './add-button-modal';
 
 $( function() {
-	$( document.body ).on( 'click', '#sbb-add-widget', function( e ) {
+	$( document.body ).on( 'click', '#secp-add-widget', function( e ) {
 		// Grab inputs and iframe of current widget.
 		var $widgetContent = $( this ).closest( '.widget-content' ),
 			$c = {
-				inputType:   $widgetContent.find( '.sbb-hidden-embed_type' ),
-				inputShop:   $widgetContent.find( '.sbb-hidden-shop' ),
-				inputHandle: $widgetContent.find( '.sbb-hidden-product_handle' ),
-				inputShow:   $widgetContent.find( '.sbb-hidden-show' ),
-				iframe:      $widgetContent.find( '.sbb-widget-preview' )
+				inputType:   $widgetContent.find( '.secp-hidden-embed_type' ),
+				inputShop:   $widgetContent.find( '.secp-hidden-shop' ),
+				inputHandle: $widgetContent.find( '.secp-hidden-product_handle' ),
+				inputShow:   $widgetContent.find( '.secp-hidden-show' ),
+				iframe:      $widgetContent.find( '.secp-widget-preview' )
 			};
 
 		e.preventDefault();

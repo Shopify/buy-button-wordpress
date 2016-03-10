@@ -1,5 +1,5 @@
 
-.sbb-appearance {
+.secp-customize {
 	overflow: hidden;
 	border-radius: 5px;
 	position: relative;
@@ -115,19 +115,19 @@
 	}
 }
 
-.sbb-appearance-left, .sbb-appearance-right {
+.secp-customize-left, .secp-customize-right {
 	padding: 30px;
 	box-sizing: border-box;
 }
 
-.sbb-appearance-left {
+.secp-customize-left {
 	width: 100%;
 	float: left;
 	background: #fff;
 	min-height: 500px;
 }
 
-.sbb-appearance-right {
+.secp-customize-right {
 	width: 100%;
 	height: 100%;
 	background: #F4F5F6;
@@ -138,11 +138,11 @@
 }
 
 @media (min-width: 645px) {
-	.sbb-appearance-left {
+	.secp-customize-left {
 		width: 50%;
 	}
 
-	.sbb-appearance-right {
+	.secp-customize-right {
 		width: 50%;
 		position: absolute;
 		top: 0;
@@ -152,16 +152,16 @@
 }
 
 @media (min-width: 985px) {
-	.sbb-appearance-left {
+	.secp-customize-left {
 		width: 40%;
 	}
 
-	.sbb-appearance-right {
+	.secp-customize-right {
 		width: 60%;
 	}
 }
 
-.sbb-appearance-preview {
+.secp-customize-preview {
 	position: absolute;
 	top: 0;
 	left: 0;

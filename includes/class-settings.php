@@ -1,11 +1,11 @@
 <?php
 /**
- * Shopify Buy Button Settings
+ * Shopify eCommerce Plugin - Shopping Cart Settings
  * @version 0.1.0
- * @package Shopify Buy Button
+ * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
-class SBB_Settings {
+class SECP_Settings {
 	/**
 	 * Parent plugin class
 	 *
@@ -20,7 +20,7 @@ class SBB_Settings {
 	 * @var    string
 	 * @since  NEXT
 	 */
-	protected $key = 'shopify_buy_button_settings';
+	protected $key = 'shopify_ecommerce_plugin_settings';
 
 	/**
 	 * Options page metabox id
@@ -28,7 +28,7 @@ class SBB_Settings {
 	 * @var    string
 	 * @since  NEXT
 	 */
-	protected $metabox_id = 'shopify_buy_button_settings_metabox';
+	protected $metabox_id = 'shopify_ecommerce_plugin_settings_metabox';
 
 	/**
 	 * Options Page title
@@ -54,7 +54,7 @@ class SBB_Settings {
 		$this->plugin = $plugin;
 		$this->hooks();
 
-		$this->title = __( 'Shopify', 'shopify-buy-button' );
+		$this->title = __( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
 	}
 
 	/**
@@ -84,7 +84,7 @@ class SBB_Settings {
 	 */
 	public function admin_enqueue_scripts() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_style( 'sbb-admin', shopify_buy_button()->url( 'assets/css/shopify-buy-button' . $min . '.css' ), array(), '160223' );
+		wp_enqueue_style( 'secp-admin', shopify_ecommerce_plugin()->url( 'assets/css/styles' . $min . '.css' ), array(), '160223' );
 	}
 
 	/**
@@ -110,7 +110,7 @@ class SBB_Settings {
 	 */
 	public function admin_page_display() {
 		?>
-		<iframe class="sbb-settings-iframe" src="https://widgets.shopifyapps.com/embed_admin/settings"></iframe>
+		<iframe class="secp-settings-iframe" src="https://widgets.shopifyapps.com/embed_admin/settings"></iframe>
 		<?php
 	}
 }

@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - Admin Appearance Page
+ * Shopify eCommerce Plugin - Shopping Cart - Admin Customize Page
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
@@ -9,7 +9,7 @@ import $ from 'jquery';
 import queryString from 'query-string';
 
 $( function() {
-	let $iframe = $( '.sbb-appearance-preview' ),
+	let $iframe = $( '.secp-customize-preview' ),
 		addArgument = function( key, val ) {
 			let loc = $iframe.attr( 'src' ),
 				split = loc.split( '?' ),

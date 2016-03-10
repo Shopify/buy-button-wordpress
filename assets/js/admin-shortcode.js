@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-09
+ * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-10
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -23,7 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var open = false,
     modal = undefined,
-    html = sbbAdminModal.modal.trim(),
+    html = secpAdminModal.modal.trim(),
     closeModal = function closeModal() {
 	if (modal && modal.remove) {
 		modal.remove();
@@ -31,13 +31,13 @@ var open = false,
 	open = false;
 },
     callback = undefined; /**
-                           * Shopify Buy Button - Add Button Modal
+                           * Shopify eCommerce Plugin - Shopping Cart - Add Button Modal
                            * https://www.shopify.com/buy-button
                            *
                            * Licensed under the GPLv2+ license.
                            */
 
-/* global sbbAdminModal */
+/* global secpAdminModal */
 
 
 window.addEventListener('message', function (event) {
@@ -52,9 +52,9 @@ window.addEventListener('message', function (event) {
 	if (event.data.resourceType && event.data.resourceHandles && event.data.resourceHandles.length) {
 		if ('product' === event.data.resourceType) {
 			modal.find('iframe').remove();
-			modal.find('.sbb-modal-secondpage').show();
-			modal.find('.sbb-modal-add-button').click(function () {
-				event.data.show = modal.find('.sbb-show:checked').val();
+			modal.find('.secp-modal-secondpage').show();
+			modal.find('.secp-modal-add-button').click(function () {
+				event.data.show = modal.find('.secp-show:checked').val();
 				callback(event.data);
 				closeModal();
 			});
@@ -80,7 +80,7 @@ function createButtonModal(cb) {
 	modal = (0, _jquery2.default)(html).appendTo(document.body);
 
 	// Handle close button event.
-	modal.on('click', '.sbb-modal-close', function (e) {
+	modal.on('click', '.secp-modal-close', function (e) {
 		e.preventDefault();
 		closeModal();
 	});
@@ -102,7 +102,7 @@ var _addButtonModal2 = _interopRequireDefault(_addButtonModal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Shopify Buy Button - Admin Shortcode
+ * Shopify eCommerce Plugin - Shopping Cart - Admin Shortcode
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
@@ -111,7 +111,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* global tinymce */
 
 (0, _jquery2.default)(function () {
-	(0, _jquery2.default)('#sbb-add-shortcode').click(function (e) {
+	(0, _jquery2.default)('#secp-add-shortcode').click(function (e) {
 		var _this = this;
 
 		var editor = undefined;
@@ -124,7 +124,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 			shortcodeAtts = [{ name: 'embed_type', value: data.resourceType }, { name: 'shop', value: data.shop }, { name: 'product_handle', value: data.resourceHandles.join(', ') }, { name: 'show', value: data.show }];
 
-			shortcode = '[shopify-buy-button';
+			shortcode = '[shopify';
 
 			for (var i in shortcodeAtts) {
 				if (shortcodeAtts[i].value) {

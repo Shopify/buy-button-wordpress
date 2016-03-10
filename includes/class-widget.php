@@ -1,11 +1,11 @@
 <?php
 /**
- * Shopify Buy Button Widget
+ * Shopify eCommerce Plugin - Shopping Cart Widget
  * @version 0.1.0
- * @package Shopify Buy Button
+ * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
-class SBB_Widget extends WP_Widget {
+class SECP_Widget extends WP_Widget {
 
 	/**
 	 * Unique identifier for this widget.
@@ -15,7 +15,7 @@ class SBB_Widget extends WP_Widget {
 	 * @var string
 	 * @since  NEXT
 	 */
-	protected $widget_slug = 'shopify-buy-button-widget';
+	protected $widget_slug = 'shopify-ecommerce-plugin-shopping-car-widget';
 
 
 	/**
@@ -44,7 +44,7 @@ class SBB_Widget extends WP_Widget {
 	 * @var string
 	 * @since  NEXT
 	 */
-	protected static $shortcode = 'shopify-buy-button-widget';
+	protected static $shortcode = 'shopify-widget';
 
 
 	/**
@@ -54,15 +54,15 @@ class SBB_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->widget_name          = esc_html__( 'Shopify Buy Button', 'shopify-buy-button' );
-		$this->default_widget_title = esc_html__( 'Shopify Buy Button', 'shopify-buy-button' );
+		$this->widget_name          = esc_html__( 'Shopify eCommerce Plugin - Shopping Cart', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->default_widget_title = esc_html__( 'Shopify eCommerce Plugin - Shopping Cart', 'shopify-ecommerce-plugin-shopping-cart' );
 
 		parent::__construct(
 			$this->widget_slug,
 			$this->widget_name,
 			array(
 				'classname'   => $this->widget_slug,
-				'description' => esc_html__( 'Embed a Shopify product and buy button.', 'shopify-buy-button' ),
+				'description' => esc_html__( 'Embed a Shopify product and buy button.', 'shopify-ecommerce-plugin-shopping-cart' ),
 			)
 		);
 
@@ -142,7 +142,7 @@ class SBB_Widget extends WP_Widget {
 
 		$widget .= wpautop( wp_kses_post( $atts['text'] ) );
 
-		$widget .= shopify_buy_button()->output->get_button( array(
+		$widget .= shopify_ecommerce_plugin()->output->get_button( array(
 			'embed_type'     => $atts['embed_type'],
 			'shop'           => $atts['shop'],
 			'product_handle' => $atts['product_handle'],
@@ -189,9 +189,9 @@ class SBB_Widget extends WP_Widget {
 	 */
 	function enqueue() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_script( 'sbb-admin-shortcode', shopify_buy_button()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
-		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
-			'modal' => shopify_buy_button()->modal->get_modal(),
+		wp_enqueue_script( 'secp-admin-shortcode', shopify_ecommerce_plugin()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
+		wp_localize_script( 'secp-admin-shortcode', 'secpAdminModal', array(
+			'modal' => shopify_ecommerce_plugin()->modal->get_modal(),
 		) );
 	}
 
@@ -225,29 +225,29 @@ class SBB_Widget extends WP_Widget {
 		// Do product preview.
 		if ( $instance['product_handle'] ) {
 			?>
-			<p><?php esc_html_e( 'Preview: ', 'shopify_buy_button' ); ?>
-			<iframe class="sbb-widget-preview" src="<?php echo esc_url( add_query_arg( array(
+			<p><?php esc_html_e( 'Preview: ', 'shopify_ecommerce_plugin' ); ?>
+			<iframe class="secp-widget-preview" src="<?php echo esc_url( add_query_arg( array(
 				'embed_type'     => $instance['embed_type'],
 				'shop'           => $instance['shop'],
 				'product_handle' => $instance['product_handle'],
 			), site_url() ) ); ?>"></iframe></p>
 			<?php
 		} else {
-			?><p><?php esc_html_e( 'No Product Set', 'shopify-buy-button' ); ?></p><?php
+			?><p><?php esc_html_e( 'No Product Set', 'shopify-ecommerce-plugin-shopping-cart' ); ?></p><?php
 		}
 
 		// Do button.
-		$button_text = __( 'Add Product', 'shopify-buy-button' );
+		$button_text = __( 'Add Product', 'shopify-ecommerce-plugin-shopping-cart' );
 		if ( $instance['product_handle'] ) {
-			$button_text = __( 'Replace Product', 'shopify-buy-button' );
+			$button_text = __( 'Replace Product', 'shopify-ecommerce-plugin-shopping-cart' );
 		}
 		?>
-		<p><button class="button" id="sbb-add-widget"><?php echo esc_html( $button_text ); ?></button></p>
+		<p><button class="button" id="secp-add-widget"><?php echo esc_html( $button_text ); ?></button></p>
 		<?php
 
 		// Do hidden fields for product.
 		foreach ( array( 'embed_type', 'shop', 'product_handle' ) as $hidden_field ) {
-			?><input class="sbb-hidden-<?php echo esc_attr( $hidden_field ); ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
+			?><input class="secp-hidden-<?php echo esc_attr( $hidden_field ); ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
 		}
 	}
 }
@@ -258,7 +258,7 @@ class SBB_Widget extends WP_Widget {
  *
  * @since  NEXT
  */
-function register_shopify_buy_button_widget() {
-	register_widget( 'SBB_Widget' );
+function register_shopify_ecommerce_plugin_widget() {
+	register_widget( 'SECP_Widget' );
 }
-add_action( 'widgets_init', 'register_shopify_buy_button_widget' );
+add_action( 'widgets_init', 'register_shopify_ecommerce_plugin_widget' );

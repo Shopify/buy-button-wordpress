@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - Admin Shortcode
+ * Shopify eCommerce Plugin - Shopping Cart - Admin Shortcode
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
@@ -11,7 +11,7 @@ import $ from 'jquery';
 import modal from './add-button-modal';
 
 $( function() {
-	$( '#sbb-add-shortcode' ).click( function( e ) {
+	$( '#secp-add-shortcode' ).click( function( e ) {
 		let editor;
 
 		e.preventDefault();
@@ -26,7 +26,7 @@ $( function() {
 				{ name: 'show', value: data.show }
 			];
 
-			shortcode = '[shopify-buy-button';
+			shortcode = '[shopify';
 
 			for ( let i in shortcodeAtts ) {
 				if ( shortcodeAtts[i].value ) {

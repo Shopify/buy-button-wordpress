@@ -1,6 +1,6 @@
 <?php
 
-class SBB_Modal_Test extends WP_UnitTestCase {
+class SECP_Modal_Test extends WP_UnitTestCase {
 
 	/**
 	 * Confirm modal class is defined.
@@ -8,7 +8,7 @@ class SBB_Modal_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'SBB_Modal' ) );
+		$this->assertTrue( class_exists( 'SECP_Modal' ) );
 	}
 
 	/**
@@ -17,6 +17,6 @@ class SBB_Modal_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_access() {
-		$this->assertTrue( shopify_buy_button()->modal instanceof SBB_Modal );
+		$this->assertTrue( shopify_ecommerce_plugin()->modal instanceof SECP_Modal );
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-class SBB_Shortcode_Test extends WP_UnitTestCase {
+class SECP_Shortcode_Test extends WP_UnitTestCase {
 
 	/**
 	 * Confirm shortcode class is defined.
@@ -8,7 +8,7 @@ class SBB_Shortcode_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_exists() {
-		$this->assertTrue( class_exists( 'SBB_Shortcode' ) );
+		$this->assertTrue( class_exists( 'SECP_Shortcode' ) );
 	}
 
 	/**
@@ -17,6 +17,6 @@ class SBB_Shortcode_Test extends WP_UnitTestCase {
 	 * @since NEXT
 	 */
 	function test_class_access() {
-		$this->assertTrue( shopify_buy_button()->shortcode instanceof SBB_Shortcode );
+		$this->assertTrue( shopify_ecommerce_plugin()->shortcode instanceof SECP_Shortcode );
 	}
 }

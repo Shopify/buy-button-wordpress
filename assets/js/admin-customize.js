@@ -1,5 +1,5 @@
 /**
- * Shopify Buy Button - v0.1.0 - 2016-03-09
+ * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-10
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -21,14 +21,14 @@ var _queryString2 = _interopRequireDefault(_queryString);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Shopify Buy Button - Admin Appearance Page
+ * Shopify eCommerce Plugin - Shopping Cart - Admin Customize Page
  * https://www.shopify.com/buy-button
  *
  * Licensed under the GPLv2+ license.
  */
 
 (0, _jquery2.default)(function () {
-	var $iframe = (0, _jquery2.default)('.sbb-appearance-preview'),
+	var $iframe = (0, _jquery2.default)('.secp-customize-preview'),
 	    addArgument = function addArgument(key, val) {
 		var loc = $iframe.attr('src'),
 		    split = loc.split('?'),
@@ -39,7 +39,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		}
 
 		if (parsed[key] !== val) {
-			parsed[key] = val;
+			if (val) {
+				parsed[key] = val;
+			} else {
+				delete parsed[key];
+			}
 			loc = split[0] + '?' + _queryString2.default.stringify(parsed);
 
 			$iframe.attr('src', loc);
