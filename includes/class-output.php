@@ -180,6 +180,11 @@ class SBB_Output {
 			'no_script_text'                      => sprintf( __( 'Buy %s', 'shopify' ), '[product_name]' ), // Buy <product_name>
 		) );
 
+		if ( $args['embed_type'] == 'collection' ) {
+			$args['redirect_to'] = 'modal';
+			$args['product_modal'] = 'true';
+		}
+
 		$args = apply_filters( 'sbb_output_args', $args );
 
 		if ( empty( $args['shop'] ) || empty( $args['product_handle'] ) ) {
@@ -212,7 +217,7 @@ class SBB_Output {
 			'checkout_button_text' => cmb2_get_option( 'shopify_buy_button_appearance', 'checkout_button_text' ),
 			'button_text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_text_color' ), 1 ),
 			'button_background_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'button_background_color' ), 1 ),
-			'background_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ),
+			'background_color' => cmb2_get_option( 'shopify_buy_button_appearance', 'background' ) ? substr( cmb2_get_option( 'shopify_buy_button_appearance', 'background_color' ), 1 ) : 'transparent',
 			'text_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
 			'accent_color' => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'accent_color' ), 1 ),
 			'cart_title' => cmb2_get_option( 'shopify_buy_button_appearance', 'cart_title' ),
