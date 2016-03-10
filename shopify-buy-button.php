@@ -174,7 +174,6 @@ class Shopify_Buy_Button {
 	 * Attach other plugin classes to the base plugin class.
 	 *
 	 * @since  NEXT
-	 * @return void
 	 */
 	public function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
@@ -190,7 +189,6 @@ class Shopify_Buy_Button {
 	 * Add hooks and filters
 	 *
 	 * @since  NEXT
-	 * @return void
 	 */
 	public function hooks() {
 		add_action( 'init', array( $this, 'init' ) );
@@ -200,7 +198,6 @@ class Shopify_Buy_Button {
 	 * Init hooks
 	 *
 	 * @since  NEXT
-	 * @return void
 	 */
 	public function init() {
 		if ( $this->check_requirements() ) {
@@ -234,7 +231,6 @@ class Shopify_Buy_Button {
 	 * Deactivates this plugin, hook this function on admin_init.
 	 *
 	 * @since  NEXT
-	 * @return void
 	 */
 	public function deactivate_me() {
 		deactivate_plugins( $this->basename );
@@ -257,7 +253,6 @@ class Shopify_Buy_Button {
 	 * Adds a notice to the dashboard if the plugin requirements are not met
 	 *
 	 * @since  NEXT
-	 * @return void
 	 */
 	public function requirements_not_met_notice() {
 		// Output our error.
