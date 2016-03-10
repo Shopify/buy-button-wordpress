@@ -160,11 +160,6 @@ class SBB_Appearance {
 			'id'      => 'button_background_color',
 			'type'    => 'colorpicker',
 			'default' => '7db461',
-			'attributes' => array(
-				'data-colorpicker' => json_encode( array(
-					'pick' => 'TEST',
-				) ),
-			),
 		) );
 
 		$cmb->add_field( array(

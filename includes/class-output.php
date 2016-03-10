@@ -62,7 +62,7 @@ class SBB_Output {
 	public function array_to_data_attributes( $args ) {
 		$attributes = '';
 		foreach ( $args as $key => $value ) {
-			if ( !empty( $value ) ) {
+			if ( ! empty( $value ) ) {
 				$attributes .= sprintf( ' data-%s="%s"', esc_html( $key ), esc_attr( $value ) );
 			}
 		}
@@ -94,7 +94,7 @@ class SBB_Output {
 		}
 
 		// Is the shop param different from the first embed's shop param?
-		if ( $args['shop'] != $this->shop && 'cart' == $args['redirect_to'] ) {
+		if ( $args['shop'] !== $this->shop && 'cart' === $args['redirect_to'] ) {
 			$args['redirect_to'] = 'checkout';
 		}
 
@@ -128,8 +128,8 @@ class SBB_Output {
 	 * Get markup for frontend buy button iframe.
 	 *
 	 * @since NEXT
-	 * @param  array $args Arguments for buy button
-	 * @return string      HTML markup
+	 * @param  array $args Arguments for buy button.
+	 * @return string      HTML markup.
 	 */
 	public function get_button( $args ) {
 		if ( isset( $args['text_color'] ) ) {
@@ -140,10 +140,8 @@ class SBB_Output {
 			$args['background_color'] = 'transparent';
 		}
 
-		if ( ! empty( $args['show'] ) ) {
-			if ( $args['show'] == 'button-only' ) {
-				$args['has_image'] = 'false';
-			}
+		if ( ! empty( $args['show'] && 'button-only' === $args['show'] ) {
+			$args['has_image'] = 'false';
 		}
 
 		/**
@@ -170,31 +168,28 @@ class SBB_Output {
 			'buy_button_out_of_stock_text'        => __( 'Out of Stock', 'shopify' ),
 			'buy_button_product_unavailable_text' => __( 'Unavailable', 'shopify' ),
 			'product_title_color'                 => substr( cmb2_get_option( 'shopify_buy_button_appearance', 'text_color' ), 1 ),
-			// Additional non-data-attribute params
-			'no_script_url'                       => '', // https://<shop>.myshopify.com/cart/<cart-number>
-			'no_script_text'                      => sprintf( __( 'Buy %s', 'shopify' ), '[product_name]' ), // Buy <product_name>
 		) );
 
-		if ( $args['embed_type'] == 'collection' ) {
+		if ( 'collection' === $args['embed_type'] ) {
 			$args['redirect_to'] = 'modal';
 			$args['product_modal'] = 'true';
 		}
 
-		$args = apply_filters( 'sbb_output_args', $args );
-
 		if ( empty( $args['shop'] ) || empty( $args['product_handle'] ) ) {
-			// no button if there is no product id or shop url
+			// No button if there is no product id or shop url.
 			return;
 		}
 
-		if ( 'collection' == $args['embed_type'] ) {
+		if ( 'collection' === $args['embed_type'] ) {
 			$args['collection_handle'] = $args['product_handle'];
 		}
 
-		// Override for whether or not to display the product price. Can be true or false.	The current value of data-has_image
+		// Override for whether or not to display the product price. Can be true or false.	The current value of data-has_image.
 		$args['show_product_price'] = ! empty( $args['show_product_price'] ) ? $args['show_product_price'] : $args['has_image'];
-		// Override for whether or not to display the product title. Can be true or false.	The current value of data-has_image
+		// Override for whether or not to display the product title. Can be true or false.	The current value of data-has_image.
 		$args['show_product_title'] = ! empty( $args['show_product_title'] ) ? $args['show_product_title'] : $args['has_image'];
+
+		$args = apply_filters( 'sbb_product_output_args', $args );
 
 		return $this->get_embed( $args );
 	}
@@ -203,8 +198,8 @@ class SBB_Output {
 	 * Get the cart embed
 	 *
 	 * @since NEXT
-	 * @param  array $args Cart arguments
-	 * @return string      HTML embed markup
+	 * @param  array $args Cart arguments.
+	 * @return string      HTML embed markup.
 	 */
 	public function get_cart( $args ) {
 		$args = wp_parse_args( $args, array(
@@ -226,6 +221,8 @@ class SBB_Output {
 		$args['embed_type'] = 'cart';
 		$args['sticky'] = 'true';
 
+		$args = apply_filters( 'sbb_cart_output_args', $args );
+
 		return $this->get_embed( $args );
 	}
 
@@ -241,7 +238,7 @@ class SBB_Output {
 		}
 
 		$args = array(
-			'product_handle' => esc_attr( $_GET['product_handle'] ),
+			'product_handle' => sanitize_text_field( wp_unslash( $_GET['product_handle'] ) ),
 		);
 
 		$other_args = array(
@@ -259,15 +256,17 @@ class SBB_Output {
 			'show',
 		);
 
-		foreach( $other_args as $arg ) {
+		foreach ( $other_args as $arg ) {
 			if ( isset( $_GET[ $arg ] ) ) {
-				if ( $_GET[ $arg ] == 'false' ) {
+				if ( 'false' === $_GET[ $arg ] ) {
 					$args[ $arg ] = false;
 				} else {
-					$args[ $arg ] = esc_attr( $_GET[ $arg ] );
+					$args[ $arg ] = sanitize_text_field( wp_unslash( $_GET[ $arg ] ) );
 				}
 			}
 		}
+
+		$args = apply_filters( 'sbb_preview_args', $args );
 
 		?>
 		<style type="text/css">
@@ -287,6 +286,8 @@ class SBB_Output {
 		if ( ! empty( $_GET['show_cart'] ) ) {
 			echo $this->get_cart( $args );
 		}
+
+		do_action( 'sbb_preview_output', $args );
 
 		die();
 	}

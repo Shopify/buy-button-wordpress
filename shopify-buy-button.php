@@ -56,7 +56,6 @@ function shopify_buy_button_autoload_classes( $class_name ) {
 }
 spl_autoload_register( 'shopify_buy_button_autoload_classes' );
 
-
 /**
  * Main initiation class
  *
