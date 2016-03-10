@@ -67,5 +67,6 @@ node_modules
 ### Sass ###
 .sass-cache
 
-release
+# Don't ignore releases
+# release
 
