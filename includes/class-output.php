@@ -140,7 +140,7 @@ class SBB_Output {
 			$args['background_color'] = 'transparent';
 		}
 
-		if ( ! empty( $args['show'] && 'button-only' === $args['show'] ) {
+		if ( ! empty( $args['show'] ) && 'button-only' === $args['show'] ) {
 			$args['has_image'] = 'false';
 		}
 
