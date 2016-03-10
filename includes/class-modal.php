@@ -53,12 +53,14 @@ class SBB_Modal {
 					<div class="sbb-modal-content">
 						<label class="sbb-show-label">
 							<span class="sbb-show-preview">
+								<img src="<?php echo esc_url( $this->plugin->url( 'assets/images/type-all.svg' ) ); ?>">
 							</span>
 							<input class="sbb-show" type="radio" name="sbb-show" value="all" checked="checked">
 							<?php esc_html_e( 'Product image, price and button', 'shopify-buy-button' ); ?>
 						</label>
 						<label class="sbb-show-label">
 							<span class="sbb-show-preview">
+								<img src="<?php echo esc_url( $this->plugin->url( 'assets/images/type-button-only.svg' ) ); ?>">
 							</span>
 							<input class="sbb-show" type="radio" name="sbb-show" value="button-only">
 							<?php esc_html_e( 'Buy button only', 'shopify-buy-button' ); ?>

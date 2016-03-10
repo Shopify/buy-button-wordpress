@@ -79,15 +79,10 @@
 }
 
 .sbb-show-preview {
-	width: 100px;
-	height: 100px;
-	background: #ddd;
-	border-radius: 10px;
+	width: 150px;
+	height: 150px;
 	display: block;
 	margin: 0 auto 20px;
-	:checked + & {
-		background: #eee;
-	}
 }
 
 .sbb-modal-footer {

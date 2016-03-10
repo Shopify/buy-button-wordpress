@@ -76,14 +76,10 @@ button.sbb-add-shortcode.button, button.sbb-add-shortcode.button:hover {
   margin-bottom: 20px; }
 
 .sbb-show-preview {
-  width: 100px;
-  height: 100px;
-  background: #ddd;
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
   display: block;
   margin: 0 auto 20px; }
-  :checked + .sbb-show-preview {
-    background: #eee; }
 
 .sbb-modal-footer {
   padding: 20px;
