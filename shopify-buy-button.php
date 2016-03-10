@@ -167,9 +167,6 @@ class Shopify_Buy_Button {
 		$this->url      = plugin_dir_url( __FILE__ );
 		$this->path     = plugin_dir_path( __FILE__ );
 
-		register_activation_hook( __FILE__, array( 'Shopify_Buy_Button', '_activate' ) );
-		register_deactivation_hook( __FILE__, array( 'Shopify_Buy_Button', '_deactivate' ) );
-
 		$this->plugin_classes();
 	}
 
@@ -198,26 +195,6 @@ class Shopify_Buy_Button {
 	public function hooks() {
 		add_action( 'init', array( $this, 'init' ) );
 	}
-
-	/**
-	 * Activate the plugin
-	 *
-	 * @since  NEXT
-	 * @return void
-	 */
-	public static function _activate() {
-		// Make sure any rewrite functionality has been loaded.
-		flush_rewrite_rules();
-	}
-
-	/**
-	 * Deactivate the plugin
-	 * Uninstall routines should be in uninstall.php
-	 *
-	 * @since  NEXT
-	 * @return void
-	 */
-	public static function _deactivate() {}
 
 	/**
 	 * Init hooks
