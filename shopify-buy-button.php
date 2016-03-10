@@ -177,12 +177,12 @@ class Shopify_Buy_Button {
 	 */
 	public function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
-		$this->output = new SBB_Output( $this );
-		$this->shortcode = new SBB_Shortcode( $this );
-		require( self::dir( 'includes/class-widget.php' ) );
-		$this->modal = new SBB_Modal( $this );
-		$this->settings = new SBB_Settings( $this );
+		$this->output     = new SBB_Output( $this );
+		$this->shortcode  = new SBB_Shortcode( $this );
+		$this->modal      = new SBB_Modal( $this );
+		$this->settings   = new SBB_Settings( $this );
 		$this->appearance = new SBB_Appearance( $this );
+		require( self::dir( 'includes/class-widget.php' ) );
 	} // END OF PLUGIN CLASSES FUNCTION
 
 	/**
