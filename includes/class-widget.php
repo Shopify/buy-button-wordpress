@@ -54,8 +54,8 @@ class SECP_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->widget_name          = esc_html__( 'Shopify eCommerce Plugin - Shopping Cart', 'shopify-ecommerce-plugin-shopping-cart' );
-		$this->default_widget_title = esc_html__( 'Shopify eCommerce Plugin - Shopping Cart', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->widget_name          = esc_html__( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->default_widget_title = esc_html__( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
 
 		parent::__construct(
 			$this->widget_slug,
