@@ -47,6 +47,7 @@ class SBB_Shortcode {
 		wp_localize_script( 'sbb-admin-shortcode', 'sbbAdminModal', array(
 			'modal' => $this->plugin->modal->get_modal(),
 		) );
+
 		?>
 		<button id="sbb-add-shortcode" class="button sbb-add-shortcode" data-editor-id="<?php echo esc_attr( $editor_id ); ?>">
 			<?php esc_html_e( 'Add Product', 'shopify-buy-button' ); ?>
@@ -59,7 +60,7 @@ class SBB_Shortcode {
 	 * Just passes arguments to output function.
 	 *
 	 * @since NEXT
-	 * @param  array $args Shortcode attributes
+	 * @param  array $args Shortcode attributes.
 	 * @return string      HTML output.
 	 */
 	public function shortcode( $args ) {
