@@ -111,14 +111,9 @@ class SBB_Output {
 	public function get_embed( $args ) {
 		$args = $this->handle_shop( $args );
 
-		$no_script_text = str_replace( '[product_name]', $args['product_name'], wp_kses_post( $args['no_script_text'] ) );
-		$no_script_url = $args['no_script_url'];
-		unset( $args['no_script_url'], $args['no_script_text'] );
-
 		ob_start();
 		?>
 		<div class="sbb-embed sbb-embed-<?php echo esc_attr( $args['embed_type'] ) ?>"<?php echo $this->array_to_data_attributes( $args ); ?>></div>
-		<noscript><a href="<?php echo esc_url( $no_script_url ); ?>" target="_blank"><?php echo $no_script_text; ?></a></noscript>
 		<?php
 
 		if ( ! $this->js_added ) {
