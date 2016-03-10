@@ -143,10 +143,10 @@ class SBB_Widget extends WP_Widget {
 		$widget .= wpautop( wp_kses_post( $atts['text'] ) );
 
 		$widget .= shopify_buy_button()->output->get_button( array(
-			'embed_type'     => $atts[ 'embed_type' ],
-			'shop'           => $atts[ 'shop' ],
-			'product_handle' => $atts[ 'product_handle' ],
-			'show'           => $atts[ 'show' ],
+			'embed_type'     => $atts['embed_type'],
+			'shop'           => $atts['shop'],
+			'product_handle' => $atts['product_handle'],
+			'show'           => $atts['show'],
 		) );
 
 		// After widget hook.
@@ -214,7 +214,7 @@ class SBB_Widget extends WP_Widget {
 
 		$this->enqueue();
 
-		// Title field
+		// Title field.
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', '<%= slug %>' ); ?></label>
@@ -222,32 +222,32 @@ class SBB_Widget extends WP_Widget {
 		</p>
 		<?php
 
-		// Do product preview
-		if ( $instance[ 'product_handle' ] ) {
+		// Do product preview.
+		if ( $instance['product_handle'] ) {
 			?>
 			<p><?php esc_html_e( 'Preview: ', 'shopify_buy_button' ); ?>
 			<iframe class="sbb-widget-preview" src="<?php echo esc_url( add_query_arg( array(
-				'embed_type'     => $instance[ 'embed_type' ],
-				'shop'           => $instance[ 'shop' ],
-				'product_handle' => $instance[ 'product_handle' ],
+				'embed_type'     => $instance['embed_type'],
+				'shop'           => $instance['shop'],
+				'product_handle' => $instance['product_handle'],
 			), site_url() ) ); ?>"></iframe></p>
 			<?php
 		} else {
 			?><p><?php esc_html_e( 'No Product Set', 'shopify-buy-button' ); ?></p><?php
 		}
 
-		// Do button
+		// Do button.
 		$button_text = __( 'Add Product', 'shopify-buy-button' );
-		if ( $instance[ 'product_handle' ] ) {
+		if ( $instance['product_handle'] ) {
 			$button_text = __( 'Replace Product', 'shopify-buy-button' );
 		}
 		?>
 		<p><button class="button" id="sbb-add-widget"><?php echo esc_html( $button_text ); ?></button></p>
 		<?php
 
-		// Do hidden fields for product
-		foreach( array( 'embed_type', 'shop', 'product_handle' ) as $hidden_field ) {
-			?><input class="sbb-hidden-<?php echo $hidden_field ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
+		// Do hidden fields for product.
+		foreach ( array( 'embed_type', 'shop', 'product_handle' ) as $hidden_field ) {
+			?><input class="sbb-hidden-<?php echo esc_attr( $hidden_field ); ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
 		}
 	}
 }

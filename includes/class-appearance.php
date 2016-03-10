@@ -5,7 +5,7 @@
  * @package Shopify Buy Button
  */
 
-require_once dirname(__FILE__) . '/../vendor/cmb2/init.php';
+require_once dirname( __FILE__ ) . '/../vendor/cmb2/init.php';
 
 class SBB_Appearance {
 	/**
@@ -236,8 +236,8 @@ class SBB_Appearance {
 	 * Register settings notices for display
 	 *
 	 * @since  NEXT
-	 * @param  int   $object_id Option key
-	 * @param  array $updated   Array of updated fields
+	 * @param  int   $object_id Option key.
+	 * @param  array $updated   Array of updated fields.
 	 */
 	public function settings_notices( $object_id, $updated ) {
 		if ( $object_id !== $this->key || empty( $updated ) ) {
