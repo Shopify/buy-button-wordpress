@@ -15,7 +15,7 @@ class SECP_Widget extends WP_Widget {
 	 * @var string
 	 * @since  NEXT
 	 */
-	protected $widget_slug = 'shopify-ecommerce-plugin-shopping-car-widget';
+	protected $widget_slug = 'shopify-ecommerce-plugin-shopping-cart-widget';
 
 
 	/**
