@@ -54,15 +54,15 @@ class SECP_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->widget_name          = esc_html__( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
-		$this->default_widget_title = esc_html__( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->widget_name          = esc_html__( 'Shopify', 'shopify-ecommerce-shopping-cart' );
+		$this->default_widget_title = esc_html__( 'Shopify', 'shopify-ecommerce-shopping-cart' );
 
 		parent::__construct(
 			$this->widget_slug,
 			$this->widget_name,
 			array(
 				'classname'   => $this->widget_slug,
-				'description' => esc_html__( 'Embed a Shopify product and buy button.', 'shopify-ecommerce-plugin-shopping-cart' ),
+				'description' => esc_html__( 'Embed a Shopify product and buy button.', 'shopify-ecommerce-shopping-cart' ),
 			)
 		);
 
@@ -233,13 +233,13 @@ class SECP_Widget extends WP_Widget {
 			), site_url() ) ); ?>"></iframe></p>
 			<?php
 		} else {
-			?><p><?php esc_html_e( 'No Product Set', 'shopify-ecommerce-plugin-shopping-cart' ); ?></p><?php
+			?><p><?php esc_html_e( 'No Product Set', 'shopify-ecommerce-shopping-cart' ); ?></p><?php
 		}
 
 		// Do button.
-		$button_text = __( 'Add Product', 'shopify-ecommerce-plugin-shopping-cart' );
+		$button_text = __( 'Add Product', 'shopify-ecommerce-shopping-cart' );
 		if ( $instance['product_handle'] ) {
-			$button_text = __( 'Replace Product', 'shopify-ecommerce-plugin-shopping-cart' );
+			$button_text = __( 'Replace Product', 'shopify-ecommerce-shopping-cart' );
 		}
 		?>
 		<p><button class="button" id="secp-add-widget"><?php echo esc_html( $button_text ); ?></button></p>

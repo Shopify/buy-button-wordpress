@@ -8,7 +8,7 @@
  * Author URI:  http://webdevstudios.com
  * Donate link: https://www.shopify.com/buy-button
  * License:     GPLv2
- * Text Domain: shopify-ecommerce-plugin-shopping-cart
+ * Text Domain: shopify-ecommerce-shopping-cart
  * Domain Path: /languages
  */
 
@@ -200,7 +200,7 @@ class Shopify_ECommerce_Plugin {
 	 */
 	public function init() {
 		if ( $this->check_requirements() ) {
-			load_plugin_textdomain( 'shopify-ecommerce-plugin-shopping-cart', false, dirname( $this->basename ) . '/languages/' );
+			load_plugin_textdomain( 'shopify-ecommerce-shopping-cart', false, dirname( $this->basename ) . '/languages/' );
 		}
 	}
 
@@ -256,7 +256,7 @@ class Shopify_ECommerce_Plugin {
 	public function requirements_not_met_notice() {
 		// Output our error.
 		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'shopify-ecommerce-plugin-shopping-cart' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'shopify-ecommerce-shopping-cart' ), admin_url( 'plugins.php' ) ) . '</p>';
 		echo '</div>';
 	}
 

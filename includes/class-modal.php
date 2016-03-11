@@ -44,11 +44,11 @@ class SECP_Modal {
 		?>
 		<div class="secp-modal-wrap">
 			<div class="secp-modal">
-				<div class="secp-modal-close"><div class="screen-reader-text"><?php esc_attr_e( 'Close', 'shopify-ecommerce-plugin-shopping-cart' ); ?></div></div>
+				<div class="secp-modal-close"><div class="screen-reader-text"><?php esc_attr_e( 'Close', 'shopify-ecommerce-shopping-cart' ); ?></div></div>
 				<iframe src="<?php echo esc_url( $iframe_url ); ?>" frameborder="0" class="secp-modal-iframe"></iframe>
 				<div class="secp-modal-secondpage">
 					<div class="secp-modal-header">
-						<h2><?php esc_html_e( 'Embed Type', 'shopify-ecommerce-plugin-shopping-cart' ); ?></h2>
+						<h2><?php esc_html_e( 'Embed Type', 'shopify-ecommerce-shopping-cart' ); ?></h2>
 					</div>
 					<div class="secp-modal-content">
 						<label class="secp-show-label">
@@ -56,18 +56,18 @@ class SECP_Modal {
 								<img src="<?php echo esc_url( $this->plugin->url( 'assets/images/type-all.svg' ) ); ?>">
 							</span>
 							<input class="secp-show" type="radio" name="secp-show" value="all" checked="checked">
-							<?php esc_html_e( 'Product image, price and button', 'shopify-ecommerce-plugin-shopping-cart' ); ?>
+							<?php esc_html_e( 'Product image, price and button', 'shopify-ecommerce-shopping-cart' ); ?>
 						</label>
 						<label class="secp-show-label">
 							<span class="secp-show-preview">
 								<img src="<?php echo esc_url( $this->plugin->url( 'assets/images/type-button-only.svg' ) ); ?>">
 							</span>
 							<input class="secp-show" type="radio" name="secp-show" value="button-only">
-							<?php esc_html_e( 'Buy button only', 'shopify-ecommerce-plugin-shopping-cart' ); ?>
+							<?php esc_html_e( 'Buy button only', 'shopify-ecommerce-shopping-cart' ); ?>
 						</label>
 					</div>
 					<div class="secp-modal-footer">
-						<button class="button button-primary secp-modal-add-button"><?php esc_html_e( 'Ok', 'shopify-ecommerce-plugin-shopping-cart' ); ?></button>
+						<button class="button button-primary secp-modal-add-button"><?php esc_html_e( 'Ok', 'shopify-ecommerce-shopping-cart' ); ?></button>
 					</div>
 				</div>
 			</div>

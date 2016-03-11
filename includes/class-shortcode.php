@@ -50,7 +50,7 @@ class SECP_Shortcode {
 
 		?>
 		<button id="secp-add-shortcode" class="button secp-add-shortcode" data-editor-id="<?php echo esc_attr( $editor_id ); ?>">
-			<?php esc_html_e( 'Add Product', 'shopify-ecommerce-plugin-shopping-cart' ); ?>
+			<?php esc_html_e( 'Add Product', 'shopify-ecommerce-shopping-cart' ); ?>
 		</button>
 		<?php
 	}

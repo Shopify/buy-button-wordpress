@@ -54,7 +54,7 @@ class SECP_Settings {
 		$this->plugin = $plugin;
 		$this->hooks();
 
-		$this->title = __( 'Shopify', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->title = __( 'Shopify', 'shopify-ecommerce-shopping-cart' );
 	}
 
 	/**

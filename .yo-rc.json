@@ -8,7 +8,7 @@
     "authoremail": "contact@webdevstudios.com",
     "authorurl": "http://webdevstudios.com",
     "license": "GPLv2",
-    "slug": "shopify-ecommerce-plugin-shopping-cart",
+    "slug": "shopify-ecommerce-shopping-cart",
     "classname": "Shopify_ECommerce_Plugin",
     "classprefix": "SECP_",
     "prefix": "shopify_ecommerce_plugin",

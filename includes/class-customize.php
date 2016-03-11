@@ -56,7 +56,7 @@ class SECP_Customize {
 		$this->plugin = $plugin;
 		$this->hooks();
 
-		$this->title = __( 'Customize', 'shopify-ecommerce-plugin-shopping-cart' );
+		$this->title = __( 'Customize', 'shopify-ecommerce-shopping-cart' );
 	}
 
 	/**
@@ -111,7 +111,7 @@ class SECP_Customize {
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 			<div class="secp-customize">
 				<div class="secp-customize-right">
-					<h4><?php _e( 'Preview', 'shopify-ecommerce-plugin-shopping-cart' ); ?></h4>
+					<h4><?php _e( 'Preview', 'shopify-ecommerce-shopping-cart' ); ?></h4>
 					<iframe class="secp-customize-preview" src="<?php
 					echo esc_url( add_query_arg( array(
 						'shop'           => 'embeds.myshopify.com',
@@ -150,83 +150,83 @@ class SECP_Customize {
 		Add your fields here
 		*/
 		$cmb->add_field( array(
-			'name'    => __( 'Colors', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Colors', 'shopify-ecommerce-shopping-cart' ),
 			'id'   => 'color_title',
 			'type'    => 'title',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Button color', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Button color', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'button_background_color',
 			'type'    => 'colorpicker',
 			'default' => '7db461',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Button text', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Button text', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'button_text_color',
 			'type'    => 'colorpicker',
 			'default' => 'ffffff',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Accent', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Accent', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'accent_color',
 			'type'    => 'colorpicker',
 			'default' => '000000',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Text', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Text', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'text_color',
 			'type'    => 'colorpicker',
 			'default' => '000000',
 		) );
 
 		$cmb->add_field( array(
-			'desc'    => __( 'Background', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'desc'    => __( 'Background', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'background',
 			'type'    => 'checkbox',
 			'default' => false,
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Background', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Background', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'background_color',
 			'type'    => 'colorpicker',
 			'default' => 'ffffff',
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Button text', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Button text', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'buy_button_text',
 			'type'    => 'text',
-			'default' => __( 'Buy now', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'default' => __( 'Buy now', 'shopify-ecommerce-shopping-cart' ),
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Cart title text', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Cart title text', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'cart_title',
 			'type'    => 'text',
-			'default' => __( 'Your cart', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'default' => __( 'Your cart', 'shopify-ecommerce-shopping-cart' ),
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Checkout button text', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Checkout button text', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'checkout_button_text',
 			'type'    => 'text',
-			'default' => __( 'Checkout', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'default' => __( 'Checkout', 'shopify-ecommerce-shopping-cart' ),
 		) );
 
 		$cmb->add_field( array(
-			'name'    => __( 'Where this button links to (single product only)', 'shopify-ecommerce-plugin-shopping-cart' ),
+			'name'    => __( 'Where this button links to (single product only)', 'shopify-ecommerce-shopping-cart' ),
 			'id'      => 'redirect_to',
 			'type'    => 'select',
 			'default' => 'checkout',
 			'options' => array(
-				'checkout' => __( 'Checkout', 'shopify-ecommerce-plugin-shopping-cart' ),
-				'product'  => __( 'Product', 'shopify-ecommerce-plugin-shopping-cart' ),
-				'cart'     => __( 'Cart', 'shopify-ecommerce-plugin-shopping-cart' ),
+				'checkout' => __( 'Checkout', 'shopify-ecommerce-shopping-cart' ),
+				'product'  => __( 'Product', 'shopify-ecommerce-shopping-cart' ),
+				'cart'     => __( 'Cart', 'shopify-ecommerce-shopping-cart' ),
 			),
 		) );
 
@@ -243,7 +243,7 @@ class SECP_Customize {
 		if ( $object_id !== $this->key || empty( $updated ) ) {
 			return;
 		}
-		add_settings_error( $this->key . '-notices', '', __( 'Customize updated.', 'shopify-ecommerce-plugin-shopping-cart' ), 'updated' );
+		add_settings_error( $this->key . '-notices', '', __( 'Customize updated.', 'shopify-ecommerce-shopping-cart' ), 'updated' );
 		settings_errors( $this->key . '-notices' );
 	}
 }

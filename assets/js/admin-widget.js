@@ -1,5 +1,5 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-10
+ * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-11
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
