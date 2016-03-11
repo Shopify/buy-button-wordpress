@@ -180,7 +180,7 @@ class Shopify_ECommerce_Plugin {
 		$this->shortcode  = new SECP_Shortcode( $this );
 		$this->modal      = new SECP_Modal( $this );
 		$this->settings   = new SECP_Settings( $this );
-		$this->customize = new SECP_Customize( $this );
+		$this->customize  = new SECP_Customize( $this );
 		require( self::dir( 'includes/class-widget.php' ) );
 	} // END OF PLUGIN CLASSES FUNCTION
 
