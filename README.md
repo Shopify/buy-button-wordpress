@@ -1,5 +1,5 @@
 # Shopify eCommerce Plugin - Shopping Cart #
-**Contributors:**      WebDevStudios
+**Contributors:**      Shopify, WebDevStudios
 **Donate link:**       https://www.shopify.com/buy-button
 **Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop
 **Requires at least:** 4.3
