@@ -1,5 +1,5 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-11
+ * Shopify eCommerce Plugin - Shopping Cart - v0.1.0 - 2016-03-15
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -112,15 +112,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)(function () {
 	(0, _jquery2.default)('#secp-add-shortcode').click(function (e) {
-		var _this = this;
-
-		var editor = undefined;
+		var $this = (0, _jquery2.default)(this),
+		    $wrap = $this.parents('.wp-editor-wrap');
 
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
 			var shortcode = undefined,
-			    shortcodeAtts = undefined;
+			    shortcodeAtts = undefined,
+			    editor = undefined;
 
 			shortcodeAtts = [{ name: 'embed_type', value: data.resourceType }, { name: 'shop', value: data.shop }, { name: 'product_handle', value: data.resourceHandles.join(', ') }, { name: 'show', value: data.show }];
 
@@ -135,12 +135,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			shortcode += ']';
 
 			// Insert shortcode.
-			editor = tinymce.get((0, _jquery2.default)(_this).data('editor-id'));
-
-			if (editor) {
+			if ($wrap.hasClass('tmce-active')) {
+				editor = tinymce.get($this.data('editor-id'));
 				editor.insertContent(shortcode);
 			} else {
-				(0, _jquery2.default)(_this).parents('.wp-editor-wrap').find('.wp-editor-area').append('\n\n' + shortcode);
+				editor = $wrap.find('.wp-editor-area');
+				editor.val(editor.val() + '\n\n' + shortcode);
 			}
 		});
 	});

@@ -12,12 +12,13 @@ import modal from './add-button-modal';
 
 $( function() {
 	$( '#secp-add-shortcode' ).click( function( e ) {
-		let editor;
+		let $this = $( this ),
+			$wrap = $this.parents( '.wp-editor-wrap' );
 
 		e.preventDefault();
 
 		modal( ( data ) => {
-			let shortcode, shortcodeAtts;
+			let shortcode, shortcodeAtts, editor;
 
 			shortcodeAtts = [
 				{ name: 'embed_type', value: data.resourceType },
@@ -37,14 +38,12 @@ $( function() {
 			shortcode += ']';
 
 			// Insert shortcode.
-			editor = tinymce.get( $( this ).data( 'editor-id' ) );
-
-			if ( editor ) {
+			if ( $wrap.hasClass( 'tmce-active' ) ) {
+				editor = tinymce.get( $this.data( 'editor-id' ) );
 				editor.insertContent( shortcode );
 			} else {
-				$( this ).parents( '.wp-editor-wrap' )
-						.find( '.wp-editor-area' )
-						.append( '\n\n' + shortcode );
+				editor = $wrap.find( '.wp-editor-area' );
+				editor.val( editor.val() + '\n\n' + shortcode );
 			}
 		} );
 	} );
