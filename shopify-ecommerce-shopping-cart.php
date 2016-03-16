@@ -3,7 +3,7 @@
  * Plugin Name: Shopify eCommerce Plugin - Shopping Cart
  * Plugin URI:  https://www.shopify.com/buy-button
  * Description: Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
- * Version:     0.1.0
+ * Version:     1.0.0
  * Author:      WebDevStudios
  * Author URI:  http://webdevstudios.com
  * Donate link: https://www.shopify.com/buy-button
@@ -38,7 +38,7 @@
 /**
  * Autoloads files with classes when needed
  *
- * @since  NEXT
+ * @since  1.0.0
  * @param  string $class_name Name of the class being requested.
  * @return void
  */
@@ -59,7 +59,7 @@ spl_autoload_register( 'shopify_ecommerce_plugin_autoload_classes' );
 /**
  * Main initiation class
  *
- * @since  NEXT
+ * @since  1.0.0
  * @var  string $version  Plugin version
  * @var  string $basename Plugin basename
  * @var  string $url      Plugin URL
@@ -71,15 +71,15 @@ class Shopify_ECommerce_Plugin {
 	 * Current version
 	 *
 	 * @var  string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
-	const VERSION = '0.1.0';
+	const VERSION = '1.0.0';
 
 	/**
 	 * URL of plugin directory
 	 *
 	 * @var string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $url = '';
 
@@ -87,7 +87,7 @@ class Shopify_ECommerce_Plugin {
 	 * Path of plugin directory
 	 *
 	 * @var string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $path = '';
 
@@ -95,7 +95,7 @@ class Shopify_ECommerce_Plugin {
 	 * Plugin basename
 	 *
 	 * @var string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $basename = '';
 
@@ -103,7 +103,7 @@ class Shopify_ECommerce_Plugin {
 	 * Singleton instance of plugin
 	 *
 	 * @var Shopify_ECommerce_Plugin
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected static $single_instance = null;
 
@@ -145,7 +145,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Creates or returns an instance of this class.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @return Shopify_ECommerce_Plugin A single instance of this class.
 	 */
 	public static function get_instance() {
@@ -159,7 +159,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Sets up our plugin
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected function __construct() {
 		$this->basename = plugin_basename( __FILE__ );
@@ -172,7 +172,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Attach other plugin classes to the base plugin class.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
@@ -187,7 +187,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Add hooks and filters
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function hooks() {
 		add_action( 'init', array( $this, 'init' ) );
@@ -196,7 +196,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Init hooks
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function init() {
 		if ( $this->check_requirements() ) {
@@ -208,7 +208,7 @@ class Shopify_ECommerce_Plugin {
 	 * Check if the plugin meets requirements and
 	 * disable it if they are not present.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @return boolean result of meets_requirements
 	 */
 	public function check_requirements() {
@@ -229,7 +229,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Deactivates this plugin, hook this function on admin_init.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function deactivate_me() {
 		deactivate_plugins( $this->basename );
@@ -238,7 +238,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Check that all plugin requirements are met
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @return boolean True if requirements are met.
 	 */
 	public static function meets_requirements() {
@@ -251,7 +251,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Adds a notice to the dashboard if the plugin requirements are not met
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function requirements_not_met_notice() {
 		// Output our error.
@@ -263,7 +263,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Magic getter for our object.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param string $field Field to get.
 	 * @throws Exception Throws an exception if the field is invalid.
 	 * @return mixed
@@ -289,7 +289,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * Include a file from the includes directory
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  string $filename Name of the file to be included.
 	 * @return bool   Result of include call.
 	 */
@@ -304,7 +304,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * This plugin's directory
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  string $path (optional) appended path.
 	 * @return string       Directory and path
 	 */
@@ -317,7 +317,7 @@ class Shopify_ECommerce_Plugin {
 	/**
 	 * This plugin's url
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  string $path (optional) appended path.
 	 * @return string       URL and path
 	 */
@@ -332,7 +332,7 @@ class Shopify_ECommerce_Plugin {
  * Grab the Shopify_ECommerce_Plugin object and return it.
  * Wrapper for Shopify_ECommerce_Plugin::get_instance()
  *
- * @since  NEXT
+ * @since  1.0.0
  * @return Shopify_ECommerce_Plugin  Singleton instance of plugin class.
  */
 function shopify_ecommerce_plugin() {

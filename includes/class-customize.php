@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Customize
- * @version 0.1.0
+ * @version 1.0.0
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
@@ -12,7 +12,7 @@ class SECP_Customize {
 	 * Parent plugin class
 	 *
 	 * @var    class
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $plugin = null;
 
@@ -20,7 +20,7 @@ class SECP_Customize {
 	 * Option key, and option page slug
 	 *
 	 * @var    string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $key = 'shopify_ecommerce_plugin_customize';
 
@@ -28,7 +28,7 @@ class SECP_Customize {
 	 * Options page metabox id
 	 *
 	 * @var    string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $metabox_id = 'shopify_ecommerce_plugin_customize_metabox';
 
@@ -36,7 +36,7 @@ class SECP_Customize {
 	 * Options Page title
 	 *
 	 * @var    string
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	protected $title = '';
 
@@ -49,7 +49,7 @@ class SECP_Customize {
 	/**
 	 * Constructor
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -62,7 +62,7 @@ class SECP_Customize {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function hooks() {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
@@ -73,7 +73,7 @@ class SECP_Customize {
 	/**
 	 * Register our setting to WP
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function admin_init() {
 		register_setting( $this->key, $this->key );
@@ -82,7 +82,7 @@ class SECP_Customize {
 	/**
 	 * Add menu options page
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function add_options_page() {
 		$this->options_page = add_submenu_page(
@@ -101,7 +101,7 @@ class SECP_Customize {
 	/**
 	 * Admin page markup. Mostly handled by CMB2
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function admin_page_display() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -131,7 +131,7 @@ class SECP_Customize {
 	/**
 	 * Add custom fields to the options page.
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function add_options_page_metabox() {
 		add_action( "cmb2_save_options-page_fields_{$this->metabox_id}", array( $this, 'settings_notices' ), 10, 2 );
@@ -235,7 +235,7 @@ class SECP_Customize {
 	/**
 	 * Register settings notices for display
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  int   $object_id Option key.
 	 * @param  array $updated   Array of updated fields.
 	 */

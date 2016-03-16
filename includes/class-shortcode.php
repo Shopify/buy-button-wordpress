@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Shortcode
- * @version 0.1.0
+ * @version 1.0.0
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
@@ -10,14 +10,14 @@ class SECP_Shortcode {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	protected $plugin = null;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -28,7 +28,7 @@ class SECP_Shortcode {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function hooks() {
 		add_action( 'media_buttons', array( $this, 'media_buttons' ), 10 );
@@ -38,7 +38,7 @@ class SECP_Shortcode {
 	/**
 	 * Add Shopify eCommerce Plugin - Shopping Cart next to the add media button.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param string $editor_id ID of content editor for button.
 	 */
 	public function media_buttons( $editor_id ) {
@@ -59,7 +59,7 @@ class SECP_Shortcode {
 	 * Shortcode rendering
 	 * Just passes arguments to output function.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args Shortcode attributes.
 	 * @return string      HTML output.
 	 */

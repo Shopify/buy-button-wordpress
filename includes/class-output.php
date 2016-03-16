@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Output
- * @version 0.1.0
+ * @version 1.0.0
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
@@ -11,7 +11,7 @@ class SECP_Output {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	protected $plugin = null;
 
@@ -19,7 +19,7 @@ class SECP_Output {
 	 * Has the shopify js been added?
 	 *
 	 * @var boolean
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	private $js_added = false;
 
@@ -27,14 +27,14 @@ class SECP_Output {
 	 * The current shop.
 	 *
 	 * @var boolean
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	private $shop = false;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -45,7 +45,7 @@ class SECP_Output {
 	/**
 	 * Initiate our hooks
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 */
 	public function hooks() {
 		add_action( 'cmb2_init', array( $this, 'button_endpoint' ), 30 );
@@ -55,7 +55,7 @@ class SECP_Output {
 	/**
 	 * Convert array of attributes to string of html data attributes.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args Array of attributes to convert to data attributes.
 	 * @return string      HTML attributes.
 	 */
@@ -77,7 +77,7 @@ class SECP_Output {
 	 * the page or the saved option. If shop parameter is different from first
 	 * embed and 'redirect_to' set to cart change redirect_to to checkout.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args Embed arguments.
 	 * @return array       Modified embed arguments.
 	 */
@@ -104,7 +104,7 @@ class SECP_Output {
 	/**
 	 * Get shopify embed markup.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args data arguments.
 	 * @return string      HTML markup.
 	 */
@@ -127,7 +127,7 @@ class SECP_Output {
 	/**
 	 * Get markup for frontend buy button iframe.
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args Arguments for buy button.
 	 * @return string      HTML markup.
 	 */
@@ -197,7 +197,7 @@ class SECP_Output {
 	/**
 	 * Get the cart embed
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @param  array $args Cart arguments.
 	 * @return string      HTML embed markup.
 	 */
@@ -229,7 +229,7 @@ class SECP_Output {
 	/**
 	 * Handle endpoint for preview elements
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	public function button_endpoint() {
 		if ( ! current_user_can( 'edit_posts' )
@@ -295,7 +295,7 @@ class SECP_Output {
 	/**
 	 * Embed the cart in the footer
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	function embed_cart() {
 		echo $this->get_cart( array() );

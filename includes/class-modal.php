@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Modal
- * @version 0.1.0
+ * @version 1.0.0
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
@@ -10,14 +10,14 @@ class SECP_Modal {
 	 * Parent plugin class
 	 *
 	 * @var   class
-	 * @since NEXT
+	 * @since 1.0.0
 	 */
 	protected $plugin = null;
 
 	/**
 	 * Constructor
 	 *
-	 * @since  NEXT
+	 * @since  1.0.0
 	 * @param  object $plugin Main plugin object.
 	 */
 	public function __construct( $plugin ) {
@@ -27,7 +27,7 @@ class SECP_Modal {
 	/**
 	 * Get the buy button creation modal
 	 *
-	 * @since NEXT
+	 * @since 1.0.0
 	 * @return string HTML markup of modal.
 	 */
 	public function get_modal() {
