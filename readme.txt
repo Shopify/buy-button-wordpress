@@ -88,10 +88,16 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 
 == Changelog ==
 
+= 1.0.1 =
+* Update CMB2 dependency to 2.2.1 to fix backcompat issue
+
 = 1.0.0 =
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Update CMB2 dependency to 2.2.1 to fix backcompat issue
 
 = 1.0.0 =
 First Release
