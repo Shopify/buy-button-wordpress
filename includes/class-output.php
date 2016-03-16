@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Output
- * @version 1.0.0
+ * @version 1.0.1
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
