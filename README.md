@@ -1,11 +1,11 @@
 # Shopify eCommerce Plugin - Shopping Cart #
-**Contributors:**      Shopify, WebDevStudios
-**Donate link:**       https://www.shopify.com/buy-button
-**Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop
-**Requires at least:** 4.3
-**Tested up to:**      4.5
-**Stable tag:**        1.0.1
-**License:**           GPLv2
+**Contributors:**      Shopify, WebDevStudios  
+**Donate link:**       https://www.shopify.com/buy-button  
+**Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop  
+**Requires at least:** 4.3  
+**Tested up to:**      4.5  
+**Stable tag:**        1.0.1  
+**License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
 Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
