@@ -1,5 +1,5 @@
 # Shopify eCommerce Plugin - Shopping Cart #
-**Contributors:**      Shopify, WebDevStudios  
+**Contributors:**      shopify, webdevstudios  
 **Donate link:**       https://www.shopify.com/buy-button  
 **Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop  
 **Requires at least:** 4.3  
@@ -85,6 +85,15 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 
 ## Screenshots ##
 
+1. Single product with image, price and buy button.
+
+2. Single product (displaying image, price and buy button) with product attributes.
+
+3. Collection of products.
+
+4. Product collection modal and cart.
+
+5. Adding a product to a post with the Add Product button.
 
 ## Changelog ##
 
