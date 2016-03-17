@@ -1,5 +1,5 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v1.0.1 - 2016-03-16
+ * Shopify eCommerce Plugin - Shopping Cart - v1.0.1 - 2016-03-17
  * http://webdevstudios.com
  *
  * Copyright (c) 2016;
@@ -111,7 +111,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* global tinymce */
 
 (0, _jquery2.default)(function () {
-	(0, _jquery2.default)('#secp-add-shortcode').click(function (e) {
+	(0, _jquery2.default)(document.body).on('click', '.secp-add-shortcode', function (e) {
 		var $this = (0, _jquery2.default)(this),
 		    $wrap = $this.parents('.wp-editor-wrap');
 

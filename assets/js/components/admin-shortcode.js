@@ -11,7 +11,7 @@ import $ from 'jquery';
 import modal from './add-button-modal';
 
 $( function() {
-	$( '#secp-add-shortcode' ).click( function( e ) {
+	$( document.body ).on( 'click', '.secp-add-shortcode', function( e ) {
 		let $this = $( this ),
 			$wrap = $this.parents( '.wp-editor-wrap' );
 
