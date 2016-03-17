@@ -180,7 +180,43 @@ module.exports = function (grunt) {
                     '!phpunit.xml',
                 ],
                 dest: 'release/' + pkg.version + '/'
+            },
+            svn: {
+                cwd: 'release/<%= pkg.version %>/',
+                expand: true,
+                src: '**',
+                dest: 'release/svn/'
             }
+        },
+
+        compress: {
+            dist: {
+                options: {
+                    mode: 'zip',
+                    archive: './release/<%= pkg.name %>.<%= pkg.version %>.zip'
+                },
+                expand: true,
+                cwd: 'release/<%= pkg.version %>',
+                src: ['**/*'],
+                dest: '<%= pkg.name %>'
+            }
+        },
+
+        wp_deploy: {
+            dist: {
+                options: {
+                    plugin_slug: '<%= pkg.name %>',
+                    build_dir: 'release/svn/',
+                    assets_dir: 'svn_assets/'
+                }
+            }
+        },
+
+        clean: {
+            release: [
+                'release/<%= pkg.version %>/',
+                'release/svn/'
+            ]
         }
     });
     // Default task.
@@ -204,8 +240,19 @@ module.exports = function (grunt) {
         'php'
     ]);
 
-    grunt.registerTask( 'version', [ 'default', 'replace:version_php', 'replace:version_readme' ] );
-    grunt.registerTask( 'release', [ 'replace:readme_txt', 'copy' ] );
+    grunt.registerTask('version', [
+        'default',
+        'replace:version_php',
+        'replace:version_readme'
+    ]);
+
+    grunt.registerTask('release', [
+        'clean:release',
+        'replace:readme_txt',
+        'copy',
+        'compress',
+        'wp_deploy'
+    ]);
 
     grunt.util.linefeed = '\n';
 };
