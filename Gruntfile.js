@@ -178,6 +178,7 @@ module.exports = function (grunt) {
                     '!Gruntfile.js',
                     '!package.json',
                     '!phpunit.xml',
+                    '!svn_assets/**'
                 ],
                 dest: 'release/' + pkg.version + '/'
             },
