@@ -5,7 +5,7 @@
  * Copyright (c) 2016 WebDevStudios
  * Licensed under the GPLv2+ license.
  */
-button.secp-add-shortcode.button, button.secp-add-shortcode.button:hover {
+button.secp-add-shortcode.button, button.secp-add-shortcode.button:hover, button.secp-add-shortcode.button:active, button.secp-add-shortcode.button:focus {
   padding-left: 25px;
   background-image: url(../images/shopify_icon_small.png);
   background-position: 6px 4px;
