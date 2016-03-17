@@ -4,7 +4,7 @@
 **Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop  
 **Requires at least:** 4.3  
 **Tested up to:**      4.5  
-**Stable tag:**        1.0.1  
+**Stable tag:**        1.0.2  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,10 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 5. Adding a product to a post with the Add Product button.
 
 ## Changelog ##
+
+### 1.0.2 ###
+* Fix issue with logo disappearing when shortcode button clicked
+* Fix for page reload on click Add Product button if more than one WYSIWYG field is present
 
 ### 1.0.1 ###
 * Update CMB2 dependency to 2.2.1 to fix backcompat issue
