@@ -31,7 +31,6 @@ class SECP_Shortcode {
 	 * @since  1.0.0
 	 */
 	public function hooks() {
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ), 10 );
 		add_action( 'media_buttons', array( $this, 'media_buttons' ), 10 );
 		add_shortcode( 'shopify', array( $this, 'shortcode' ) );
 	}
@@ -40,12 +39,8 @@ class SECP_Shortcode {
 	 * Enqueue shorcode script
 	 *
 	 * @since 1.0.3
-	 * @param  string $hook Admin page.
 	 */
-	public function enqueue( $hook ) {
-		if ( 'edit.php' !== $hook && 'post.php' !== $hook ) {
-			return;
-		}
+	public function enqueue() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 		wp_enqueue_script( 'secp-admin-shortcode', $this->plugin->url( 'assets/js/admin-shortcode' . $min . '.js' ), array( 'jquery' ), '160223', true );
 		wp_localize_script( 'secp-admin-shortcode', 'secpAdminModal', array(
@@ -60,6 +55,7 @@ class SECP_Shortcode {
 	 * @param string $editor_id ID of content editor for button.
 	 */
 	public function media_buttons( $editor_id ) {
+		$this->enqueue();
 		?>
 		<button id="secp-add-shortcode" class="button secp-add-shortcode" data-editor-id="<?php echo esc_attr( $editor_id ); ?>">
 			<?php esc_html_e( 'Add Product', 'shopify-ecommerce-shopping-cart' ); ?>
