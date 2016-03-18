@@ -115,6 +115,7 @@ class SECP_Customize {
 						'shop'           => 'embeds.myshopify.com',
 						'product_handle' => 'yello-w',
 						'show_cart'      => true,
+						'vcenter'        => true,
 					), site_url() ) );
 					?>"></iframe>
 				</div>

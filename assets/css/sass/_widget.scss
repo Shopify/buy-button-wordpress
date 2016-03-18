@@ -1,3 +1,21 @@
+.secp-widget-preview-wrap {
+	.secp-no-product {
+		display: none;
+	}
+
+	&.no-product {
+		.secp-no-product {
+			display: inline;
+		}
+		.secp-preview-text {
+			display: none;
+		}
+		.secp-widget-preview {
+			display: none;
+		}
+	}
+}
+
 .secp-widget-preview {
 	width: 100%;
 	border: 1px solid #ddd;

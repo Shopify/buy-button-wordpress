@@ -11,13 +11,13 @@ import modal from './add-button-modal';
 $( function() {
 	$( document.body ).on( 'click', '#secp-add-widget', function( e ) {
 		// Grab inputs and iframe of current widget.
-		var $widgetContent = $( this ).closest( '.widget-content' ),
+		var $widgetWrap = $( this ).closest( '.secp-widget-wrap' ),
 			$c = {
-				inputType:   $widgetContent.find( '.secp-hidden-embed_type' ),
-				inputShop:   $widgetContent.find( '.secp-hidden-shop' ),
-				inputHandle: $widgetContent.find( '.secp-hidden-product_handle' ),
-				inputShow:   $widgetContent.find( '.secp-hidden-show' ),
-				iframe:      $widgetContent.find( '.secp-widget-preview' )
+				inputType:   $widgetWrap.find( '.secp-hidden-embed_type' ),
+				inputShop:   $widgetWrap.find( '.secp-hidden-shop' ),
+				inputHandle: $widgetWrap.find( '.secp-hidden-product_handle' ),
+				inputShow:   $widgetWrap.find( '.secp-hidden-show' ),
+				iframe:      $widgetWrap.find( '.secp-widget-preview' )
 			};
 
 		e.preventDefault();
@@ -28,6 +28,7 @@ $( function() {
 			// Fill in hidden fields with postMessage results
 			$c.inputType.val( data.resourceType );
 			$c.inputShop.val( data.shop );
+			$c.inputShow.val( data.show );
 			$c.inputHandle.val( data.resourceHandles.join( ', ' ) );
 
 			// Fake enter press on one of the hidden fields to trigger
@@ -37,7 +38,9 @@ $( function() {
 			$c.inputHandle.trigger( fakeEnterPress );
 
 			// Update preview iframe with postMessage results
-			$c.iframe.attr( 'src', `${ document.location.protocol }//${ document.location.host }?product_handle=${ encodeURIComponent( data.resourceHandles.join( ', ' ) ) }&shop=${ encodeURIComponent( data.shop ) }&embed_type=${ encodeURIComponent( data.resourceType ) }&show=${ encodeURIComponent( data.show ) }` );
+			$c.iframe
+				.attr( 'src', `${ document.location.protocol }//${ document.location.host }?product_handle=${ encodeURIComponent( data.resourceHandles.join( ', ' ) ) }&shop=${ encodeURIComponent( data.shop ) }&embed_type=${ encodeURIComponent( data.resourceType ) }&show=${ encodeURIComponent( data.show ) }` )
+				.parent().removeClass( 'no-product' );
 		} );
 	} );
 } );
