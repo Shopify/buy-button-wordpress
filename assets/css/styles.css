@@ -95,6 +95,18 @@ button.secp-add-shortcode.button, button.secp-add-shortcode.button:hover, button
   z-index: 701000;
   background: rgba(0, 0, 0, 0.5); }
 
+.secp-widget-preview-wrap .secp-no-product {
+  display: none; }
+
+.secp-widget-preview-wrap.no-product .secp-no-product {
+  display: inline; }
+
+.secp-widget-preview-wrap.no-product .secp-preview-text {
+  display: none; }
+
+.secp-widget-preview-wrap.no-product .secp-widget-preview {
+  display: none; }
+
 .secp-widget-preview {
   width: 100%;
   border: 1px solid #ddd;

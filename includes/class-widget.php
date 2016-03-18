@@ -103,6 +103,7 @@ class SECP_Widget extends WP_Widget {
 			'embed_type'     => $instance['embed_type'],
 			'shop'           => $instance['shop'],
 			'product_handle' => $instance['product_handle'],
+			'show'           => $instance['show'],
 		) );
 	}
 
@@ -129,6 +130,7 @@ class SECP_Widget extends WP_Widget {
 				'embed_type'     => '',
 				'shop'           => '',
 				'product_handle' => '',
+				'show'           => '',
 			),
 			(array) $atts,
 			self::$shortcode
@@ -172,6 +174,7 @@ class SECP_Widget extends WP_Widget {
 		$instance['embed_type'] = sanitize_text_field( $new_instance['embed_type'] );
 		$instance['shop'] = sanitize_text_field( $new_instance['shop'] );
 		$instance['product_handle'] = sanitize_text_field( $new_instance['product_handle'] );
+		$instance['show'] = sanitize_text_field( $new_instance['show'] );
 
 		// Sanitize title before saving to database.
 		$instance['title'] = sanitize_text_field( $new_instance['title'] );
@@ -189,8 +192,8 @@ class SECP_Widget extends WP_Widget {
 	 */
 	function enqueue() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-		wp_enqueue_script( 'secp-admin-shortcode', shopify_ecommerce_plugin()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
-		wp_localize_script( 'secp-admin-shortcode', 'secpAdminModal', array(
+		wp_enqueue_script( 'secp-admin-widget', shopify_ecommerce_plugin()->url( 'assets/js/admin-widget' . $min . '.js' ), array( 'jquery' ), '160223', true );
+		wp_localize_script( 'secp-admin-widget', 'secpAdminModal', array(
 			'modal' => shopify_ecommerce_plugin()->modal->get_modal(),
 		) );
 	}
@@ -209,10 +212,13 @@ class SECP_Widget extends WP_Widget {
 				'embed_type'     => '',
 				'shop'           => '',
 				'product_handle' => '',
+				'show'           => 'all',
 			)
 		);
 
 		$this->enqueue();
+
+		?><div class="secp-widget-wrap"><?php
 
 		// Title field.
 		?>
@@ -223,18 +229,16 @@ class SECP_Widget extends WP_Widget {
 		<?php
 
 		// Do product preview.
-		if ( $instance['product_handle'] ) {
-			?>
-			<p><?php esc_html_e( 'Preview: ', 'shopify_ecommerce_plugin' ); ?>
-			<iframe class="secp-widget-preview" src="<?php echo esc_url( add_query_arg( array(
-				'embed_type'     => $instance['embed_type'],
-				'shop'           => $instance['shop'],
-				'product_handle' => $instance['product_handle'],
-			), site_url() ) ); ?>"></iframe></p>
-			<?php
-		} else {
-			?><p><?php esc_html_e( 'No Product Set', 'shopify-ecommerce-shopping-cart' ); ?></p><?php
-		}
+		?>
+		<p class="secp-widget-preview-wrap <?php if( empty( $instance['product_handle'] ) ) { echo 'no-product'; } ?>"><span class="secp-no-product"><?php esc_html_e( 'No Product Set', 'shopify-ecommerce-shopping-cart' ); ?></span>
+		<span class="secp-preview-text"><?php esc_html_e( 'Preview: ', 'shopify_ecommerce_plugin' ); ?></span>
+		<iframe class="secp-widget-preview" src="<?php echo esc_url( add_query_arg( array(
+			'embed_type'     => $instance['embed_type'],
+			'shop'           => $instance['shop'],
+			'product_handle' => $instance['product_handle'],
+			'show'           => $instance['show'],
+		), site_url() ) ); ?>"></iframe></p>
+		<?php
 
 		// Do button.
 		$button_text = __( 'Add Product', 'shopify-ecommerce-shopping-cart' );
@@ -246,9 +250,11 @@ class SECP_Widget extends WP_Widget {
 		<?php
 
 		// Do hidden fields for product.
-		foreach ( array( 'embed_type', 'shop', 'product_handle' ) as $hidden_field ) {
+		foreach ( array( 'embed_type', 'shop', 'product_handle', 'show' ) as $hidden_field ) {
 			?><input class="secp-hidden-<?php echo esc_attr( $hidden_field ); ?>" type="hidden" id="<?php echo esc_attr( $this->get_field_id( $hidden_field ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( $hidden_field ) ); ?>" value="<?php echo esc_attr( $instance[ $hidden_field ]) ?>"><?php
 		}
+
+		?></div><?php // End .secp-widget-wrap.
 	}
 }
 
