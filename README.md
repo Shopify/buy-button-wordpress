@@ -100,6 +100,7 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 ### 1.0.3 ###
 * Add en_MX translations
 * Fix conflict between widget + shortcode js, fix other widget issues.
+* Update settings page submenu title to be Settings
 
 ### 1.0.2 ###
 * Fix issue with logo disappearing when shortcode button clicked
