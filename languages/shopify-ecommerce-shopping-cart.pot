@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Shopify eCommerce Plugin - Shopping Cart 1.0.3\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/shopify-ecommerce-shopping-cart\n"
-"POT-Creation-Date: 2016-03-18 16:40:33+00:00\n"
+"POT-Creation-Date: 2016-03-18 17:27:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: includes/class-shortcode.php:59 includes/class-widget.php:244
+#: includes/class-shortcode.php:65 includes/class-widget.php:244
 #: release/1.0.1/includes/class-shortcode.php:53
 #: release/1.0.1/includes/class-widget.php:240
 #: release/svn/includes/class-shortcode.php:53

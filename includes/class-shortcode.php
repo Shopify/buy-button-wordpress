@@ -36,6 +36,12 @@ class SECP_Shortcode {
 		add_shortcode( 'shopify', array( $this, 'shortcode' ) );
 	}
 
+	/**
+	 * Enqueue shorcode script
+	 *
+	 * @since 1.0.3
+	 * @param  string $hook Admin page.
+	 */
 	public function enqueue( $hook ) {
 		if ( 'edit.php' !== $hook && 'post.php' !== $hook ) {
 			return;
