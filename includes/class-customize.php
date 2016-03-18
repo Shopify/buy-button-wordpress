@@ -55,8 +55,6 @@ class SECP_Customize {
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
 		$this->hooks();
-
-		$this->title = __( 'Customize', 'shopify-ecommerce-shopping-cart' );
 	}
 
 	/**
@@ -87,8 +85,8 @@ class SECP_Customize {
 	public function add_options_page() {
 		$this->options_page = add_submenu_page(
 			'shopify_ecommerce_plugin_settings',
-			$this->title,
-			$this->title,
+			__( 'Customize', 'shopify-ecommerce-shopping-cart' ),
+			__( 'Customize', 'shopify-ecommerce-shopping-cart' ),
 			'manage_options',
 			$this->key,
 			array( $this, 'admin_page_display' )
