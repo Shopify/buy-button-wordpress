@@ -4,8 +4,8 @@
   "version": "1.0.4",
   "description": "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.",
   "author": {
-    "name": "WebDevStudios",
-    "url": "http://webdevstudios.com"
+    "name": "Shopify",
+    "url": "https://www.shopify.com/"
   },
   "license": "GPLv2",
   "devDependencies": {
