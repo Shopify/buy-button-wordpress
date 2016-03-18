@@ -97,6 +97,9 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 
 ## Changelog ##
 
+### 1.0.4 ###
+* Fix missing shortcode button script on new post.
+
 ### 1.0.3 ###
 * Add en_MX translations
 * Fix conflict between widget + shortcode js, fix other widget issues.
@@ -113,6 +116,9 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 * First release
 
 ## Upgrade Notice ##
+
+### 1.0.4 ###
+Fix missing shortcode button script on new post.
 
 ### 1.0.1 ###
 Update CMB2 dependency to 2.2.1 to fix backcompat issue
