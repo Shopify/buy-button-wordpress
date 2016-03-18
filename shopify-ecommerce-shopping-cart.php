@@ -3,7 +3,7 @@
  * Plugin Name: Shopify eCommerce Plugin - Shopping Cart
  * Plugin URI:  https://www.shopify.com/buy-button
  * Description: Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      WebDevStudios
  * Author URI:  http://webdevstudios.com
  * Donate link: https://www.shopify.com/buy-button
