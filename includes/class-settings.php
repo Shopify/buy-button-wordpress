@@ -31,14 +31,6 @@ class SECP_Settings {
 	protected $metabox_id = 'shopify_ecommerce_plugin_settings_metabox';
 
 	/**
-	 * Options Page title
-	 *
-	 * @var    string
-	 * @since  1.0.0
-	 */
-	protected $title = '';
-
-	/**
 	 * Options Page hook
 	 * @var string
 	 */
@@ -53,8 +45,6 @@ class SECP_Settings {
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
 		$this->hooks();
-
-		$this->title = __( 'Shopify', 'shopify-ecommerce-shopping-cart' );
 	}
 
 	/**
@@ -93,13 +83,21 @@ class SECP_Settings {
 	 * @since  1.0.0
 	 */
 	public function add_options_page() {
-		$this->options_page = add_menu_page(
-			$this->title,
-			$this->title,
+		add_menu_page(
+			__( 'Shopify', 'shopify-ecommerce-shopping-cart' ),
+			__( 'Shopify', 'shopify-ecommerce-shopping-cart' ),
 			'manage_options',
 			$this->key,
 			array( $this, 'admin_page_display' ),
 			$this->plugin->url( 'assets/images/shopify_icon_small2.png' )
+		);
+		$this->options_page = add_submenu_page(
+			$this->key,
+			__( 'Shopify', 'shopify-ecommerce-shopping-cart' ),
+			__( 'Settings', 'shopify-ecommerce-shopping-cart' ),
+			'manage_options',
+			$this->key,
+			array( $this, 'admin_page_display' )
 		);
 	}
 
