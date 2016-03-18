@@ -4,8 +4,8 @@
  * Plugin URI:  https://www.shopify.com/buy-button
  * Description: Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
  * Version:     1.0.4
- * Author:      WebDevStudios
- * Author URI:  http://webdevstudios.com
+ * Author:      Shopify
+ * Author URI:  https://www.shopify.com/
  * Donate link: https://www.shopify.com/buy-button
  * License:     GPLv2
  * Text Domain: shopify-ecommerce-shopping-cart
