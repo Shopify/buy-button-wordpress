@@ -1,0 +1,265 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shopify eCommerce Plugin - Shopping Cart\n"
+"POT-Creation-Date: 2016-03-18 13:42+0000\n"
+"PO-Revision-Date: 2016-03-18 09:29-0600\n"
+"Language-Team: Shopify <contact@shopify.com>\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;_ex\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-customize.php:59
+msgid "Customize"
+msgstr "Personalizar"
+
+msgid "Preview"
+msgstr "Vista previa"
+
+msgid "Colors"
+msgstr "Colores"
+
+msgid "Button color"
+msgstr "Color del botón"
+
+msgid "Button text"
+msgstr "Texto del botón"
+
+msgid "Accent"
+msgstr "Acento"
+
+msgid "Text"
+msgstr "Texto"
+
+msgid "Background"
+msgstr "Fondo"
+
+msgid "Buy now"
+msgstr "Comprar ahora"
+
+msgid "Cart title text"
+msgstr "Texto del título del carrito"
+
+msgid "Your cart"
+msgstr "Tu carrito"
+
+msgid "Checkout button text"
+msgstr "Texto del botón del registro de salida"
+
+msgid "Checkout"
+msgstr "Pantalla de compra"
+
+msgid "Where this button links to (single product only)"
+msgstr "A donde está vinculado este botón (solo un producto)"
+
+msgid "Product"
+msgstr "Producto"
+
+msgid "Cart"
+msgstr "Carrito"
+
+msgid "Customize updated."
+msgstr "Personalización actualizada."
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Embed Type"
+msgstr "Tipo Embed"
+
+msgid "Product image, price and button"
+msgstr "Imagen, precio y botón del producto"
+
+msgid "Buy button only"
+msgstr "Solo el botón para comprar"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Out of Stock"
+msgstr "Agotado"
+
+msgid "Unavailable"
+msgstr "No disponible"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Agregar producto"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Incrustar un producto de Shopify y el botón para comprar."
+
+msgid "Title:"
+msgstr "Titulo:"
+
+msgid "Preview: "
+msgstr "Vista previa: "
+
+msgid "No Product Set"
+msgstr "No hay juego de productos"
+
+msgid "Replace Product"
+msgstr "Reemplazar el producto"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Plugin de eCommerce de Shopify: El carrito de compras no cumplió con los requisitos y ha sido a href=\"%s\">desactivado</a>. Por favor, asegúrate que todos los requisitos estén disponibles."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Se requiere la configuración de Metabox para tener un parámetro ID"
+
+msgid "Click to toggle"
+msgstr "Hacer clic para alternar"
+
+msgid "Please Try Again"
+msgstr "Por favor, inténtalo de nuevo"
+
+msgid "Remove Embed"
+msgstr "Eliminar Embed"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "No se encontraron resultados de oEmbed para %s. Ver más información en"
+
+msgid "Add Group"
+msgstr "Agregar grupo"
+
+msgid "Remove Group"
+msgstr "Quitar grupo"
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "Clear"
+msgstr "Borrar"
+
+msgid "Default"
+msgstr "Predefinido"
+
+msgid "Select Color"
+msgstr "Ajustar color"
+
+msgid "Current Color"
+msgstr "Color actual"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "Do, Lu, Ma, Mie, Ju, Vi, Sa"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Dom, Lun, Mar, Mie, Jue, Vie, Sab"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+
+msgid "Next"
+msgstr "Siguiente"
+
+msgid "Prev"
+msgstr "Ant"
+
+msgid "Today"
+msgstr "Hoy"
+
+msgid "Done"
+msgstr "Hecho"
+
+msgid "Choose Time"
+msgstr "Escoger la hora"
+
+msgid "Time"
+msgstr "Tiempo"
+
+msgid "Hour"
+msgstr "Hora"
+
+msgid "Minute"
+msgstr "Minuto"
+
+msgid "Second"
+msgstr "Segundo"
+
+msgid "Now"
+msgstr "Ahora"
+
+msgid "Use this file"
+msgstr "Usar este archivo"
+
+msgid "Use these files"
+msgstr "Usar estos archivos"
+
+msgid "Remove Image"
+msgstr "Eliminar la imagen"
+
+msgid "Remove"
+msgstr "Eliminar"
+
+msgid "File:"
+msgstr "Archivo:"
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Select / Deselect All"
+msgstr "Selecionar todo/No seleccionar nada"
+
+msgid "Add Row"
+msgstr "Agregar fila"
+
+msgid "No terms"
+msgstr "Sin términos"
+
+msgid "Add or Upload Files"
+msgstr "Agregar o subir archivos"
+
+msgid "Add or Upload File"
+msgstr "Agregar o subir archivo"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Term Metadata es una función de WordPress > 4.4. Por favor, actualiza tu instalación de WordPress."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "La configuración de las metaboxes Term requiere un parámetro de \"taxonomías\""
+
+msgid "Save"
+msgstr "Guardar"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Plugin de eCommerce de Shopify - Carrito de compras"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Vende productos en tu sitio de WordPress usando los poderosos botones de compra de Shopify, son fáciles de usar."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "dd/mm/aa"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "hh:mm TT"
