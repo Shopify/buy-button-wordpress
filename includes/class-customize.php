@@ -224,7 +224,7 @@ class SECP_Customize {
 			'default' => 'checkout',
 			'options' => array(
 				'checkout' => __( 'Checkout', 'shopify-ecommerce-shopping-cart' ),
-				'product'  => __( 'Product', 'shopify-ecommerce-shopping-cart' ),
+				'modal'  => __( 'Product Modal', 'shopify-ecommerce-shopping-cart' ),
 				'cart'     => __( 'Cart', 'shopify-ecommerce-shopping-cart' ),
 			),
 		) );

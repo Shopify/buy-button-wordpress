@@ -175,6 +175,10 @@ class SECP_Output {
 			$args['product_modal'] = 'true';
 		}
 
+		if ( $args['redirect_to'] === 'modal') {
+			$args['product_modal'] = 'true';
+		}
+
 		if ( empty( $args['shop'] ) || empty( $args['product_handle'] ) ) {
 			// No button if there is no product id or shop url.
 			return;
