@@ -1,7 +1,7 @@
 # Shopify eCommerce Plugin - Shopping Cart #
 **Contributors:**      shopify, webdevstudios  
 **Donate link:**       https://www.shopify.com/buy-button  
-**Tags:**              ecommerce, widget, shopify, shortcode, buy, purchase, shop  
+**Tags:**              ecommerce, e-commerce, widget, shortcode, buy, purchase, shop, cart, checkout, downloads, sales, paypal, sell, store, storefront  
 **Requires at least:** 4.3  
 **Tested up to:**      4.5  
 **Stable tag:**        1.0.4  
@@ -12,21 +12,17 @@ Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy
 
 ## Description ##
 
-**Shopify Ecommerce Plugin - Shopping Cart** makes selling products on your WordPress site simple. In just a few clicks you can create a Buy Button that lets visitors securely checkout from any page on your site.
+**Shopify Ecommerce Plugin - Shopping Cart** makes selling products on your WordPress site simple. In just a few clicks you can create a Buy Button and add ecommerce functionality that lets visitors securely checkout from any page on your site.
 
-Other **WordPress ecommerce** plugins want your whole website to be a store, but with **Shopify Ecommerce Plugin - Shopping Cart**, you can seamlessly integrate a **WordPress shopping cart** for as little as one product. It’s perfect for WordPress site owners looking for a simple way to sell directly to their audience.
+Other **WordPress ecommerce** plugins want your whole website to be a store, but with **Shopify Ecommerce Plugin - Shopping Cart**, you can seamlessly integrate a **WordPress shopping cart** for as little as one product. It’s perfect for WordPress ecommerce site owners looking for a simple way to sell directly to their audience.
 
 ### More ways to sell ###
 
 Because the **Shopify Ecommerce Plugin** - Shopping Cart runs on Shopify, you get access to a lot more than **WordPress ecommerce**. Besides our **WordPress ecommerce plugin**, here’s what else our merchants get access to:
 
-**Facebook Shop** - Showcase and sell products on your Facebook page using a dedicated Shop section that’s both desktop and mobile-friendly.
+**Facebook Shop** - Showcase and sell products on your Facebook page using a dedicated ecommerce Shop section that’s both desktop and mobile-friendly.
 
-**Pinterest Buyable Pins** - All products pinned from your Shopify store will automatically become Buyable Pins, letting Pinterest users purchase them without leaving the site or app.
-
-**Twitter Shoppable Tweets** - Any product that's ever been Tweeted from your online store will automatically include a Buy Button, letting Twitter users purchase them without leaving the site or app.
-
-**iPad / iPhone POS** - Sell in-person and easily accept credit card payments using a mobile device, the Shopify POS app, and a free Shopify card reader.
+**Android / iPad / iPhone POS** - Sell in-person and easily accept credit card payments using a mobile device, the Shopify POS app, and a free Shopify card reader.
 
 **Store Management App** - Track sales, discover trends, and fulfill orders anywhere using the Shopify app for Android and iOS.
 
@@ -51,7 +47,7 @@ To begin, simply create a new post/page or begin editing an existing one. Click 
 
 ### Buy Button-enabled themes ###
 
-The following themes come with Shopify Buy Button functionality pre-installed. They’ve been specifically designed to help you run a Shopify-powered online store on WordPress.
+The following themes come with Shopify Buy Button ecommerce functionality pre-installed. They’ve been specifically designed to help you run a Shopify-powered online store on WordPress.
 
 * [Hype by Themezilla](http://www.themezilla.com/themes/hype/)
 * [Pulse by Ultralinx Themes](http://themes.theultralinx.com/shopify-button-WordPress-theme/)
@@ -67,7 +63,7 @@ If you need additional help, you can speak to a Shopify Guru via [24/7 phone & e
 
 ### What is Shopify? ###
 
-Shopify is a complete commerce solution that makes it easy for anyone to sell products. You can customize your storefront, accept credit card payments, and track and respond to orders — all with a few simple clicks.
+Shopify is a complete ecommerce solution that makes it easy for anyone to sell products. You can customize your storefront, accept credit card payments, and track and respond to orders — all with a few simple clicks.
 
 Shopify Ecommerce Plugin - Shopping Cart is just one of the many ways you can sell using Shopify. Merchants can build a beautiful online store, sell in-person with a smartphone or tablet, and sell directly on popular websites and apps like Facebook and Pinterest - all with one inventory, and without having to sign up for multiple merchant accounts.
 
