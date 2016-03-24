@@ -4,7 +4,7 @@
 **Tags:**              ecommerce, e-commerce, widget, shortcode, buy, purchase, shop, cart, checkout, downloads, sales, paypal, sell, store, storefront  
 **Requires at least:** 4.3  
 **Tested up to:**      4.5  
-**Stable tag:**        1.0.4  
+**Stable tag:**        1.0.5  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,10 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 5. Adding a product to a post with the Add Product button.
 
 ## Changelog ##
+
+### 1.0.5 ###
+* Set the redirect_to for 'Product Modal' to 'modal'
+* Added new language files for German, French, Italian, Dutch, Polish, Portuguese, Russian, Turkish and Vietnamese.
 
 ### 1.0.4 ###
 * Fix missing shortcode button script on new post.
