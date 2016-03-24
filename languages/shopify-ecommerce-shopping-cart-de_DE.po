@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 14:59+0000\n"
+"PO-Revision-Date: 2016-03-23 11:05-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Anpassen"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Colors"
+msgstr "Farben"
+
+msgid "Button color"
+msgstr "Button-Farbe"
+
+msgid "Button text"
+msgstr "Button-Text"
+
+msgid "Accent"
+msgstr "Akzent"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Background"
+msgstr "Hintergrund"
+
+msgid "Buy now"
+msgstr "Jetzt kaufen"
+
+msgid "Cart title text"
+msgstr "Titeltext für Warenkorb"
+
+msgid "Your cart"
+msgstr "Ihr Warenkorb"
+
+msgid "Checkout button text"
+msgstr "Button-Text für Kasse"
+
+msgid "Checkout"
+msgstr "Kasse"
+
+msgid "Where this button links to (single product only)"
+msgstr "Zielseite dieses Links (nur einzelnes Produkt)"
+
+msgid "Product"
+msgstr "Produkt"
+
+msgid "Cart"
+msgstr "Warenkorb"
+
+msgid "Customize updated."
+msgstr "Anpassung aktualisiert."
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Embed Type"
+msgstr "Einbettungstyp"
+
+msgid "Product image, price and button"
+msgstr "Bild, Preis und Button zum Produkt"
+
+msgid "Buy button only"
+msgstr "Nur Kaufen-Button"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Out of Stock"
+msgstr "Ausverkauft"
+
+msgid "Unavailable"
+msgstr "Nicht verfügbar"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Produkt hinzufügen"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Shopify-Produkt und einen Kaufen-Button eingebettet."
+
+msgid "Title:"
+msgstr "Titel:"
+
+msgid "Preview: "
+msgstr "Vorschau: "
+
+msgid "No Product Set"
+msgstr "Kein Produkt festgelegt"
+
+msgid "Replace Product"
+msgstr "Produkt ersetzen"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Shopify eCommerce Plugin - Der Warenkorb ist noch nicht komplett eingerichtet und wurde <a href=\"%s\">deaktiviert</a>. Bitte stellen Sie sicher, dass alle Anforderungen verfügbar sind."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Die Metabox-Konfiguration ist erforderlich, um einen ID-Parameter zu erhalten"
+
+msgid "Click to toggle"
+msgstr "Zum Wechseln klicken"
+
+msgid "Please Try Again"
+msgstr "Bitte erneut versuchen"
+
+msgid "Remove Embed"
+msgstr "Einbettung entfernen"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Keine eingebetteten Ergebnisse für %s gefunden. Mehr Infos unter"
+
+msgid "Add Group"
+msgstr "Gruppe hinzufügen"
+
+msgid "Remove Group"
+msgstr "Gruppe entfernen"
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Clear"
+msgstr "Entfernen"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Select Color"
+msgstr "Farbe auswählen"
+
+msgid "Current Color"
+msgstr "Aktuelle Farbe"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "So, Mo, Di, Mi, Do, Fr, Sa"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "So, Mo, Di, Mi, Do, Fr, Sa"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez"
+
+msgid "Next"
+msgstr "Weiter"
+
+msgid "Prev"
+msgstr "Vor"
+
+msgid "Today"
+msgstr "Heute"
+
+msgid "Done"
+msgstr "Fertig"
+
+msgid "Choose Time"
+msgstr "Uhrzeit wählen"
+
+msgid "Time"
+msgstr "Uhrzeit"
+
+msgid "Hour"
+msgstr "Stunde"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Second"
+msgstr "Sekunde"
+
+msgid "Now"
+msgstr "Jetzt"
+
+msgid "Use this file"
+msgstr "Diese Datei verwenden"
+
+msgid "Use these files"
+msgstr "Diese Dateien verwenden"
+
+msgid "Remove Image"
+msgstr "Bild entfernen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "File:"
+msgstr "Datei:"
+
+msgid "Download"
+msgstr "Herunterladen"
+
+msgid "Select / Deselect All"
+msgstr "Alle aus-/abwählen"
+
+msgid "Add Row"
+msgstr "Zeile hinzufügen"
+
+msgid "No terms"
+msgstr "Keine Bedingungen"
+
+msgid "Add or Upload Files"
+msgstr "Dateien hinzufügen oder hochladen"
+
+msgid "Add or Upload File"
+msgstr "Datei hinzufügen oder hochladen"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Term Metadata ist eine Funktion ab WordPress 4.4. Bitte aktualisieren Sie Ihre WordPress-Version."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "Für die Konfiguration der Term-Metaboxen ist ein Taxonomie-Parameter erforderlich."
+
+msgid "Save"
+msgstr "Speichern"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Shopify eCommerce Plugin - Warenkorb"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Verkaufen Sie mit Hilfe der benutzerfreundlichen, leistungsstarken Kaufen-Buttons von Shopify Produkte auf Ihrer WordPress-Website."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "MM/TT/JJ"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "HH:MM TT"

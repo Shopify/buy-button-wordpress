@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 15:00+0000\n"
+"PO-Revision-Date: 2016-03-23 11:03-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Personnaliser"
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Colors"
+msgstr "Couleurs"
+
+msgid "Button color"
+msgstr "Couleur du bouton"
+
+msgid "Button text"
+msgstr "Texte du bouton"
+
+msgid "Accent"
+msgstr "Accent"
+
+msgid "Text"
+msgstr "Texte"
+
+msgid "Background"
+msgstr "Arrière-plan"
+
+msgid "Buy now"
+msgstr "Acheter maintenant"
+
+msgid "Cart title text"
+msgstr "Texte titre panier"
+
+msgid "Your cart"
+msgstr "Votre panier"
+
+msgid "Checkout button text"
+msgstr "Texte bouton paiement"
+
+msgid "Checkout"
+msgstr "Paiement"
+
+msgid "Where this button links to (single product only)"
+msgstr "Cible du lien du bouton (produit individuel uniquement)"
+
+msgid "Product"
+msgstr "Produit"
+
+msgid "Cart"
+msgstr "Panier"
+
+msgid "Customize updated."
+msgstr "Personnalisation mise à jour."
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Embed Type"
+msgstr "Type d'intégration"
+
+msgid "Product image, price and button"
+msgstr "Image, prix et bouton du produit"
+
+msgid "Buy button only"
+msgstr "Bouton d'achat uniquement"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Out of Stock"
+msgstr "Stock épuisé"
+
+msgid "Unavailable"
+msgstr "Indisponible"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Ajouter un produit"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Intégrez un produit et un bouton d'achat Shopify."
+
+msgid "Title:"
+msgstr "Titre :"
+
+msgid "Preview: "
+msgstr "Aperçu : "
+
+msgid "No Product Set"
+msgstr "Aucun produit défini"
+
+msgid "Replace Product"
+msgstr "Remplacer le produit"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Module eCommerce Shopify - Certaines informations manquent dans le panier d'achat et celui-ci a été <a href=\"%s\">désactivé</a>. Veuillez bien vérifier que ces informations soient présentes."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Une configuration metabox est requise pour détenir un paramètre d'ID."
+
+msgid "Click to toggle"
+msgstr "Cliquer pour activer"
+
+msgid "Please Try Again"
+msgstr "Veuillez réessayer"
+
+msgid "Remove Embed"
+msgstr "Supprimer l'intégration"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Aucun résultat d'intégration trouvé pour %s. Afficher plus d'infos sur"
+
+msgid "Add Group"
+msgstr "Ajouter le groupe"
+
+msgid "Remove Group"
+msgstr "Supprimer le groupe"
+
+msgid "None"
+msgstr "Aucun"
+
+msgid "Clear"
+msgstr "Supprimer"
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Select Color"
+msgstr "Sélectionner la couleur"
+
+msgid "Current Color"
+msgstr "Couleur actuelle"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "Di, Lu, Ma, Me, Je, Ve, Sa"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Dim, Lun, Mar, Mer, Jeu, Ven, Sam"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Jan, Fév, Mar, Avr, Mai, Juin, Juil, Août, Sep, Oct, Nov, Déc"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Prev"
+msgstr "Préc"
+
+msgid "Today"
+msgstr "Aujourd'hui"
+
+msgid "Done"
+msgstr "Terminé"
+
+msgid "Choose Time"
+msgstr "Choisir l'heure"
+
+msgid "Time"
+msgstr "Heure"
+
+msgid "Hour"
+msgstr "Heure"
+
+msgid "Minute"
+msgstr "Minute"
+
+msgid "Second"
+msgstr "Seconde"
+
+msgid "Now"
+msgstr "Maintenant"
+
+msgid "Use this file"
+msgstr "Utiliser ce fichier"
+
+msgid "Use these files"
+msgstr "Utiliser ces fichiers"
+
+msgid "Remove Image"
+msgstr "Supprimer l'image"
+
+msgid "Remove"
+msgstr "Supprimer"
+
+msgid "File:"
+msgstr "Fichier :"
+
+msgid "Download"
+msgstr "Télécharger"
+
+msgid "Select / Deselect All"
+msgstr "Sélectionner / Désélectionner tout"
+
+msgid "Add Row"
+msgstr "Ajouter une ligne"
+
+msgid "No terms"
+msgstr "Aucune condition"
+
+msgid "Add or Upload Files"
+msgstr "Ajouter ou télécharger des fichiers"
+
+msgid "Add or Upload File"
+msgstr "Ajouter ou envoyer un fichier"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Term Metadata est une fonctionnalité d'une version de WordPress supérieure à 4.4. Veuillez mettre à niveau votre version de WordPress."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "La configuration des metaboxes requiert un paramètre « taxonomies »"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Module d'eCommerce Shopify - Panier"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Vendez des produits sur votre site Wordpress à l'aide des boutons d'achats puissants et faciles à utiliser de Shopify."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "jj/mm/aa"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "hh:mm TT"

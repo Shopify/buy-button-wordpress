@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 14:58+0000\n"
+"PO-Revision-Date: 2016-03-23 11:08-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Tùy chỉnh"
+
+msgid "Preview"
+msgstr "Xem trước"
+
+msgid "Colors"
+msgstr "Màu sắc"
+
+msgid "Button color"
+msgstr "Màu của nút"
+
+msgid "Button text"
+msgstr "Chữ của nút"
+
+msgid "Accent"
+msgstr "Nhấn mạnh"
+
+msgid "Text"
+msgstr "Chữ"
+
+msgid "Background"
+msgstr "Nền"
+
+msgid "Buy now"
+msgstr "Mua ngay"
+
+msgid "Cart title text"
+msgstr "Tiêu đề giỏ hàng"
+
+msgid "Your cart"
+msgstr "Giỏ hàng của bạn"
+
+msgid "Checkout button text"
+msgstr "Chữ của nút thanh toán"
+
+msgid "Checkout"
+msgstr "Thanh toán"
+
+msgid "Where this button links to (single product only)"
+msgstr "Địa chỉ liên kết của nút này (chỉ sản phẩm lẻ)"
+
+msgid "Product"
+msgstr "Sản phẩm"
+
+msgid "Cart"
+msgstr "Giỏ hàng"
+
+msgid "Customize updated."
+msgstr "Đã cập nhật tùy chỉnh."
+
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Embed Type"
+msgstr "Kiểu Nhúng"
+
+msgid "Product image, price and button"
+msgstr "Hình ảnh, giá và nút của sản phẩm"
+
+msgid "Buy button only"
+msgstr "Chỉ nút mua hàng"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Out of Stock"
+msgstr "Hết hàng"
+
+msgid "Unavailable"
+msgstr "Không khả dụng"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Thêm Sản phẩm"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Nhúng một sản phẩm và nút mua hàng Shopify."
+
+msgid "Title:"
+msgstr "Tiêu đề:"
+
+msgid "Preview: "
+msgstr "Xem trước:"
+
+msgid "No Product Set"
+msgstr "Không có sản phẩm được thiết lập"
+
+msgid "Replace Product"
+msgstr "Thay thế sản phẩm"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Trình bổ trợ thương mại điện tử Shopify  - Giỏ hàng chưa đáp ứng các điều kiện và đã bị <a href=\"%s\">ngừng kích hoạt</a>. Hãy đảm bảo tất cả các điều kiện được khả dụng."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Cấu hình Metabox là cần thiêt để có thông số ID"
+
+msgid "Click to toggle"
+msgstr "Bấm để chuyển chế độ"
+
+msgid "Please Try Again"
+msgstr "Hãy Thử Lại"
+
+msgid "Remove Embed"
+msgstr "Gỡ bỏ Nhúng"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Không tìm thấy kết quả nhúng cho %s. Xem thêm thông tin tại"
+
+msgid "Add Group"
+msgstr "Thêm Nhóm"
+
+msgid "Remove Group"
+msgstr "Xóa Nhóm"
+
+msgid "None"
+msgstr "Không có"
+
+msgid "Clear"
+msgstr "Xóa"
+
+msgid "Default"
+msgstr "Mặc định"
+
+msgid "Select Color"
+msgstr "Chọn Màu"
+
+msgid "Current Color"
+msgstr "Màu hiện tại"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Chủ Nhật, Thứ Hai, Thứ Ba, Thứ Tư, Thứ Năm, Thứ Sáu, Thứ Bảy"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "CN, T2, T3, T4, T5, T6, T7"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "CN, T2, T3, T4, T5, T6, T7"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Tháng Một, Tháng Hai, Tháng Ba, Tháng Tư, Tháng Năm, Tháng Sáu, Tháng Bảy, Tháng Tám, Tháng Chín, Tháng Mười, Tháng Mười Một, Tháng Mười Hai"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Tháng 1, Tháng 2, Tháng 3, Tháng 4, Tháng 5, Tháng 6, Tháng 7, Tháng 8, Tháng 9, Tháng 10, Tháng 11, Tháng 12"
+
+msgid "Next"
+msgstr "Tiếp theo"
+
+msgid "Prev"
+msgstr "Trước"
+
+msgid "Today"
+msgstr "Hôm nay"
+
+msgid "Done"
+msgstr "Đã xong"
+
+msgid "Choose Time"
+msgstr "Chọn Thời gian"
+
+msgid "Time"
+msgstr "Thời gian"
+
+msgid "Hour"
+msgstr "Giờ"
+
+msgid "Minute"
+msgstr "Phút"
+
+msgid "Second"
+msgstr "Giây"
+
+msgid "Now"
+msgstr "Bây giờ"
+
+msgid "Use this file"
+msgstr "Dùng tập tin này"
+
+msgid "Use these files"
+msgstr "Dùng các tập tin này"
+
+msgid "Remove Image"
+msgstr "Xóa Ảnh"
+
+msgid "Remove"
+msgstr "Xóa"
+
+msgid "File:"
+msgstr "Tập tin:"
+
+msgid "Download"
+msgstr "Tải về"
+
+msgid "Select / Deselect All"
+msgstr "Chọn / Bỏ chọn Tất cả"
+
+msgid "Add Row"
+msgstr "Thêm Hàng"
+
+msgid "No terms"
+msgstr "Không có điều khoản"
+
+msgid "Add or Upload Files"
+msgstr "Thêm hoặc Tải lên Tập tin"
+
+msgid "Add or Upload File"
+msgstr "Thêm hoặc Tải lên Tập tin"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Đối tượng Metadata là một tính năng của WordPress > 4.4. Hãy nâng cấp cài đặt WordPress của bạn."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "Tùy chỉnh đối tượng metabox yêu cầu một thông số \"hệ thống phân loại\""
+
+msgid "Save"
+msgstr "Lưu"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Trình bổ trợ thương mại điện tử Shopify - Giỏ hàng"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Bán các sản phẩm trên trang WordPress của bạn với Nút Mua hàng mạnh mẽ, dễ sử dụng của Shopify"
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "mm/dd/yy"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "hh:mm TT"

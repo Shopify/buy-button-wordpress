@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 14:59+0000\n"
+"PO-Revision-Date: 2016-03-23 11:04-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: nl_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Aanpassen"
+
+msgid "Preview"
+msgstr "Voorbeeld"
+
+msgid "Colors"
+msgstr "Kleuren"
+
+msgid "Button color"
+msgstr "Knopkleur"
+
+msgid "Button text"
+msgstr "Knoptekst"
+
+msgid "Accent"
+msgstr "Accent"
+
+msgid "Text"
+msgstr "Tekst"
+
+msgid "Background"
+msgstr "Achtergrond"
+
+msgid "Buy now"
+msgstr "Nu kopen"
+
+msgid "Cart title text"
+msgstr "Tekst winkelmandjetitel"
+
+msgid "Your cart"
+msgstr "Je winkelmandje"
+
+msgid "Checkout button text"
+msgstr "Tekst kassaknop"
+
+msgid "Checkout"
+msgstr "Kassa"
+
+msgid "Where this button links to (single product only)"
+msgstr "Waar deze knop naartoe verwijst (alleen afzonderlijk product)"
+
+msgid "Product"
+msgstr "Product"
+
+msgid "Cart"
+msgstr "Winkelmandje"
+
+msgid "Customize updated."
+msgstr "Aanpassen bijgewerkt."
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Embed Type"
+msgstr "Insluittype"
+
+msgid "Product image, price and button"
+msgstr "Productafbeelding, prijs en knop"
+
+msgid "Buy button only"
+msgstr "Alleen koopknop"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Out of Stock"
+msgstr "Niet op voorraad"
+
+msgid "Unavailable"
+msgstr "Onbeschikbaar"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Product toevoegen"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Sluit een product- en koopknop voor Shopify in"
+
+msgid "Title:"
+msgstr "Titel:"
+
+msgid "Preview: "
+msgstr "Voorbeeld: "
+
+msgid "No Product Set"
+msgstr "Geen product ingesteld"
+
+msgid "Replace Product"
+msgstr "Product vervangen"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Shopify eCommerce-plugin - Winkelmandje mist enkele vereisten en is <a href=\"%s\">uitgeschakeld</a>. Zorg dat alle vereisten beschikbaar zijn."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Metabox-configuratie heeft een ID-parameter nodig"
+
+msgid "Click to toggle"
+msgstr "Klik om aan/uit te zetten"
+
+msgid "Please Try Again"
+msgstr "Probeer het opnieuw"
+
+msgid "Remove Embed"
+msgstr "Insluiting verwijderen"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Geen invoegresultaten gevonden voor %s. Bekijk meer informatie op"
+
+msgid "Add Group"
+msgstr "Groep toevoegen"
+
+msgid "Remove Group"
+msgstr "Groep verwijderen"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "Clear"
+msgstr "Wissen"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Select Color"
+msgstr "Kleur selecteren"
+
+msgid "Current Color"
+msgstr "Huidige kleur"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "zondag, maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "zo, ma, di, wo, do, vr, za"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "zon, maa, din, woe, don, vrij, zat"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "jan, feb, mrt, apr, mei, jun, juli, aug, sep, okt, nov, dec"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Prev"
+msgstr "Vorige"
+
+msgid "Today"
+msgstr "Vandaag"
+
+msgid "Done"
+msgstr "Klaar"
+
+msgid "Choose Time"
+msgstr "Tijd kiezen"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Hour"
+msgstr "Uur"
+
+msgid "Minute"
+msgstr "Minuut"
+
+msgid "Second"
+msgstr "Seconde"
+
+msgid "Now"
+msgstr "Nu"
+
+msgid "Use this file"
+msgstr "Dit bestand gebruiken"
+
+msgid "Use these files"
+msgstr "Deze bestanden gebruiken"
+
+msgid "Remove Image"
+msgstr "Afbeelding verwijderen"
+
+msgid "Remove"
+msgstr "Verwijderen"
+
+msgid "File:"
+msgstr "Bestand:"
+
+msgid "Download"
+msgstr "Downloaden"
+
+msgid "Select / Deselect All"
+msgstr "Selecteren/selectie opheffen"
+
+msgid "Add Row"
+msgstr "Rij toevoegen"
+
+msgid "No terms"
+msgstr "Geen termen"
+
+msgid "Add or Upload Files"
+msgstr "Bestanden toevoegen of uploaden"
+
+msgid "Add or Upload File"
+msgstr "Bestand toevoegen of uploaden"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Term Metadata is een functie van WordPress > 4.4. Vernieuw je installatie van WordPress."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "Voor de configuratie van term-metaboxen is een 'taxonomieën'-parameter nodig"
+
+msgid "Save"
+msgstr "Opslaan"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Shopify eCommerce-plugin - Winkelmandje"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Verkoop producten op je WordPress-site met Shopify’s krachtige, gemakkelijk te gebruiken Koop-knoppen."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "mm/dd/jj"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "HH:mm"

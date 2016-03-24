@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 14:57+0000\n"
+"PO-Revision-Date: 2016-03-23 11:07-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Özelleştir"
+
+msgid "Preview"
+msgstr "ön izleme"
+
+msgid "Colors"
+msgstr "Renkler"
+
+msgid "Button color"
+msgstr "Düğme rengi"
+
+msgid "Button text"
+msgstr "Düğme metni"
+
+msgid "Accent"
+msgstr "Vurgu"
+
+msgid "Text"
+msgstr "Metin"
+
+msgid "Background"
+msgstr "Arkaplan"
+
+msgid "Buy now"
+msgstr "Şimdi satın al"
+
+msgid "Cart title text"
+msgstr "Sepet başlığı metni"
+
+msgid "Your cart"
+msgstr "Sepetiniz"
+
+msgid "Checkout button text"
+msgstr "Ödeme işlem düğmesi metni"
+
+msgid "Checkout"
+msgstr "Ödeme işlemi"
+
+msgid "Where this button links to (single product only)"
+msgstr "Bu düğmenin bağlandığı yer (yalnızca tek ürün)"
+
+msgid "Product"
+msgstr "Ürün"
+
+msgid "Cart"
+msgstr "Sepet"
+
+msgid "Customize updated."
+msgstr "Özelleştirme güncellendi."
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Embed Type"
+msgstr "Embed Türü"
+
+msgid "Product image, price and button"
+msgstr "Ürün resmi, fiyatı ve düğmesi"
+
+msgid "Buy button only"
+msgstr "Yalnızca satın alma düğmesi"
+
+msgid "Ok"
+msgstr "Tamam"
+
+msgid "Out of Stock"
+msgstr "Stokta Yok"
+
+msgid "Unavailable"
+msgstr "Mevcut Değil"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Ürün Ekle"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Shopify ürünü ve satın al düğmesi embed edin."
+
+msgid "Title:"
+msgstr "Başlık:"
+
+msgid "Preview: "
+msgstr "Ön izleme: "
+
+msgid "No Product Set"
+msgstr "Ürün Ayarlanmadı"
+
+msgid "Replace Product"
+msgstr "Ürün Değiştir"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Shopify E-Ticaret EKlentisi - Alışveriş Sepetinde eksik gereksinimler var ve <a href=\"%s\">devre dışı bırakıldı</a>. Tüm gereksinimlerin bulunduğundan emin olun."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "ID parametresinin olması için Metabox yapılandırması gerekiyor"
+
+msgid "Click to toggle"
+msgstr "Değiştirmek için tıklayın"
+
+msgid "Please Try Again"
+msgstr "Lütfen Tekrar Deneyin"
+
+msgid "Remove Embed"
+msgstr "Embed'i Kaldır"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "%S için herhangi bir Embed Sonucu Bulunamadı. Daha fazla bilgi için şuraya bakın:"
+
+msgid "Add Group"
+msgstr "Grup Ekle"
+
+msgid "Remove Group"
+msgstr "Grubu Kaldır"
+
+msgid "None"
+msgstr "Hiçbiri"
+
+msgid "Clear"
+msgstr "Temizle"
+
+msgid "Default"
+msgstr "Varsayılan"
+
+msgid "Select Color"
+msgstr "Renk Seçin"
+
+msgid "Current Color"
+msgstr "Mevcut Renk"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Pazar, Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "Pz, Pzt, Sa, Çrş, Prş, Cum, Cts"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Paz, Pazt, Sal, Çarş, Perş, Cum, Cumts"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Oca, Şub, Mar, Nis, May, Haz, Tem, Ağu, Eyl, Ekm, Kas, Arl"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Prev"
+msgstr "Önceki"
+
+msgid "Today"
+msgstr "Bugün"
+
+msgid "Done"
+msgstr "Tamam"
+
+msgid "Choose Time"
+msgstr "Zaman Seç"
+
+msgid "Time"
+msgstr "Zaman"
+
+msgid "Hour"
+msgstr "Saat"
+
+msgid "Minute"
+msgstr "Dakika"
+
+msgid "Second"
+msgstr "Saniye"
+
+msgid "Now"
+msgstr "Şimdi"
+
+msgid "Use this file"
+msgstr "Bu dosyayı kullan"
+
+msgid "Use these files"
+msgstr "Bu dosyaları kullan"
+
+msgid "Remove Image"
+msgstr "Görseli Kaldır"
+
+msgid "Remove"
+msgstr "Kaldır"
+
+msgid "File:"
+msgstr "Dosya:"
+
+msgid "Download"
+msgstr "İndir"
+
+msgid "Select / Deselect All"
+msgstr "Tümünü Seç / Seçimi Kaldır"
+
+msgid "Add Row"
+msgstr "Satır Ekle"
+
+msgid "No terms"
+msgstr "Hiç öge yok"
+
+msgid "Add or Upload Files"
+msgstr "Birden Fazla Dosya Ekle veya Yükle"
+
+msgid "Add or Upload File"
+msgstr "Dosya Ekle veya Yükle"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Metadata, WordPress > 4.4 özelliğidir. Lütfen WordPress kurulumunuzu yükseltin."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "Metaboxes yapılandırması 'taxonomies’ parametresi gerektiriyor"
+
+msgid "Save"
+msgstr "Kaydet"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Shopify E-Ticaret EKlentisi - Alışveriş Sepeti"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Shopify’ın güçlü, kullanımı kolay Satın Al Düğmeleriyle WordPress sitenizde ürünlerinizi satın."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "aa/gg/yy"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "aa:gg ZZ"

@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: 2016-03-23 14:59+0000\n"
+"PO-Revision-Date: 2016-03-23 11:07-0400\n"
+"Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Customize"
+msgstr "Настройка"
+
+msgid "Preview"
+msgstr "Просмотр"
+
+msgid "Colors"
+msgstr "Цвета"
+
+msgid "Button color"
+msgstr "Цвет кнопки"
+
+msgid "Button text"
+msgstr "Текст кнопки"
+
+msgid "Accent"
+msgstr "Выделение"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Background"
+msgstr "Фон"
+
+msgid "Buy now"
+msgstr "Купить"
+
+msgid "Cart title text"
+msgstr "Текст названия корзины"
+
+msgid "Your cart"
+msgstr "Ваша корзина"
+
+msgid "Checkout button text"
+msgstr "Текст кнопки «Оплатить»"
+
+msgid "Checkout"
+msgstr "Оплатить"
+
+msgid "Where this button links to (single product only)"
+msgstr "На что ссылается эта кнопка (только один товар)"
+
+msgid "Product"
+msgstr "Товар"
+
+msgid "Cart"
+msgstr "Корзина"
+
+msgid "Customize updated."
+msgstr "Настройка обновлена."
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Embed Type"
+msgstr "Тип интеграции"
+
+msgid "Product image, price and button"
+msgstr "Изображение товара, цена и кнопка"
+
+msgid "Buy button only"
+msgstr "Только кнопка «Купить»"
+
+msgid "Ok"
+msgstr "ОК"
+
+msgid "Out of Stock"
+msgstr "Нет на складе"
+
+msgid "Unavailable"
+msgstr "Недоступно"
+
+msgid "Shopify"
+msgstr "Shopify"
+
+msgid "Add Product"
+msgstr "Добавить товар"
+
+msgid "Embed a Shopify product and buy button."
+msgstr "Интегрировать товар от Shopify и кнопку «Купить»."
+
+msgid "Title:"
+msgstr "Название:"
+
+msgid "Preview: "
+msgstr "Просмотр: "
+
+msgid "No Product Set"
+msgstr "Товар не задан"
+
+msgid "Replace Product"
+msgstr "Заменить товар"
+
+msgid "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href=\"%s\">deactivated</a>. Please make sure all requirements are available."
+msgstr "Для работы плагина Shopify eCommerce - Shopping Cart отсутствуют необходимые условия и он <a href=\"%s\">отключен</a>. Проверьте выполнение всех условий."
+
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Конфигурация метабокса должна иметь параметр ID"
+
+msgid "Click to toggle"
+msgstr "Нажмите, чтобы переключить"
+
+msgid "Please Try Again"
+msgstr "Повторите попытку"
+
+msgid "Remove Embed"
+msgstr "Удалить интеграцию"
+
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Не найдены результаты интеграции для %s. Подробности:"
+
+msgid "Add Group"
+msgstr "Добавить группу"
+
+msgid "Remove Group"
+msgstr "Удалить группу"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "Select Color"
+msgstr "Выбрать цвет"
+
+msgid "Current Color"
+msgstr "Текущий цвет"
+
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота"
+
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "Вс, Пн, Вт, Ср, Чт, Пт, Сб"
+
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Вс, Пн, Вт, Ср, Чт, Пт, Сб"
+
+msgid "January, February, March, April, May, June, July, August, September, October, November, December"
+msgstr "Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь"
+
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Янв, Фев, Мар, Апр, Май, Июн, Июл, Авг, Сен, Окт, Ноя, Дек"
+
+msgid "Next"
+msgstr "Далее"
+
+msgid "Prev"
+msgstr "Предыдущ."
+
+msgid "Today"
+msgstr "Сегодня"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Choose Time"
+msgstr "Выберите время"
+
+msgid "Time"
+msgstr "Время"
+
+msgid "Hour"
+msgstr "Час"
+
+msgid "Minute"
+msgstr "Мин"
+
+msgid "Second"
+msgstr "Сек"
+
+msgid "Now"
+msgstr "Сейчас"
+
+msgid "Use this file"
+msgstr "Использовать этот файл"
+
+msgid "Use these files"
+msgstr "Использовать эти файлы"
+
+msgid "Remove Image"
+msgstr "Удалить изображение"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "File:"
+msgstr "Файл:"
+
+msgid "Download"
+msgstr "Загрузить"
+
+msgid "Select / Deselect All"
+msgstr "Выбрать все / снять выделение"
+
+msgid "Add Row"
+msgstr "Добавить строку"
+
+msgid "No terms"
+msgstr "Нет сроков"
+
+msgid "Add or Upload Files"
+msgstr "Добавить или отправить файлы"
+
+msgid "Add or Upload File"
+msgstr "Добавить или отправить файл"
+
+msgid "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress install."
+msgstr "Метаданные терминов — это функция WordPress версии 4.4 или выше. Обновите свою версию WordPress."
+
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr "Для конфигурации метабоксов терминов требуется параметр «таксономии»"
+
+msgid "Save"
+msgstr "Сохранить"
+
+#. Plugin Name of the plugin/theme
+msgid "Shopify eCommerce Plugin - Shopping Cart"
+msgstr "Плагин Shopify eCommerce - Shopping Cart"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.shopify.com/buy-button"
+msgstr "https://www.shopify.com/buy-button"
+
+#. Description of the plugin/theme
+msgid "Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons."
+msgstr "Продавайте товары на своем веб-сайте WordPress с помощью функциональных и легких в использовании кнопок «Купить» от Shopify."
+
+#. Author of the plugin/theme
+msgid "WebDevStudios"
+msgstr "WebDevStudios"
+
+#. Author URI of the plugin/theme
+msgid "http://webdevstudios.com"
+msgstr "http://webdevstudios.com"
+
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr "мм/дд/гг"
+
+msgctxt "Valid formatting string, as per http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr "hh:mm TT"
