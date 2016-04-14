@@ -1,5 +1,5 @@
 # Shopify eCommerce Plugin - Shopping Cart #
-**Contributors:**      shopify, webdevstudios  
+**Contributors:**      Shopify  
 **Donate link:**       https://www.shopify.com/buy-button  
 **Tags:**              admin, attributes, blog catalog, cart, catalog, catalog of goods, catalogs, catalogue,collection, commerce, digital goods, directory, display products, e-commerce, e-shop,ecomerce, ecommerce, gallery, implecode, inventory, list, list products, listing, manage, online shop, online store, plugin, Post, posts, product, product catalog, product catalogue, product feed, product gallery, product management, product portfolio, products, products catalog,responsive, restaurant menu, sales, sell, sell products, selling, shipping, shop, shopping,shopping cart, store, widget, woocommerce catalog, wordpress ecommerce, WordPress shopping cart, wordpress store, wp catalog, WP Catalogue, wp e-commerce, shortcode, buy, purchase, checkout, downloads, paypal, storefront  
 **Requires at least:** 4.3  
