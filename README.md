@@ -1,20 +1,28 @@
 # Shopify eCommerce Plugin - Shopping Cart #
 **Contributors:**      shopify, webdevstudios  
 **Donate link:**       https://www.shopify.com/buy-button  
-**Tags:**              ecommerce, e-commerce, widget, shortcode, buy, purchase, shop, cart, checkout, downloads, sales, paypal, sell, store, storefront  
+**Tags:**              admin, attributes, blog catalog, cart, catalog, catalog of goods, catalogs, catalogue,collection, commerce, digital goods, directory, display products, e-commerce, e-shop,ecomerce, ecommerce, gallery, implecode, inventory, list, list products, listing, manage, online shop, online store, plugin, Post, posts, product, product catalog, product catalogue, product feed, product gallery, product management, product portfolio, products, products catalog,responsive, restaurant menu, sales, sell, sell products, selling, shipping, shop, shopping,shopping cart, store, widget, woocommerce catalog, wordpress ecommerce, WordPress shopping cart, wordpress store, wp catalog, WP Catalogue, wp e-commerce, shortcode, buy, purchase, checkout, downloads, paypal, storefront  
 **Requires at least:** 4.3  
 **Tested up to:**      4.5  
 **Stable tag:**        1.0.5  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
-Sell products on your WordPress site using Shopify’s powerful, easy-to-use Buy Buttons.
+The most powerful, beautiful way to add ecommerce and sell products on your WordPress website&mdash;display products, add a shopping cart, and a secure, fully-encrypted checkout. 
 
 ## Description ##
+
+Finally, an ecommerce plugin that doesn't require hours of customization or developer time. This simple to use, beautiful, powerful ecommerce plugin is everything you need to start making money on WordPress&mdash;today. This is the official Shopify WordPress plugin, built by the ecommerce company trusted by over 243,000 ecommerce merchants worldwide. 
 
 **Shopify Ecommerce Plugin - Shopping Cart** makes selling products on your WordPress site simple. In just a few clicks you can create a Buy Button and add ecommerce functionality that lets visitors securely checkout from any page on your site.
 
 Other **WordPress ecommerce** plugins want your whole website to be a store, but with **Shopify Ecommerce Plugin - Shopping Cart**, you can seamlessly integrate a **WordPress shopping cart** for as little as one product. It’s perfect for WordPress ecommerce site owners looking for a simple way to sell directly to their audience.
+
+**Shopify Ecommerce Plugin - Shopping Cart** Plugin is currently available in: English, French (France), and Spanish (Mexico)
+
+### See how this merchant successfully sells with Shopify ###
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c80_ct-Hn60" frameborder="0" allowfullscreen></iframe>
 
 ### More ways to sell ###
 
@@ -34,7 +42,7 @@ Because the **Shopify Ecommerce Plugin** - Shopping Cart runs on Shopify, you ge
 * Accept payments using Paypal (per-transaction fees apply)
 * Buy and print discounted shipping labels with Shopify Shipping
 * Import or export your orders and customer list to CSV
-* Get access to over 1000 helpful apps from the Shopify App Store
+* Get access to over 1000 helpful ecommerce apps from the Shopify App Store
 * Easily edit product information in bulk
 * Print invoices, labels, receipts, packing slips, and more
 * Add tracking numbers to any shipment
