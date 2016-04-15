@@ -4,7 +4,7 @@
 **Tags:**              admin, attributes, blog catalog, cart, catalog, catalog of goods, catalogs, catalogue,collection, commerce, digital goods, directory, display products, e-commerce, e-shop,ecomerce, ecommerce, gallery, implecode, inventory, list, list products, listing, manage, online shop, online store, plugin, Post, posts, product, product catalog, product catalogue, product feed, product gallery, product management, product portfolio, products, products catalog,responsive, restaurant menu, sales, sell, sell products, selling, shipping, shop, shopping,shopping cart, store, widget, woocommerce catalog, wordpress ecommerce, WordPress shopping cart, wordpress store, wp catalog, WP Catalogue, wp e-commerce, shortcode, buy, purchase, checkout, downloads, paypal, storefront  
 **Requires at least:** 4.3  
 **Tested up to:**      4.5  
-**Stable tag:**        1.0.5  
+**Stable tag:**        1.0.8  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Other **WordPress ecommerce** plugins want your whole website to be a store, but
 
 ### See how this merchant successfully sells with Shopify ###
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c80_ct-Hn60" frameborder="0" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=c80_ct-Hn60
 
 ### More ways to sell ###
 
