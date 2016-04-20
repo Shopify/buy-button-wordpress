@@ -31,7 +31,7 @@ class SECP_Modal {
 	 * @return string HTML markup of modal.
 	 */
 	public function get_modal() {
-		$iframe_url = 'https://widgets.shopifyapps.com/embed_admin/embeds/picker';
+		$iframe_url = 'https://widgets.shopifyapps.com/embed_admin/embeds/picker?ref='.AFFILIATE_CODE;
 
 		$site = get_option( 'secp-connected-site', false );
 		if ( $site ) {

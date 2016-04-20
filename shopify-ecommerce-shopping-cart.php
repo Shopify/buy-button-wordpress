@@ -1,4 +1,5 @@
 <?php
+	include_once("affiliate_config.php");
 /**
  * Plugin Name: Shopify eCommerce Plugin - Shopping Cart
  * Plugin URI:  https://www.shopify.com/buy-button

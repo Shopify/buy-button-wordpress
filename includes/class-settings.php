@@ -107,8 +107,9 @@ class SECP_Settings {
 	 * @since  1.0.0
 	 */
 	public function admin_page_display() {
+		$settings_url = "https://widgets.shopifyapps.com/embed_admin/settings?ref=".AFFILIATE_CODE;
 		?>
-		<iframe class="secp-settings-iframe" src="https://widgets.shopifyapps.com/embed_admin/settings"></iframe>
+		<iframe class="secp-settings-iframe" src="<?php echo esc_url( $settings_url ); ?>"></iframe>
 		<?php
 	}
 }
