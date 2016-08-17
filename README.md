@@ -3,7 +3,7 @@
 **Donate link:**       https://www.shopify.com/buy-button  
 **Tags:**              cart, digital goods, display products, e-commerce, e-shop, ecommerce, inventory, list products, online shop, online store, product, product gallery, sell products, shop, store, checkout  
 **Requires at least:** 4.3  
-**Tested up to:**      4.5  
+**Tested up to:**      4.6  
 **Stable tag:**        1.0.9  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
