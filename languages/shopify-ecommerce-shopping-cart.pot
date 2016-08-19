@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Shopify eCommerce Plugin - Shopping Cart 1.0.6\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/shopify-ecommerce-shopping-cart\n"
-"POT-Creation-Date: 2016-08-19 14:25:58+00:00\n"
+"POT-Creation-Date: 2016-08-19 14:48:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,98 +15,147 @@ msgstr ""
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
 #: includes/class-customize.php:88 includes/class-customize.php:89
+#: release/1.0.6/includes/class-customize.php:88
+#: release/1.0.6/includes/class-customize.php:89
+#: release/svn/includes/class-customize.php:88
+#: release/svn/includes/class-customize.php:89
 msgid "Customize"
 msgstr ""
 
 #: includes/class-customize.php:112
+#: release/1.0.6/includes/class-customize.php:112
+#: release/svn/includes/class-customize.php:112
 msgid "Preview"
 msgstr ""
 
 #: includes/class-customize.php:152
+#: release/1.0.6/includes/class-customize.php:152
+#: release/svn/includes/class-customize.php:152
 msgid "Colors"
 msgstr ""
 
 #: includes/class-customize.php:158
+#: release/1.0.6/includes/class-customize.php:158
+#: release/svn/includes/class-customize.php:158
 msgid "Button color"
 msgstr ""
 
 #: includes/class-customize.php:165 includes/class-customize.php:200
+#: release/1.0.6/includes/class-customize.php:165
+#: release/1.0.6/includes/class-customize.php:200
+#: release/svn/includes/class-customize.php:165
+#: release/svn/includes/class-customize.php:200
 msgid "Button text"
 msgstr ""
 
 #: includes/class-customize.php:172
+#: release/1.0.6/includes/class-customize.php:172
+#: release/svn/includes/class-customize.php:172
 msgid "Accent"
 msgstr ""
 
 #: includes/class-customize.php:179
+#: release/1.0.6/includes/class-customize.php:179
+#: release/svn/includes/class-customize.php:179
 msgid "Text"
 msgstr ""
 
 #: includes/class-customize.php:186 includes/class-customize.php:193
+#: release/1.0.6/includes/class-customize.php:186
+#: release/1.0.6/includes/class-customize.php:193
+#: release/svn/includes/class-customize.php:186
+#: release/svn/includes/class-customize.php:193
 msgid "Background"
 msgstr ""
 
 #: includes/class-customize.php:203
+#: release/1.0.6/includes/class-customize.php:203
+#: release/svn/includes/class-customize.php:203
 msgid "Buy now"
 msgstr ""
 
 #: includes/class-customize.php:207
+#: release/1.0.6/includes/class-customize.php:207
+#: release/svn/includes/class-customize.php:207
 msgid "Cart title text"
 msgstr ""
 
 #: includes/class-customize.php:210
+#: release/1.0.6/includes/class-customize.php:210
+#: release/svn/includes/class-customize.php:210
 msgid "Your cart"
 msgstr ""
 
 #: includes/class-customize.php:214
+#: release/1.0.6/includes/class-customize.php:214
+#: release/svn/includes/class-customize.php:214
 msgid "Checkout button text"
 msgstr ""
 
 #: includes/class-customize.php:217 includes/class-customize.php:226
+#: release/1.0.6/includes/class-customize.php:217
+#: release/1.0.6/includes/class-customize.php:226
+#: release/svn/includes/class-customize.php:217
+#: release/svn/includes/class-customize.php:226
 msgid "Checkout"
 msgstr ""
 
 #: includes/class-customize.php:221
+#: release/1.0.6/includes/class-customize.php:221
+#: release/svn/includes/class-customize.php:221
 msgid "Where this button links to (single product only)"
 msgstr ""
 
 #: includes/class-customize.php:227
+#: release/1.0.6/includes/class-customize.php:227
+#: release/svn/includes/class-customize.php:227
 msgid "Product Modal"
 msgstr ""
 
 #: includes/class-customize.php:228
+#: release/1.0.6/includes/class-customize.php:228
+#: release/svn/includes/class-customize.php:228
 msgid "Cart"
 msgstr ""
 
 #: includes/class-customize.php:245
+#: release/1.0.6/includes/class-customize.php:245
+#: release/svn/includes/class-customize.php:245
 msgid "Customize updated."
 msgstr ""
 
-#: includes/class-modal.php:47
+#: includes/class-modal.php:47 release/1.0.6/includes/class-modal.php:47
+#: release/svn/includes/class-modal.php:47
 msgid "Close"
 msgstr ""
 
-#: includes/class-modal.php:51
+#: includes/class-modal.php:51 release/1.0.6/includes/class-modal.php:51
+#: release/svn/includes/class-modal.php:51
 msgid "Embed Type"
 msgstr ""
 
-#: includes/class-modal.php:59
+#: includes/class-modal.php:59 release/1.0.6/includes/class-modal.php:59
+#: release/svn/includes/class-modal.php:59
 msgid "Product image, price and button"
 msgstr ""
 
-#: includes/class-modal.php:66
+#: includes/class-modal.php:66 release/1.0.6/includes/class-modal.php:66
+#: release/svn/includes/class-modal.php:66
 msgid "Buy button only"
 msgstr ""
 
-#: includes/class-modal.php:70
+#: includes/class-modal.php:70 release/1.0.6/includes/class-modal.php:70
+#: release/svn/includes/class-modal.php:70
 msgid "Ok"
 msgstr ""
 
-#: includes/class-output.php:168
+#: includes/class-output.php:168 release/1.0.6/includes/class-output.php:168
+#: release/svn/includes/class-output.php:168
 msgid "Out of Stock"
 msgstr ""
 
-#: includes/class-output.php:169
+#: includes/class-output.php:169 release/1.0.6/includes/class-output.php:169
+#: release/svn/includes/class-output.php:169
 msgid "Unavailable"
 msgstr ""
 
@@ -114,34 +163,46 @@ msgstr ""
 msgid "Shopify"
 msgstr ""
 
-#: includes/class-settings.php:97
+#: includes/class-settings.php:97 release/1.0.6/includes/class-settings.php:97
+#: release/svn/includes/class-settings.php:97
 msgid "Settings"
 msgstr ""
 
 #: includes/class-shortcode.php:61 includes/class-widget.php:244
+#: release/1.0.6/includes/class-shortcode.php:61
+#: release/1.0.6/includes/class-widget.php:244
+#: release/svn/includes/class-shortcode.php:61
+#: release/svn/includes/class-widget.php:244
 msgid "Add Product"
 msgstr ""
 
-#: includes/class-widget.php:65
+#: includes/class-widget.php:65 release/1.0.6/includes/class-widget.php:65
+#: release/svn/includes/class-widget.php:65
 msgid "Embed a Shopify product and buy button."
 msgstr ""
 
-#: includes/class-widget.php:226
+#: includes/class-widget.php:226 release/1.0.6/includes/class-widget.php:226
+#: release/svn/includes/class-widget.php:226
 msgid "Title:"
 msgstr ""
 
-#: includes/class-widget.php:233
+#: includes/class-widget.php:233 release/1.0.6/includes/class-widget.php:233
+#: release/svn/includes/class-widget.php:233
 msgid "No Product Set"
 msgstr ""
 
-#: includes/class-widget.php:234
+#: includes/class-widget.php:234 release/1.0.6/includes/class-widget.php:234
+#: release/svn/includes/class-widget.php:234
 msgid "Preview: "
 msgstr ""
 
-#: includes/class-widget.php:246
+#: includes/class-widget.php:246 release/1.0.6/includes/class-widget.php:246
+#: release/svn/includes/class-widget.php:246
 msgid "Replace Product"
 msgstr ""
 
+#: release/1.0.6/shopify-ecommerce-shopping-cart.php:260
+#: release/svn/shopify-ecommerce-shopping-cart.php:260
 #: shopify-ecommerce-shopping-cart.php:260
 msgid ""
 "Shopify eCommerce Plugin - Shopping Cart is missing requirements and has "
@@ -149,176 +210,276 @@ msgid ""
 "available."
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2.php:122
+#: release/svn/vendor/cmb2/includes/CMB2.php:122
 #: vendor/cmb2/includes/CMB2.php:122
 msgid "Metabox configuration is required to have an ID parameter"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2.php:375
+#: release/svn/vendor/cmb2/includes/CMB2.php:375
 #: vendor/cmb2/includes/CMB2.php:375
 msgid "Click to toggle"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Ajax.php:65
+#: release/svn/vendor/cmb2/includes/CMB2_Ajax.php:65
 #: vendor/cmb2/includes/CMB2_Ajax.php:65
 msgid "Please Try Again"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Ajax.php:155
+#: release/svn/vendor/cmb2/includes/CMB2_Ajax.php:155
 #: vendor/cmb2/includes/CMB2_Ajax.php:155
 msgid "Remove Embed"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Ajax.php:159
+#: release/svn/vendor/cmb2/includes/CMB2_Ajax.php:159
 #: vendor/cmb2/includes/CMB2_Ajax.php:159
 msgid "No oEmbed Results Found for %s. View more info at"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Field.php:1030
+#: release/svn/vendor/cmb2/includes/CMB2_Field.php:1030
 #: vendor/cmb2/includes/CMB2_Field.php:1030
 msgid "Add Group"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Field.php:1031
+#: release/svn/vendor/cmb2/includes/CMB2_Field.php:1031
 #: vendor/cmb2/includes/CMB2_Field.php:1031
 msgid "Remove Group"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Field.php:1053
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Field.php:1057
+#: release/svn/vendor/cmb2/includes/CMB2_Field.php:1053
+#: release/svn/vendor/cmb2/includes/CMB2_Field.php:1057
 #: vendor/cmb2/includes/CMB2_Field.php:1053
 #: vendor/cmb2/includes/CMB2_Field.php:1057
 msgid "None"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:86
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:119
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:86
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:119
 #: vendor/cmb2/includes/CMB2_JS.php:86 vendor/cmb2/includes/CMB2_JS.php:119
 msgid "Clear"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:87
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:87
 #: vendor/cmb2/includes/CMB2_JS.php:87
 msgid "Default"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:88
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:88
 #: vendor/cmb2/includes/CMB2_JS.php:88
 msgid "Select Color"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:89
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:89
 #: vendor/cmb2/includes/CMB2_JS.php:89
 msgid "Current Color"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:110
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:110
 #: vendor/cmb2/includes/CMB2_JS.php:110
 msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:111
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:111
 #: vendor/cmb2/includes/CMB2_JS.php:111
 msgid "Su, Mo, Tu, We, Th, Fr, Sa"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:112
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:112
 #: vendor/cmb2/includes/CMB2_JS.php:112
 msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:113
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:113
 #: vendor/cmb2/includes/CMB2_JS.php:113
 msgid ""
 "January, February, March, April, May, June, July, August, September, "
 "October, November, December"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:114
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:114
 #: vendor/cmb2/includes/CMB2_JS.php:114
 msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:115
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:115
 #: vendor/cmb2/includes/CMB2_JS.php:115
 msgid "Next"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:116
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:116
 #: vendor/cmb2/includes/CMB2_JS.php:116
 msgid "Prev"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:117
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:117
 #: vendor/cmb2/includes/CMB2_JS.php:117
 msgid "Today"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:118
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:128
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:118
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:128
 #: vendor/cmb2/includes/CMB2_JS.php:118 vendor/cmb2/includes/CMB2_JS.php:128
 msgid "Done"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:122
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:122
 #: vendor/cmb2/includes/CMB2_JS.php:122
 msgid "Choose Time"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:123
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:123
 #: vendor/cmb2/includes/CMB2_JS.php:123
 msgid "Time"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:124
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:124
 #: vendor/cmb2/includes/CMB2_JS.php:124
 msgid "Hour"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:125
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:125
 #: vendor/cmb2/includes/CMB2_JS.php:125
 msgid "Minute"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:126
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:126
 #: vendor/cmb2/includes/CMB2_JS.php:126
 msgid "Second"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:127
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:127
 #: vendor/cmb2/includes/CMB2_JS.php:127
 msgid "Now"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:135
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:135
 #: vendor/cmb2/includes/CMB2_JS.php:135
 msgid "Use this file"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:136
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:136
 #: vendor/cmb2/includes/CMB2_JS.php:136
 msgid "Use these files"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:137
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:1021
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:137
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:1021
 #: vendor/cmb2/includes/CMB2_JS.php:137
 #: vendor/cmb2/includes/CMB2_Types.php:1021
 msgid "Remove Image"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:138
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:357
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:1040
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:138
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:357
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:1040
 #: vendor/cmb2/includes/CMB2_JS.php:138 vendor/cmb2/includes/CMB2_Types.php:357
 #: vendor/cmb2/includes/CMB2_Types.php:1040
 msgid "Remove"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:139
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:1035
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:139
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:1035
 #: vendor/cmb2/includes/CMB2_JS.php:139
 #: vendor/cmb2/includes/CMB2_Types.php:1035
 msgid "File:"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:140
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:1038
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:140
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:1038
 #: vendor/cmb2/includes/CMB2_JS.php:140
 #: vendor/cmb2/includes/CMB2_Types.php:1038
 msgid "Download"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:141
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:141
 #: vendor/cmb2/includes/CMB2_JS.php:141
 msgid "Select / Deselect All"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:298
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:298
 #: vendor/cmb2/includes/CMB2_Types.php:298
 msgid "Add Row"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:768
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:816
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:768
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:816
 #: vendor/cmb2/includes/CMB2_Types.php:768
 #: vendor/cmb2/includes/CMB2_Types.php:816
 msgid "No terms"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:884
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:884
 #: vendor/cmb2/includes/CMB2_Types.php:884
 msgid "Add or Upload Files"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_Types.php:945
+#: release/svn/vendor/cmb2/includes/CMB2_Types.php:945
 #: vendor/cmb2/includes/CMB2_Types.php:945
 msgid "Add or Upload File"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_hookup.php:120
+#: release/svn/vendor/cmb2/includes/CMB2_hookup.php:120
 #: vendor/cmb2/includes/CMB2_hookup.php:120
 msgid ""
 "Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress "
 "install."
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_hookup.php:124
+#: release/svn/vendor/cmb2/includes/CMB2_hookup.php:124
 #: vendor/cmb2/includes/CMB2_hookup.php:124
 msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/helper-functions.php:250
+#: release/svn/vendor/cmb2/includes/helper-functions.php:250
 #: vendor/cmb2/includes/helper-functions.php:250
 msgid "Save"
 msgstr ""
@@ -341,11 +502,15 @@ msgstr ""
 msgid "https://www.shopify.com/"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:109
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:109
 #: vendor/cmb2/includes/CMB2_JS.php:109
 msgctxt "Valid formatDate string for jquery-ui datepicker"
 msgid "mm/dd/yy"
 msgstr ""
 
+#: release/1.0.6/vendor/cmb2/includes/CMB2_JS.php:129
+#: release/svn/vendor/cmb2/includes/CMB2_JS.php:129
 #: vendor/cmb2/includes/CMB2_JS.php:129
 msgctxt ""
 "Valid formatting string, as per "

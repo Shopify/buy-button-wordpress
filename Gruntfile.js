@@ -209,7 +209,7 @@ module.exports = function (grunt) {
                     plugin_slug: '<%= pkg.name %>',
                     build_dir: 'release/svn/',
                     assets_dir: 'svn_assets/',
-                    max_buffer: 1048576
+                    max_buffer: 1048576 /*1024x1024*/
                 }
             }
         },

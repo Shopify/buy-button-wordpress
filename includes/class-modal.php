@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Modal
- * @version 1.0.6
+ * @version 1.0.7
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
