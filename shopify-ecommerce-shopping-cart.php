@@ -14,7 +14,7 @@
  */
 
 /**
- * Copyright (c) 2016 WebDevStudios (email : contact@webdevstudios.com)
+ * Copyright (c) 2016 Shopify (email : buybutton@shopify.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
