@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Settings
- * @version 1.0.7
+ * @version 1.0.10
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
