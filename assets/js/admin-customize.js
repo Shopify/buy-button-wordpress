@@ -1,6 +1,6 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v1.0.4 - 2016-03-18
- * http://webdevstudios.com
+ * Shopify eCommerce Plugin - Shopping Cart - v1.0.6 - 2016-08-19
+ * https://www.shopify.com/
  *
  * Copyright (c) 2016;
  * Licensed GPLv2+
@@ -73,7 +73,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	setTimeout(function () {
 		(0, _jquery2.default)('.wp-color-result').each(function () {
 			var $this = (0, _jquery2.default)(this),
-			    newTitle = undefined;
+			    newTitle = void 0;
 
 			newTitle = $this.closest('.cmb-row').find('.cmb-th label').text();
 

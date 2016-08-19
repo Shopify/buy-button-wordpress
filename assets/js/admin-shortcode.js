@@ -1,6 +1,6 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v1.0.4 - 2016-03-18
- * http://webdevstudios.com
+ * Shopify eCommerce Plugin - Shopping Cart - v1.0.6 - 2016-08-19
+ * https://www.shopify.com/
  *
  * Copyright (c) 2016;
  * Licensed GPLv2+
@@ -22,7 +22,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var open = false,
-    modal = undefined,
+    modal = void 0,
     html = secpAdminModal.modal.trim(),
     closeModal = function closeModal() {
 	if (modal && modal.remove) {
@@ -30,12 +30,12 @@ var open = false,
 	}
 	open = false;
 },
-    callback = undefined; /**
-                           * Shopify eCommerce Plugin - Shopping Cart - Add Button Modal
-                           * https://www.shopify.com/buy-button
-                           *
-                           * Licensed under the GPLv2+ license.
-                           */
+    callback = void 0; /**
+                        * Shopify eCommerce Plugin - Shopping Cart - Add Button Modal
+                        * https://www.shopify.com/buy-button
+                        *
+                        * Licensed under the GPLv2+ license.
+                        */
 
 /* global secpAdminModal */
 
@@ -118,9 +118,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		e.preventDefault();
 
 		(0, _addButtonModal2.default)(function (data) {
-			var shortcode = undefined,
-			    shortcodeAtts = undefined,
-			    editor = undefined;
+			var shortcode = void 0,
+			    shortcodeAtts = void 0,
+			    editor = void 0;
 
 			shortcodeAtts = [{ name: 'embed_type', value: data.resourceType }, { name: 'shop', value: data.shop }, { name: 'product_handle', value: data.resourceHandles.join(', ') }, { name: 'show', value: data.show }];
 

@@ -4,7 +4,7 @@
 **Tags:**              cart, digital goods, display products, e-commerce, e-shop, ecommerce, inventory, list products, online shop, online store, product, product gallery, sell products, shop, store, checkout  
 **Requires at least:** 4.3  
 **Tested up to:**      4.6  
-**Stable tag:**        1.0.9  
+**Stable tag:**        1.0.6  
 **License:**           GPLv2  
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,9 @@ To enable your Shopify-powered WordPress shopping cart, you’ll need to [subscr
 5. Adding a product to a post with the Add Product button.
 
 ## Changelog ##
+
+### 1.0.6 ###
+* Bumped version support for WP to 4.6
 
 ### 1.0.5 ###
 * Set the redirect_to for 'Product Modal' to 'modal'
