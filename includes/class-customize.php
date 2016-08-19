@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Customize
- * @version 1.0.10
+ * @version 1.1.3
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
