@@ -279,9 +279,7 @@ class SECP_Output {
 		}
 		<?php if ( isset( $_GET['vcenter'] ) ): ?>
 			.secp-embed-product {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
+        margin: 100px 0 0 55px;
 			}
 		<?php endif; ?>
 		</style>
