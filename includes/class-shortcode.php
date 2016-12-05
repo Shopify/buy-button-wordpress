@@ -1,7 +1,7 @@
 <?php
 /**
  * Shopify eCommerce Plugin - Shopping Cart Shortcode
- * @version 1.1.3
+ * @version 1.1.4
  * @package Shopify eCommerce Plugin - Shopping Cart
  */
 
