@@ -88,8 +88,7 @@ class SECP_Settings {
 			__( 'Shopify', 'shopify-ecommerce-shopping-cart' ),
 			'manage_options',
 			$this->key,
-			array( $this, 'admin_page_display' ),
-			$this->plugin->url( 'assets/images/shopify_icon_small2.png' )
+			array( $this, 'admin_page_display' )
 		);
 		$this->options_page = add_submenu_page(
 			$this->key,

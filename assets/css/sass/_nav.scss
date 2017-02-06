@@ -1,0 +1,19 @@
+#toplevel_page_shopify_ecommerce_plugin_settings {
+  .dashicons-admin-generic:before {
+    content: '';
+    background: url('../images/sidebar_icon.png') no-repeat 0 5px;
+    background-size: contain;
+  }
+
+  &:hover {
+    .dashicons-admin-generic:before {
+      background-image: url('../images/sidebar_icon_hover.png');
+    }
+  }
+
+  .wp-menu-open {
+    .dashicons-admin-generic:before {
+      background-image: url('../images/sidebar_icon_white.png');
+    }
+  }
+}
