@@ -1,5 +1,5 @@
 /**
- * Shopify eCommerce Plugin - Shopping Cart - v1.1.6 - 2017-02-06
+ * Shopify eCommerce Plugin - Shopping Cart - v1.1.8 - 2017-04-27
  * https://www.shopify.com/
  *
  * Copyright (c) 2017;

@@ -4,7 +4,7 @@
 **Tags:**              cart, display products, e-commerce, inventory, list products, online shop, online store, ecommerce, sell products, shop, store, checkout
 **Requires at least:** 4.3
 **Tested up to:**      4.6
-**Stable tag:**        1.1.4
+**Stable tag:**        1.1.8
 **License:**           GPLv2
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
