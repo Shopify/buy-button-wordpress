@@ -200,6 +200,8 @@ class Shopify_ECommerce_Plugin {
 	 * @since  1.0.0
 	 */
 	public function init() {
+		add_action( 'all_admin_notices', array( $this, 'plugin_closing_down_notice' ) );
+
 		if ( $this->check_requirements() ) {
 			load_plugin_textdomain( 'shopify-ecommerce-shopping-cart', false, dirname( $this->basename ) . '/languages/' );
 		}
@@ -256,8 +258,22 @@ class Shopify_ECommerce_Plugin {
 	 */
 	public function requirements_not_met_notice() {
 		// Output our error.
-		echo '<div id="message" class="error">';
+		echo '<div id="message" class="notice notice-error">';
 		echo '<p>' . sprintf( __( 'Shopify eCommerce Plugin - Shopping Cart is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'shopify-ecommerce-shopping-cart' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '</div>';
+	}
+
+	/**
+	 * Adds a notice to inform users the plugin is closing down
+	 *
+	 * @since  1.1.4
+	 */
+	public function plugin_closing_down_notice() {
+		// Output our error.
+		echo '<div id="message" class="notice notice-warning is-dismissible">';
+		echo '<p>' . sprintf( __( 'Starting June 30th, Shopify will no longer maintain the WordPress Plugin. You can continue to use the WordPress plugin, but Shopify will no longer be updating the plugin or providing support.', 'shopify-ecommerce-shopping-cart' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'We encourage you to <a href="https://www.shopify.com/login">login to Shopify</a> to manage your products, orders, and customers. To add products to your WordPress site in the future, you can use the <a href="https://help.shopify.com/manual/sell-online/buy-button/create-buy-button">Shopify Buy Button</a>. With the Buy Button, you can customize font, colour and layout to compliment your brand.', 'shopify-ecommerce-shopping-cart' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'If you have questions please contact Shopify’s <a href="mailto:https://help.shopify.com/questions">support team</a>.', 'shopify-ecommerce-shopping-cart' ) ) . '</p>';
 		echo '</div>';
 	}
 
