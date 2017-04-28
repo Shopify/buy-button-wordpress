@@ -4,13 +4,21 @@
 **Tags:**              cart, display products, e-commerce, inventory, list products, online shop, online store, ecommerce, sell products, shop, store, checkout
 **Requires at least:** 4.3
 **Tested up to:**      4.6
-**Stable tag:**        1.1.4
+**Stable tag:**        1.1.8
 **License:**           GPLv2
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
-The most powerful way to sell products on your WordPress website&mdash;display products, add a shopping cart, and a secure checkout.
+## Notice
+
+Starting June 30th, Shopify will no longer maintain the WordPress Plugin. You can continue to use the WordPress plugin, but Shopify will no longer be updating the plugin or providing support.
+
+We encourage you to [login to Shopify](https://www.shopify.com/login) to manage your products, orders, and customers. To add products to your WordPress site in the future, you can use the [Shopify Buy Button](https://help.shopify.com/manual/sell-online/buy-button/create-buy-button). With the Buy Button, you can customize font, colour and layout to compliment your brand.
+
+If you have questions please contact Shopify’s [support team](mailto:https://help.shopify.com/questions).
 
 ## Description ##
+
+The most powerful way to sell products on your WordPress website&mdash;display products, add a shopping cart, and a secure checkout.
 
 Finally, an ecommerce plugin that doesn't require hours of customization or developer time. This simple to use, beautiful, powerful ecommerce plugin is everything you need to start making money on WordPress&mdash;today. This is the official Shopify WordPress plugin, built by the ecommerce company trusted by over 300,000 ecommerce merchants worldwide.
 
